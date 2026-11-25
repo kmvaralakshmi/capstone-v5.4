@@ -1,0 +1,438 @@
+{
+  "run_id": "20261125_204845",
+  "finished": "2026-11-25T15:19:05+00:00",
+  "mode": "offline",
+  "llm_mode": false,
+  "llm": "none (deterministic policies)",
+  "llm_problem": null,
+  "dynamic": false,
+  "companies": null,
+  "agents": [
+    {
+      "agent_id": "agent1",
+      "name": "Agent 1 - BRSR Extraction & Audit Agent",
+      "status": "completed",
+      "steps": 229,
+      "seconds": 10.26,
+      "decisions_by_source": {
+        "llm": 0,
+        "policy": 229,
+        "guardrail": 0
+      },
+      "summary": "all companies extracted, corroborated and audited; files written",
+      "findings": [],
+      "artifacts": [
+        ".batch_offline_ce4a27b3039649ae9c7448dd6cc62136.staging\\brsr_extracted_metrics.csv",
+        "processed-data\\.batch_offline_ce4a27b3039649ae9c7448dd6cc62136.staging\\agent_traces\\agent1_trace.json"
+      ],
+      "llm_mode": false,
+      "llm_errors": [],
+      "judgements_by_source": {},
+      "judge_calls": 0,
+      "judge_seconds": 0.0,
+      "judge_budget": 300,
+      "judge_time_budget_seconds": 1800.0,
+      "judge_budget_reached": false,
+      "judge_time_budget_reached": false,
+      "planner_mode": "recover",
+      "llm_planning_calls": 0,
+      "llm_planning_decisions": 0,
+      "llm_judgements": 0,
+      "budget_reason": "none",
+      "llm_planning_seconds": 0.0,
+      "llm_judging_seconds": 0.0,
+      "guardrail_rejections": []
+    },
+    {
+      "agent_id": "agent2",
+      "name": "Agent 2 - Environmental Context Agent",
+      "status": "completed",
+      "steps": 49,
+      "seconds": 12.42,
+      "decisions_by_source": {
+        "llm": 0,
+        "policy": 49,
+        "guardrail": 0
+      },
+      "summary": "46/46 companies have an environmental score",
+      "findings": [],
+      "artifacts": [
+        "processed-data\\.batch_offline_ce4a27b3039649ae9c7448dd6cc62136.staging\\company_location_environmental_risk.csv",
+        "processed-data\\.batch_offline_ce4a27b3039649ae9c7448dd6cc62136.staging\\agent_traces\\agent2_trace.json"
+      ],
+      "llm_mode": false,
+      "llm_errors": [],
+      "judgements_by_source": {},
+      "judge_calls": 0,
+      "judge_seconds": 0.0,
+      "judge_budget": 300,
+      "judge_time_budget_seconds": 1800.0,
+      "judge_budget_reached": false,
+      "judge_time_budget_reached": false,
+      "planner_mode": "off",
+      "llm_planning_calls": 0,
+      "llm_planning_decisions": 0,
+      "llm_judgements": 0,
+      "budget_reason": "none",
+      "llm_planning_seconds": 0.0,
+      "llm_judging_seconds": 0.0,
+      "guardrail_rejections": []
+    },
+    {
+      "agent_id": "agent3",
+      "name": "Agent 3 - ESG News Sentiment Agent",
+      "status": "completed",
+      "steps": 6,
+      "seconds": 2.89,
+      "decisions_by_source": {
+        "llm": 0,
+        "policy": 6,
+        "guardrail": 0
+      },
+      "summary": "news sentiment written with reliability and shrinkage",
+      "findings": [
+        {
+          "kind": "relaxed_attribution",
+          "severity": "low",
+          "message": "strict title attribution left <40% of companies with 5+ articles; relaxed to lead-text attribution"
+        }
+      ],
+      "artifacts": [
+        "processed-data\\.batch_offline_ce4a27b3039649ae9c7448dd6cc62136.staging\\esg_news_sentiment.csv",
+        "processed-data\\.batch_offline_ce4a27b3039649ae9c7448dd6cc62136.staging\\agent_traces\\agent3_trace.json"
+      ],
+      "llm_mode": false,
+      "llm_errors": [],
+      "judgements_by_source": {
+        "rule": 33
+      },
+      "judge_calls": 33,
+      "judge_seconds": 0.0,
+      "judge_budget": 300,
+      "judge_time_budget_seconds": 1800.0,
+      "judge_budget_reached": false,
+      "judge_time_budget_reached": false,
+      "planner_mode": "recover",
+      "llm_planning_calls": 0,
+      "llm_planning_decisions": 0,
+      "llm_judgements": 0,
+      "budget_reason": "none",
+      "llm_planning_seconds": 0.0,
+      "llm_judging_seconds": 0.0,
+      "guardrail_rejections": []
+    },
+    {
+      "agent_id": "agent4",
+      "name": "Agent 4 - Market Performance Agent",
+      "status": "completed",
+      "steps": 2,
+      "seconds": 3.22,
+      "decisions_by_source": {
+        "llm": 0,
+        "policy": 2,
+        "guardrail": 0
+      },
+      "summary": "7/46 companies have market data",
+      "findings": [
+        {
+          "kind": "market_coverage_gap",
+          "severity": "high",
+          "message": "39/46 companies have no price history"
+        }
+      ],
+      "artifacts": [
+        ".batch_offline_ce4a27b3039649ae9c7448dd6cc62136.staging\\stock_esg_correlation.csv",
+        "processed-data\\.batch_offline_ce4a27b3039649ae9c7448dd6cc62136.staging\\agent_traces\\agent4_trace.json"
+      ],
+      "llm_mode": false,
+      "llm_errors": [],
+      "judgements_by_source": {},
+      "judge_calls": 0,
+      "judge_seconds": 0.0,
+      "judge_budget": 300,
+      "judge_time_budget_seconds": 1800.0,
+      "judge_budget_reached": false,
+      "judge_time_budget_reached": false,
+      "planner_mode": "recover",
+      "llm_planning_calls": 0,
+      "llm_planning_decisions": 0,
+      "llm_judgements": 0,
+      "budget_reason": "none",
+      "llm_planning_seconds": 0.0,
+      "llm_judging_seconds": 0.0,
+      "guardrail_rejections": []
+    },
+    {
+      "agent_id": "agent5",
+      "name": "Agent 5 - Disclosure-Consistency Agent",
+      "status": "completed",
+      "steps": 140,
+      "seconds": 3.16,
+      "decisions_by_source": {
+        "llm": 0,
+        "policy": 140,
+        "guardrail": 0
+      },
+      "summary": "224 claims investigated for 46 companies",
+      "findings": [],
+      "artifacts": [
+        ".batch_offline_ce4a27b3039649ae9c7448dd6cc62136.staging\\greenwashing_detection.csv",
+        "processed-data\\.batch_offline_ce4a27b3039649ae9c7448dd6cc62136.staging\\agent_traces\\agent5_trace.json"
+      ],
+      "llm_mode": false,
+      "llm_errors": [],
+      "judgements_by_source": {
+        "rule": 40
+      },
+      "judge_calls": 40,
+      "judge_seconds": 0.0,
+      "judge_budget": 300,
+      "judge_time_budget_seconds": 1800.0,
+      "judge_budget_reached": false,
+      "judge_time_budget_reached": false,
+      "planner_mode": "recover",
+      "llm_planning_calls": 0,
+      "llm_planning_decisions": 0,
+      "llm_judgements": 0,
+      "budget_reason": "none",
+      "llm_planning_seconds": 0.0,
+      "llm_judging_seconds": 0.0,
+      "guardrail_rejections": []
+    },
+    {
+      "agent_id": "agent6",
+      "name": "Agent 6 - Master ESG Scoring Agent",
+      "status": "completed",
+      "steps": 48,
+      "seconds": 0.74,
+      "decisions_by_source": {
+        "llm": 0,
+        "policy": 48,
+        "guardrail": 0
+      },
+      "summary": "46 companies scored or withheld",
+      "findings": [],
+      "artifacts": [
+        "esg_master_scores.csv",
+        "processed-data\\.batch_offline_ce4a27b3039649ae9c7448dd6cc62136.staging\\agent_traces\\agent6_trace.json"
+      ],
+      "llm_mode": false,
+      "llm_errors": [],
+      "judgements_by_source": {},
+      "judge_calls": 0,
+      "judge_seconds": 0.0,
+      "judge_budget": 300,
+      "judge_time_budget_seconds": 1800.0,
+      "judge_budget_reached": false,
+      "judge_time_budget_reached": false,
+      "planner_mode": "recover",
+      "llm_planning_calls": 0,
+      "llm_planning_decisions": 0,
+      "llm_judgements": 0,
+      "budget_reason": "none",
+      "llm_planning_seconds": 0.0,
+      "llm_judging_seconds": 0.0,
+      "guardrail_rejections": []
+    },
+    {
+      "agent_id": "agent7",
+      "name": "Agent 7 - Explanation Agent",
+      "status": "completed",
+      "steps": 94,
+      "seconds": 0.66,
+      "decisions_by_source": {
+        "llm": 0,
+        "policy": 94,
+        "guardrail": 0
+      },
+      "summary": "46 explanations (0 LLM-written, verified)",
+      "findings": [],
+      "artifacts": [
+        ".batch_offline_ce4a27b3039649ae9c7448dd6cc62136.staging\\multi_agent_explanations.csv",
+        "processed-data\\.batch_offline_ce4a27b3039649ae9c7448dd6cc62136.staging\\agent_traces\\agent7_trace.json"
+      ],
+      "llm_mode": false,
+      "llm_errors": [],
+      "judgements_by_source": {},
+      "judge_calls": 0,
+      "judge_seconds": 0.0,
+      "judge_budget": 300,
+      "judge_time_budget_seconds": 1800.0,
+      "judge_budget_reached": false,
+      "judge_time_budget_reached": false,
+      "planner_mode": "recover",
+      "llm_planning_calls": 0,
+      "llm_planning_decisions": 0,
+      "llm_judgements": 0,
+      "budget_reason": "none",
+      "llm_planning_seconds": 0.0,
+      "llm_judging_seconds": 0.0,
+      "guardrail_rejections": []
+    },
+    {
+      "agent_id": "agent8",
+      "name": "Agent 8 - Validation & Research Agent",
+      "status": "completed",
+      "steps": 10,
+      "seconds": 3.41,
+      "decisions_by_source": {
+        "llm": 0,
+        "policy": 10,
+        "guardrail": 0
+      },
+      "summary": "validation_summary.json written",
+      "findings": [],
+      "artifacts": [
+        "processed-data\\.batch_offline_ce4a27b3039649ae9c7448dd6cc62136.staging\\agent_traces\\agent8_trace.json"
+      ],
+      "llm_mode": false,
+      "llm_errors": [],
+      "judgements_by_source": {
+        "rule": 7
+      },
+      "judge_calls": 7,
+      "judge_seconds": 0.0,
+      "judge_budget": 40,
+      "judge_time_budget_seconds": 420.0,
+      "judge_budget_reached": false,
+      "judge_time_budget_reached": false,
+      "planner_mode": "recover",
+      "llm_planning_calls": 0,
+      "llm_planning_decisions": 0,
+      "llm_judgements": 0,
+      "budget_reason": "none",
+      "llm_planning_seconds": 0.0,
+      "llm_judging_seconds": 0.0,
+      "guardrail_rejections": []
+    }
+  ],
+  "timing": {
+    "run_id": "20261125_204845",
+    "company": "all",
+    "started": "2026-11-25T15:18:45+00:00",
+    "total_seconds": 20.452,
+    "stage_wall_total_seconds": 20.444,
+    "overhead_seconds": 0.008,
+    "stages": {
+      "acquisition": {
+        "sum_seconds": 28.793,
+        "spans": 4,
+        "stage_wall_seconds": 12.424
+      },
+      "consistency": {
+        "sum_seconds": 3.188,
+        "spans": 1,
+        "stage_wall_seconds": 3.19
+      },
+      "scoring": {
+        "sum_seconds": 0.747,
+        "spans": 1,
+        "stage_wall_seconds": 0.749
+      },
+      "explanation": {
+        "sum_seconds": 0.667,
+        "spans": 1,
+        "stage_wall_seconds": 0.669
+      },
+      "validation": {
+        "sum_seconds": 3.411,
+        "spans": 1,
+        "stage_wall_seconds": 3.412
+      }
+    },
+    "fetches": {
+      "market:TCS.NS": 0.659,
+      "market:INFY.NS": 0.509,
+      "market:WIPRO.NS": 0.396,
+      "market:HCLTECH.NS": 0.717,
+      "market:TECHM.NS": 0.129,
+      "market:LTIM.NS": 0.008,
+      "market:MPHASIS.NS": 0.01,
+      "market:PERSISTENT.NS": 0.009,
+      "market:COFORGE.NS": 0.006,
+      "market:LTTS.NS": 0.006,
+      "market:TATAELXSI.NS": 0.005,
+      "market:OFSS.NS": 0.01,
+      "market:KPITTECH.NS": 0.006,
+      "market:CYIENT.NS": 0.006,
+      "market:BSOFT.NS": 0.004,
+      "market:ZENSARTECH.NS": 0.005,
+      "market:TATATECH.NS": 0.005,
+      "market:HAPPSTMNDS.NS": 0.006,
+      "market:SONATSOFTW.NS": 0.006,
+      "market:NEWGEN.NS": 0.005,
+      "market:TANLA.NS": 0.007,
+      "market:INTELLECT.NS": 0.004,
+      "market:ROUTE.NS": 0.005,
+      "market:RATEGAIN.NS": 0.007,
+      "market:ECLERX.NS": 0.004,
+      "market:DATAMATICS.NS": 0.005,
+      "market:MASTEK.NS": 0.003,
+      "market:SONACOMS.NS": 0.005,
+      "market:HGS.NS": 0.003,
+      "market:NIITLTD.NS": 0.004,
+      "market:AFFLE.NS": 0.003,
+      "market:MPSLTD.NS": 0.003,
+      "market:SUBEXLTD.NS": 0.003,
+      "market:SIS.NS": 0.004,
+      "market:ETERNAL.NS": 0.005,
+      "market:PAYTM.NS": 0.004,
+      "market:POLICYBZR.NS": 0.004,
+      "market:DELHIVERY.NS": 0.006,
+      "market:NAZARA.NS": 0.008,
+      "market:TATACOMM.NS": 0.004,
+      "market:INDUSTOWER.NS": 0.004,
+      "market:BHARTIARTL.NS": 0.013,
+      "market:TEJASNET.NS": 0.005,
+      "market:REDINGTON.NS": 0.006,
+      "market:MAZDOCK.NS": 0.003,
+      "market:TITAN.NS": 0.011
+    },
+    "bottleneck": {
+      "name": "Agent 2 - Environmental Context Agent",
+      "seconds": 12.42
+    },
+    "fallbacks_used": [],
+    "failures": [
+      "market:LTIM.NS",
+      "market:MPHASIS.NS",
+      "market:PERSISTENT.NS",
+      "market:COFORGE.NS",
+      "market:LTTS.NS",
+      "market:TATAELXSI.NS",
+      "market:OFSS.NS",
+      "market:KPITTECH.NS",
+      "market:CYIENT.NS",
+      "market:BSOFT.NS",
+      "market:ZENSARTECH.NS",
+      "market:TATATECH.NS",
+      "market:HAPPSTMNDS.NS",
+      "market:SONATSOFTW.NS",
+      "market:NEWGEN.NS",
+      "market:TANLA.NS",
+      "market:INTELLECT.NS",
+      "market:ROUTE.NS",
+      "market:RATEGAIN.NS",
+      "market:ECLERX.NS",
+      "market:DATAMATICS.NS",
+      "market:MASTEK.NS",
+      "market:SONACOMS.NS",
+      "market:HGS.NS",
+      "market:NIITLTD.NS",
+      "market:AFFLE.NS",
+      "market:MPSLTD.NS",
+      "market:SUBEXLTD.NS",
+      "market:SIS.NS",
+      "market:ETERNAL.NS",
+      "market:PAYTM.NS",
+      "market:POLICYBZR.NS",
+      "market:DELHIVERY.NS",
+      "market:NAZARA.NS",
+      "market:TATACOMM.NS",
+      "market:INDUSTOWER.NS",
+      "market:TEJASNET.NS",
+      "market:REDINGTON.NS",
+      "market:MAZDOCK.NS"
+    ]
+  }
+}

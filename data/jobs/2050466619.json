@@ -1,0 +1,138 @@
+{
+  "id": "2050466619",
+  "company": "Infosys",
+  "mode": "offline",
+  "status": "completed",
+  "log": [
+    "Output folder: D:\\capstone-v5.4\\data\\runs\\offline\\INFOSYS_20261126_001829",
+    "Mode: OFFLINE  (live data: False, LLM requested: False)",
+    "[supervisor] LLM: none (deterministic policies) | dynamic data: False | run 20261126_001839",
+    "[agent0] start | planner=policy, judgements=rules",
+    "[agent0] step 1: resolve_company {\"query\": \"Infosys\"} [policy]",
+    "[agent0] step 2: check_local {\"company_code\": \"INFY\"} [policy]",
+    "[agent0] step 3: validate_filings {\"company_code\": \"INFY\"} [policy]",
+    "[agent0] step 4: finalize {} [policy]",
+    "[agent0] completed in 0.36s (4 steps): 1 company/companies have validated filing status",
+    "[agent2] start | planner=policy, judgements=rules",
+    "[agent2] step 1: load_aqi_sources {} [policy]",
+    "[agent4] start | planner=policy, judgements=rules",
+    "[agent4] step 1: fetch_prices {} [policy]",
+    "[agent1] start | planner=policy, judgements=rules",
+    "[agent1] step 1: read_xbrl {\"company_code\": \"INFY\"} [policy]",
+    "[agent3] start | planner=policy, judgements=rules",
+    "[agent3] step 1: load_corpus {} [policy]",
+    "[agent1] step 2: verify_pdf {\"company_code\": \"INFY\"} [policy]",
+    "[agent4] step 2: finalize {} [policy]",
+    "[agent3] step 2: attribute_articles {\"strict\": true} [policy]",
+    "[agent1] step 3: audit_company {\"company_code\": \"INFY\"} [policy]",
+    "[agent1] step 4: resolve_scale_issue {\"company_code\": \"INFY\", \"quantity\": \"ghg\"} [policy]",
+    "[agent1] step 5: audit_company {\"company_code\": \"INFY\"} [policy]",
+    "[agent1] step 6: finalize {} [policy]",
+    "[agent4] completed in 3.7s (2 steps): 1/1 companies have market data",
+    "[agent3] step 3: score_articles {} [policy]",
+    "[agent3] step 4: audit_distribution {} [policy]",
+    "[agent3] step 5: finalize {} [policy]",
+    "[agent2] step 2: inspect_coverage {} [policy]",
+    "[agent1] completed in 4.32s (6 steps): all companies extracted, corroborated and audited; files written",
+    "[agent3] completed in 4.29s (5 steps): news sentiment written with reliability and shrinkage",
+    "[agent2] step 3: score_company {\"company_code\": \"INFY\"} [policy]",
+    "[agent2] step 4: finalize {} [policy]",
+    "[agent2] completed in 4.85s (4 steps): 1/1 companies have an environmental score",
+    "[agent5] start | planner=policy, judgements=rules",
+    "[agent5] step 1: load_inputs {} [policy]",
+    "[agent5] step 2: extract_claims {\"company_code\": \"INFY\"} [policy]",
+    "[agent5] step 3: investigate_claim {\"company_code\": \"INFY\", \"claim_id\": \"C1\"} [policy]",
+    "[agent5] step 4: score_company {\"company_code\": \"INFY\"} [policy]",
+    "[agent5] step 5: finalize {} [policy]",
+    "[agent5] completed in 0.33s (5 steps): 6 claims investigated for 1 companies",
+    "[agent6] start | planner=policy, judgements=rules",
+    "[agent6] step 1: load_inputs {} [policy]",
+    "[agent6] step 2: score_company {\"company_code\": \"INFY\"} [policy]",
+    "[agent6] step 3: finalize {} [policy]",
+    "[agent6] completed in 0.21s (3 steps): 1 companies scored or withheld",
+    "[agent7] start | planner=policy, judgements=rules",
+    "[agent7] step 1: load_scoring_outputs {} [policy]",
+    "[agent7] step 2: build_evidence {\"company_code\": \"INFY\"} [policy]",
+    "[agent7] step 3: explain_company {\"company_code\": \"INFY\"} [policy]",
+    "[agent7] step 4: finalize {} [policy]",
+    "[agent7] completed in 0.18s (4 steps): 1 explanations (0 LLM-written, verified)",
+    "",
+    "=== RUN SUMMARY ===  MODE: OFFLINE  LLM: none (deterministic policies)  | total 6.002s",
+    "agent0   completed      0.36s  1 company/companies have validated filing status",
+    "  planner=recover decisions=0 judgements=0 budget=none planning/judging=0.00s/0.00s",
+    "agent1   completed      4.32s  all companies extracted, corroborated and audited; files written",
+    "  planner=recover decisions=0 judgements=0 budget=none planning/judging=0.00s/0.00s",
+    "agent2   completed      4.85s  1/1 companies have an environmental score",
+    "  planner=off decisions=0 judgements=0 budget=none planning/judging=0.00s/0.00s",
+    "agent3   completed      4.29s  news sentiment written with reliability and shrinkage",
+    "  planner=recover decisions=0 judgements=0 budget=none planning/judging=0.00s/0.00s",
+    "agent4   completed       3.7s  1/1 companies have market data",
+    "  planner=recover decisions=0 judgements=0 budget=none planning/judging=0.00s/0.00s",
+    "agent5   completed      0.33s  6 claims investigated for 1 companies",
+    "  planner=recover decisions=0 judgements=0 budget=none planning/judging=0.00s/0.00s",
+    "agent6   completed      0.21s  1 companies scored or withheld",
+    "  planner=recover decisions=0 judgements=0 budget=none planning/judging=0.00s/0.00s",
+    "agent7   completed      0.18s  1 explanations (0 LLM-written, verified)",
+    "  planner=recover decisions=0 judgements=0 budget=none planning/judging=0.00s/0.00s",
+    "  stage discovery    wall=0.37s  sum_of_parts=0.364s",
+    "  stage acquisition  wall=4.864s  sum_of_parts=17.432s",
+    "  stage consistency  wall=0.338s  sum_of_parts=0.335s",
+    "  stage scoring      wall=0.223s  sum_of_parts=0.217s",
+    "  stage explanation  wall=0.187s  sum_of_parts=0.184s",
+    "  bottleneck: Agent 2 - Environmental Context Agent (4.854s)"
+  ],
+  "run": "INFOSYS_20261126_001829",
+  "error": null,
+  "warning": null,
+  "expected_agents": [
+    "agent0",
+    "agent1",
+    "agent2",
+    "agent3",
+    "agent4",
+    "agent5",
+    "agent6",
+    "agent7"
+  ],
+  "_staging_dir": null,
+  "progress": {
+    "agents": [
+      {
+        "id": "agent0",
+        "status": "completed"
+      },
+      {
+        "id": "agent1",
+        "status": "completed"
+      },
+      {
+        "id": "agent2",
+        "status": "completed"
+      },
+      {
+        "id": "agent3",
+        "status": "completed"
+      },
+      {
+        "id": "agent4",
+        "status": "completed"
+      },
+      {
+        "id": "agent5",
+        "status": "completed"
+      },
+      {
+        "id": "agent6",
+        "status": "completed"
+      },
+      {
+        "id": "agent7",
+        "status": "completed"
+      }
+    ],
+    "completed": 8,
+    "total": 8,
+    "percent": 100,
+    "current": []
+  }
+}

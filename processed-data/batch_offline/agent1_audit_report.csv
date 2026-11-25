@@ -1,0 +1,74 @@
+Company_Code,Metric_Name,Metric_Value,Final_Source,Validation_Status,PDF_Status,Audit_Status,Audit_Note
+TCS,Energy Intensity,846.6111111111111,MANUAL_PDF,REPAIRED,MANUAL_PDF,repaired,PDF reports 3047.8 MJ/FTE in FY2025 and 2715.2 MJ/FTE in FY2024; XBRL derives 3047.863 MJ/FTE from 1940926732 MJ divided by D_Gender_Employees_TableA=636833; final kWh/FTE is 846.611 using 3.6 MJ per kWh
+TCS,Water Intensity,4.5,MANUAL_PDF,REPAIRED,MANUAL_PDF,repaired,PDF reports 4.5 KL/FTE in FY2025 and 3.9 KL/FTE in FY2024; XBRL derives 4.509864 KL/FTE from 2871784 KL divided by D_Gender_Employees_TableA=636833
+INFY,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=0.29039267375072936"
+HCLTECH,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=1042027.423006279"
+TECHM,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=1.6828243215955219"
+MPHASIS,Energy Intensity,2095.0426096485266,XBRL_RESCALED_PDF,REPAIRED,,repaired,recomputed after PDF ratio repair of Total Energy Consumption
+MPHASIS,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=1963757.7071931576"
+MPHASIS,Total Energy Consumption,25.704077777777776,XBRL_RESCALED_PDF,REPAIRED,MATCH_AFTER_SCALE,repaired,rescaled by PDF ratio x1e+09; PDF value=25.7041
+PERSISTENT,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=403355.7374716228"
+COFORGE,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=1.3692886321510196"
+COFORGE,Total Waste Generated,56.467,XBRL_EXACT,VALID,MISMATCH,passed,
+LTTS,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=1.3649084825821687"
+TATAELXSI,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=13249790.830884086"
+KPITTECH,Energy Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale for energy could not be established: 7.6585e-07 outside plausible range [1, 1e+07]; removed value=7.65850263089592e-07"
+KPITTECH,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=1.3322807841387492"
+KPITTECH,Water Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=0.000304735612656615"
+KPITTECH,Total Energy Consumption,,NONE,QUARANTINED,MATCH,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=7.212777777777777e-09"
+KPITTECH,Scope 1 and 2 Emissions,,NONE,QUARANTINED,MATCH,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=3415.88"
+BSOFT,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=1.5775703984206206"
+ZENSARTECH,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=0.3518406999204635"
+ZENSARTECH,Scope 1 and 2 Emissions,,NONE,QUARANTINED,MATCH,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=1857.9299999999998"
+TATATECH,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=1.546691948263019"
+HAPPSTMNDS,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=2.6218907066290047"
+NEWGEN,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=2.139115928266607"
+NEWGEN,Total Waste Generated,42.6,XBRL_EXACT,VALID,MISMATCH,passed,
+INTELLECT,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=2.0240095817210246"
+INTELLECT,Scope 1 and 2 Emissions,,NONE,QUARANTINED,MATCH,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=3295.29"
+MASTEK,GHG Intensity,,NONE,QUARANTINED,NO_PDF,quarantined,quarantined: scale unresolved: no rescaling makes the value plausible; removed value=0.0
+MASTEK,Scope 1 and 2 Emissions,,NONE,NOT_REPORTED,NO_PDF,not_reported,quarantined: NOT_REPORTED: exact zero is not a reported positive quantity; removed value=0.0
+SONACOMS,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=18234240.575563427"
+HGS,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=4.977791933796587"
+HGS,Water Intensity,,NONE,QUARANTINED,,quarantined,quarantined: scale unresolved: no rescaling makes the value plausible; removed value=0.0
+HGS,Total Water Consumption,,NONE,NOT_REPORTED,,not_reported,quarantined: NOT_REPORTED: exact zero is not a reported positive quantity; removed value=0.0
+NIITLTD,GHG Intensity,,NONE,QUARANTINED,NO_PDF,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=7.722395238716125"
+NIITLTD,Scope 1 and 2 Emissions,,NONE,QUARANTINED,NO_PDF,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=972.66"
+NIITLTD,Total Waste Generated,,NONE,NOT_REPORTED,NO_PDF,not_reported,quarantined: NOT_REPORTED: exact zero is not a reported positive quantity; removed value=0.0
+AFFLE,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=None"
+AFFLE,Water Intensity,,NONE,QUARANTINED,,quarantined,quarantined: scale unresolved: no rescaling makes the value plausible; removed value=0.0
+AFFLE,Total Water Consumption,,NONE,NOT_REPORTED,,not_reported,quarantined: NOT_REPORTED: exact zero is not a reported positive quantity; removed value=0.0
+AFFLE,Total Waste Generated,,NONE,NOT_REPORTED,,not_reported,quarantined: NOT_REPORTED: exact zero is not a reported positive quantity; removed value=0.0
+MPSLTD,GHG Intensity,,NONE,QUARANTINED,NO_PDF,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=8.443702765905607"
+MPSLTD,Scope 1 and 2 Emissions,,NONE,QUARANTINED,NO_PDF,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=2966.5699999999997"
+MPSLTD,Total Waste Generated,,NONE,NOT_REPORTED,NO_PDF,not_reported,quarantined: NOT_REPORTED: exact zero is not a reported positive quantity; removed value=0.0
+SUBEXLTD,Total Waste Generated,,NONE,NOT_REPORTED,,not_reported,quarantined: NOT_REPORTED: exact zero is not a reported positive quantity; removed value=0.0
+SIS,Energy Intensity,633.9642616730921,XBRL_RESCALED_PDF,REPAIRED,,repaired,recomputed after PDF ratio repair of Total Energy Consumption
+SIS,GHG Intensity,1.3446577891596476,XBRL_RESCALED_PDF,REPAIRED,,repaired,recomputed after PDF ratio repair of Scope 1 and 2 Emissions
+SIS,Water Intensity,6.575000183587296,XBRL_RESCALED_PDF,REPAIRED,,repaired,recomputed after PDF ratio repair of Total Water Consumption
+SIS,Total Energy Consumption,17.266016666666665,XBRL_RESCALED_PDF,REPAIRED,MATCH_AFTER_SCALE,repaired,rescaled by PDF ratio x1e-07; PDF value=17.266
+SIS,Scope 1 and 2 Emissions,6630.5599999999995,XBRL_RESCALED_PDF,REPAIRED,MATCH_AFTER_SCALE,repaired,rescaled by PDF ratio x1e-07; PDF value=6630.56
+SIS,Total Water Consumption,179070.13,XBRL_RESCALED_PDF,REPAIRED,MATCH_AFTER_SCALE,repaired,rescaled by PDF ratio x1e-07; PDF value=179070
+SIS,Total Waste Generated,30.372,XBRL_RESCALED_PDF,REPAIRED,MATCH_AFTER_SCALE,repaired,rescaled by PDF ratio x1e-07; PDF value=30.372
+ZOMATO,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=0.017139375652779388"
+ZOMATO,Scope 1 and 2 Emissions,,NONE,QUARANTINED,MATCH,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=147.69"
+ZOMATO,Total Waste Generated,6.2,XBRL_EXACT,VALID,MISMATCH,passed,
+PAYTM,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=0.36323842686569946"
+POLICYBZR,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=21897810.218978103"
+DELHIVERY,Energy Intensity,10386.68573747887,XBRL_RESCALED,REPAIRED,NO_PDF,repaired,energy rescaled x1e+09 (rule): the only candidate passing plausibility and company cross-checks; original=1.038668573747887e-05
+DELHIVERY,GHG Intensity,,NONE,QUARANTINED,NO_PDF,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=27.694800097081917"
+DELHIVERY,Total Energy Consumption,207.56752777777777,XBRL_RESCALED,REPAIRED,NO_PDF,repaired,energy rescaled x1e+09 (rule): the only candidate passing plausibility and company cross-checks; original=2.0756752777777776e-07
+DELHIVERY,Scope 1 and 2 Emissions,,NONE,QUARANTINED,NO_PDF,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=247367.22000000003"
+NAZARA,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=10.639589905362776"
+NAZARA,Water Intensity,,NONE,QUARANTINED,,quarantined,quarantined: scale unresolved: no rescaling makes the value plausible; removed value=0.0
+NAZARA,Scope 1 and 2 Emissions,,NONE,QUARANTINED,MATCH,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=134.91"
+NAZARA,Total Water Consumption,,NONE,NOT_REPORTED,,not_reported,quarantined: NOT_REPORTED: exact zero is not a reported positive quantity; removed value=0.0
+NAZARA,Total Waste Generated,,NONE,NOT_REPORTED,,not_reported,quarantined: NOT_REPORTED: exact zero is not a reported positive quantity; removed value=0.0
+TATACOMM,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=31734952.240703564"
+INDUSTOWER,Total Energy Consumption,,NONE,QUARANTINED,MATCH,quarantined,"quarantined: 9995.88 outside plausible range [0.01, 5000]; removed value=9995.88388888889"
+INDUSTOWER,Scope 1 and 2 Emissions,,NONE,QUARANTINED,MATCH,quarantined,"quarantined: 7.41971e+06 outside plausible range [1, 5e+06]; removed value=7419706.0"
+TEJASNET,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=10779969.783741768"
+TEJASNET,Total Waste Generated,1736.612,XBRL_EXACT,VALID,MISMATCH,passed,
+MAZDOCK,GHG Intensity,,NONE,QUARANTINED,NO_PDF,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=0.951482387649033"
+MAZDOCK,Scope 1 and 2 Emissions,,NONE,QUARANTINED,NO_PDF,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=10877.23"
+TITAN,GHG Intensity,,NONE,QUARANTINED,,quarantined,"quarantined: scale unresolved: no scale passes PDF, plausibility, and company cross-checks; removed value=0.552090901930453"

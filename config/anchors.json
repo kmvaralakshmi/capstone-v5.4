@@ -1,0 +1,159 @@
+{
+  "version": "5.5",
+  "note": "Anchors are EXPERT-SET, not statistically calibrated. Each metric is scored 0-10 by interpolation between anchor_0 (scores 0) and anchor_10 (scores 10); the order of the anchors gives the direction. Intensity metrics use a LOG scale because they are roughly log-normally distributed (a linear scale left 76-92% of the cohort at full marks). 'hygiene' metrics (policy exists / zero incidents) are necessary but nearly every company meets them, so they count at hygiene_weight in the pillar mean. Agent 8 reports saturation and how much the ranking moves when every anchor and weight is perturbed.",
+  "scored_metrics": {
+    "Renewable Energy Percentage": {
+      "pillar": "Environmental",
+      "anchor_0": 0,
+      "anchor_10": 60,
+      "rationale": "0% renewable share is the worst case; >=60% matches leading Indian corporates (renewable-led RE100-type targets are typically 50-100%).",
+      "source": "expert; cohort max 79%"
+    },
+    "Energy Intensity": {
+      "pillar": "Environmental",
+      "anchor_0": 20000,
+      "anchor_10": 300,
+      "rationale": "kWh per permanent employee on a log scale: 300 is best-in-class for office-based firms, 20,000 indicates heavy plant/tower operations.",
+      "source": "expert; cohort median ~1,140",
+      "scale": "log"
+    },
+    "GHG Intensity": {
+      "pillar": "Environmental",
+      "anchor_0": 200,
+      "anchor_10": 0.1,
+      "rationale": "Scope 1+2 tCO2e per INR crore revenue on a log scale: IT services emit about 0.1-1, asset-heavy firms 20-250.",
+      "source": "expert; BRSR Principle 6 intensity KPI",
+      "scale": "log"
+    },
+    "Water Intensity": {
+      "pillar": "Environmental",
+      "anchor_0": 100,
+      "anchor_10": 2,
+      "rationale": "KL consumed per permanent employee on a log scale; office campuses are typically 3-10.",
+      "source": "expert; cohort median ~5.8",
+      "scale": "log"
+    },
+    "Waste Recovered Percentage": {
+      "pillar": "Environmental",
+      "anchor_0": 0,
+      "anchor_10": 80,
+      "rationale": "Share of generated waste that is recycled/recovered (BRSR Principle 6 KPI).",
+      "source": "expert"
+    },
+    "Female Employees Percentage": {
+      "pillar": "Social",
+      "anchor_0": 0,
+      "anchor_10": 40,
+      "rationale": "Women as a share of permanent employees; 40% is near-parity for the sector (cohort max 43%).",
+      "source": "expert; NSE/CFA diversity data"
+    },
+    "Employee Turnover Rate": {
+      "pillar": "Social",
+      "anchor_0": 40,
+      "anchor_10": 10,
+      "rationale": "Permanent-employee turnover; lower is better. Indian IT attrition has recently run 12-20%.",
+      "source": "expert"
+    },
+    "Lost Time Injury Frequency Rate": {
+      "pillar": "Social",
+      "anchor_0": 1,
+      "anchor_10": 0,
+      "rationale": "LTIFR per million person-hours for employees; 0 is best.",
+      "source": "expert; BRSR Principle 3 KPI"
+    },
+    "Human Rights Training Coverage": {
+      "pillar": "Social",
+      "anchor_0": 0,
+      "anchor_10": 100,
+      "rationale": "Share of employees trained on human-rights issues (BRSR Principle 5).",
+      "source": "expert"
+    },
+    "Differently Abled Employees Percentage": {
+      "pillar": "Social",
+      "anchor_0": 0,
+      "anchor_10": 2,
+      "rationale": "India's population share is 2.2% (cited in the CFA/NSE BRSR study); disclosed workforce share is mostly below 0.5%.",
+      "source": "CFA Society India / NSE 2024"
+    },
+    "Female Directors Percentage": {
+      "pillar": "Governance",
+      "anchor_0": 0,
+      "anchor_10": 33,
+      "rationale": "One woman director is the legal minimum for listed companies; 33% is a common best-practice target.",
+      "source": "expert; Companies Act 2013"
+    },
+    "Board and KMP Disciplinary Actions": {
+      "pillar": "Governance",
+      "anchor_0": 3,
+      "anchor_10": 0,
+      "rationale": "Directors/KMPs disciplined for bribery/corruption (BRSR Principle 1); any case is a red flag.",
+      "source": "expert",
+      "hygiene": true
+    },
+    "Board and KMP Conflict of Interest Complaints": {
+      "pillar": "Governance",
+      "anchor_0": 3,
+      "anchor_10": 0,
+      "rationale": "Complaints about conflicts of interest of directors/KMPs (BRSR Principle 1).",
+      "source": "expert",
+      "hygiene": true
+    },
+    "Anti-Corruption Policy": {
+      "pillar": "Governance",
+      "anchor_0": 0,
+      "anchor_10": 1,
+      "rationale": "Disclosed anti-corruption / anti-bribery policy (yes = 10).",
+      "source": "BRSR Principle 1",
+      "hygiene": true
+    },
+    "Cybersecurity and Data Privacy Policy": {
+      "pillar": "Governance",
+      "anchor_0": 0,
+      "anchor_10": 1,
+      "rationale": "Disclosed cybersecurity and data-privacy framework (yes = 10).",
+      "source": "BRSR Principle 9",
+      "hygiene": true
+    },
+    "Board Sustainability Committee": {
+      "pillar": "Governance",
+      "anchor_0": 0,
+      "anchor_10": 1,
+      "rationale": "Board-level committee responsible for sustainability decisions (yes = 10).",
+      "source": "BRSR Section B",
+      "hygiene": true
+    }
+  },
+  "context_metrics": [
+    "Total Employees",
+    "Board Size",
+    "Total Energy Consumption",
+    "Scope 1 and 2 Emissions",
+    "Total Water Consumption",
+    "Total Waste Generated",
+    "Employee Wellbeing Spend"
+  ],
+  "pillar_weights": {
+    "Environmental": 0.33,
+    "Social": 0.33,
+    "Governance": 0.34
+  },
+  "trust_weight": 0.15,
+  "min_metrics_per_pillar": 2,
+  "quality_gate": {
+    "pass_min_metrics": 12,
+    "pass_min_per_pillar": 3,
+    "partial_min_metrics": 6,
+    "partial_min_pillars": 2
+  },
+  "risk_bands": {
+    "low_min": 70,
+    "medium_min": 50
+  },
+  "excluded_from_score": [
+    "Air quality (AQI)",
+    "Stock-market performance",
+    "News sentiment"
+  ],
+  "excluded_reason": "Air quality, market performance and news are independent evidence about the company, not company-reported ESG performance (specification A6/C9). They are reported as context and used to test consistency and validation, never added to the score.",
+  "hygiene_weight": 0.25
+}

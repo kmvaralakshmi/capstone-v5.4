@@ -1,0 +1,80 @@
+company_code,role,city,area
+TCS,HQ,Mumbai,Fort
+TCS,office,Mumbai,Andheri East
+TCS,office,Bangalore,Electronic City
+TCS,office,Pune,Hinjewadi
+TCS,office,Chennai,Sholinganallur
+TCS,office,Hyderabad,Gachibowli
+TCS,office,Noida,Sector 62
+INFY,HQ,Bangalore,Electronics City
+INFY,office,Pune,Hinjewadi
+INFY,office,Chennai,Mahindra World City
+INFY,office,Hyderabad,HITEC City
+INFY,office,Mysore,Infosys Campus
+INFY,office,Mumbai,Powai
+INFY,office,Noida,Sector 135
+WIPRO,HQ,Bangalore,Sarjapur Road
+WIPRO,office,Bangalore,Electronic City
+WIPRO,office,Mumbai,Goregaon East
+WIPRO,office,Pune,Hinjewadi
+WIPRO,office,Hyderabad,Madhapur
+WIPRO,office,Chennai,Sholinganallur
+WIPRO,office,Gurugram,Cyber City
+WIPRO,office,Kochi,Infopark
+HCLTECH,HQ,Noida,Sector 3
+HCLTECH,office,Noida,Sector 126
+HCLTECH,office,Bangalore,Nagawara
+HCLTECH,office,Chennai,Siruseri IT Park
+HCLTECH,office,Pune,Kharadi
+HCLTECH,office,Hyderabad,Madhapur
+HCLTECH,office,Mumbai,Andheri
+HCLTECH,office,Gurugram,Udyog Vihar
+TECHM,HQ,Pune,Shivajinagar
+TECHM,office,Pune,Talawade
+TECHM,office,Bangalore,Whitefield
+TECHM,office,Hyderabad,HITEC City
+TECHM,office,Chennai,Sholinganallur
+TECHM,office,Mumbai,Mahape
+TECHM,office,Gurugram,Sector 74
+TECHM,office,Chandigarh,IT Park
+LTIM,HQ,Mumbai,Powai
+MPHASIS,HQ,Bangalore,Kadubeesanahalli
+PERSISTENT,HQ,Pune,Hinjewadi
+COFORGE,HQ,Noida,Sector 62
+LTTS,HQ,Mumbai,Powai
+TATAELXSI,HQ,Bangalore,Electronics City
+OFSS,HQ,Mumbai,Goregaon East
+KPITTECH,HQ,Pune,Hinjewadi
+CYIENT,HQ,Hyderabad,Madhapur
+BSOFT,HQ,Noida,Sector 62
+ZENSARTECH,HQ,Pune,Kharadi
+TATATECH,HQ,Pune,Hinjewadi
+HAPPSTMNDS,HQ,Bangalore,Bengaluru
+SONATSOFTW,HQ,Bangalore,Ulsoor
+NEWGEN,HQ,New Delhi,New Delhi
+TANLA,HQ,Hyderabad,Hyderabad
+INTELLECT,HQ,Chennai,Chennai
+ROUTE,HQ,Mumbai,Mumbai
+RATEGAIN,HQ,Noida,Noida
+ECLERX,HQ,Mumbai,Mumbai
+DATAMATICS,HQ,Mumbai,Mumbai
+MASTEK,HQ,Mumbai,Mumbai
+SONACOMS,HQ,Gurugram,Gurugram
+HGS,HQ,Bengaluru,Bengaluru
+NIITLTD,HQ,Gurugram,Gurugram
+AFFLE,HQ,Mumbai,Mumbai
+MPSLTD,HQ,Noida,Noida
+SUBEXLTD,HQ,Bengaluru,Bengaluru
+SIS,HQ,New Delhi,New Delhi
+ZOMATO,HQ,Gurugram,Gurugram
+PAYTM,HQ,Noida,Noida
+POLICYBZR,HQ,Gurugram,Gurugram
+DELHIVERY,HQ,Gurugram,Gurugram
+NAZARA,HQ,Mumbai,Mumbai
+TATACOMM,HQ,Mumbai,Mumbai
+INDUSTOWER,HQ,Gurugram,Gurugram
+BHARTIARTL,HQ,New Delhi,New Delhi
+TEJASNET,HQ,Bengaluru,Bengaluru
+REDINGTON,HQ,Chennai,Chennai
+MAZDOCK,HQ,Mumbai,Mumbai
+TITAN,HQ,Bengaluru,Bengaluru

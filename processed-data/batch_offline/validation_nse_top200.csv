@@ -1,0 +1,5 @@
+Pillar,Our_IT_Mean,Our_IT_Median,Our_IT_Min,Our_IT_Max,n_our_IT_companies,NSE_IT_Avg,NSE_IT_Median,NSE_IT_Min,NSE_IT_Max,Mean_Difference,Our_Mean_Within_NSE_Range
+Overall,76.6,77.5,61.2,83.4,11,77,78,71,82,-0.4,True
+Environmental,74.1,74.9,48.6,87.6,11,64,64,53,74,10.1,False
+Social,71.3,74.2,56.4,78.6,11,76,77,64,83,-4.7,True
+Governance,84.2,84.8,68.1,94.9,11,85,82,80,94,-0.8,True

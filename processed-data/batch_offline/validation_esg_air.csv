@@ -1,0 +1,2 @@
+Analysis,n,status,pearson_r,pearson_p,spearman_rho,spearman_p,reading
+Environmental pillar score vs HQ AQI,45,ok,-0.192,0.207,-0.255,0.0903,"no statistically significant association (n=45, p=0.090)"

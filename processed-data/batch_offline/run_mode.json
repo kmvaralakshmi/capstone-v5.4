@@ -1,0 +1,13 @@
+{
+  "mode": "offline",
+  "live_data": false,
+  "llm_requested": false,
+  "llm_used": false,
+  "llm": "none (deterministic policies)",
+  "started": "2026-11-25T20:48:42",
+  "finished": "2026-11-25T20:49:05",
+  "kind": "batch",
+  "query": null,
+  "companies": null,
+  "status": "completed"
+}

@@ -1,0 +1,516 @@
+{
+  "written": "2026-11-25T15:19:01+00:00",
+  "report": {
+    "agent_id": "agent6",
+    "name": "Agent 6 - Master ESG Scoring Agent",
+    "status": "completed",
+    "steps": 48,
+    "seconds": 0.74,
+    "decisions_by_source": {
+      "llm": 0,
+      "policy": 48,
+      "guardrail": 0
+    },
+    "summary": "46 companies scored or withheld",
+    "findings": [],
+    "artifacts": [
+      "esg_master_scores.csv"
+    ],
+    "llm_mode": false,
+    "llm_errors": [],
+    "judgements_by_source": {},
+    "judge_calls": 0,
+    "judge_seconds": 0.0,
+    "judge_budget": 300,
+    "judge_time_budget_seconds": 1800.0,
+    "judge_budget_reached": false,
+    "judge_time_budget_reached": false,
+    "planner_mode": "recover",
+    "llm_planning_calls": 0,
+    "llm_planning_decisions": 0,
+    "llm_judgements": 0,
+    "budget_reason": "none",
+    "llm_planning_seconds": 0.0,
+    "llm_judging_seconds": 0.0,
+    "guardrail_rejections": []
+  },
+  "history": [
+    {
+      "step": 1,
+      "tool": "load_inputs",
+      "args": {},
+      "thought": "read audited inputs",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"brsr_rows\": 1058, \"trust_rows\": 46, \"_seconds\": 0.13}"
+    },
+    {
+      "step": 2,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TCS"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TCS\", \"gate\": \"Pass\", \"master\": 80.2, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 3,
+      "tool": "score_company",
+      "args": {
+        "company_code": "INFY"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INFY\", \"gate\": \"Pass\", \"master\": 83.39, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 4,
+      "tool": "score_company",
+      "args": {
+        "company_code": "WIPRO"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"WIPRO\", \"gate\": \"Pass\", \"master\": 77.52, \"_seconds\": 0.0}"
+    },
+    {
+      "step": 5,
+      "tool": "score_company",
+      "args": {
+        "company_code": "HCLTECH"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HCLTECH\", \"gate\": \"Pass\", \"master\": 81.56, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 6,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TECHM"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TECHM\", \"gate\": \"Pass\", \"master\": 80.59, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 7,
+      "tool": "score_company",
+      "args": {
+        "company_code": "LTIM"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"LTIM\", \"gate\": \"Pass\", \"master\": 74.71, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 8,
+      "tool": "score_company",
+      "args": {
+        "company_code": "MPHASIS"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MPHASIS\", \"gate\": \"Pass\", \"master\": 74.7, \"_seconds\": 0.0}"
+    },
+    {
+      "step": 9,
+      "tool": "score_company",
+      "args": {
+        "company_code": "PERSISTENT"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"PERSISTENT\", \"gate\": \"Pass\", \"master\": 82.23, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 10,
+      "tool": "score_company",
+      "args": {
+        "company_code": "COFORGE"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"COFORGE\", \"gate\": \"Pass\", \"master\": 69.16, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 11,
+      "tool": "score_company",
+      "args": {
+        "company_code": "LTTS"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"LTTS\", \"gate\": \"Pass\", \"master\": 61.17, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 12,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TATAELXSI"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATAELXSI\", \"gate\": \"Pass\", \"master\": 72.03, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 13,
+      "tool": "score_company",
+      "args": {
+        "company_code": "OFSS"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"OFSS\", \"gate\": \"Pass\", \"master\": 77.4, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 14,
+      "tool": "score_company",
+      "args": {
+        "company_code": "KPITTECH"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"KPITTECH\", \"gate\": \"Partial\", \"master\": 69.07, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 15,
+      "tool": "score_company",
+      "args": {
+        "company_code": "CYIENT"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"CYIENT\", \"gate\": \"Pass\", \"master\": 70.92, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 16,
+      "tool": "score_company",
+      "args": {
+        "company_code": "BSOFT"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"BSOFT\", \"gate\": \"Pass\", \"master\": 77.18, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 17,
+      "tool": "score_company",
+      "args": {
+        "company_code": "ZENSARTECH"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ZENSARTECH\", \"gate\": \"Pass\", \"master\": 78.08, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 18,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TATATECH"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATATECH\", \"gate\": \"Pass\", \"master\": 64.51, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 19,
+      "tool": "score_company",
+      "args": {
+        "company_code": "HAPPSTMNDS"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HAPPSTMNDS\", \"gate\": \"Pass\", \"master\": 65.08, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 20,
+      "tool": "score_company",
+      "args": {
+        "company_code": "SONATSOFTW"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SONATSOFTW\", \"gate\": \"Pass\", \"master\": 77.07, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 21,
+      "tool": "score_company",
+      "args": {
+        "company_code": "NEWGEN"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NEWGEN\", \"gate\": \"Pass\", \"master\": 71.79, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 22,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TANLA"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TANLA\", \"gate\": \"Pass\", \"master\": 58.09, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 23,
+      "tool": "score_company",
+      "args": {
+        "company_code": "INTELLECT"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INTELLECT\", \"gate\": \"Pass\", \"master\": 73.54, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 24,
+      "tool": "score_company",
+      "args": {
+        "company_code": "ROUTE"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ROUTE\", \"gate\": \"Pass\", \"master\": 66.59, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 25,
+      "tool": "score_company",
+      "args": {
+        "company_code": "RATEGAIN"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"RATEGAIN\", \"gate\": \"Pass\", \"master\": 71.22, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 26,
+      "tool": "score_company",
+      "args": {
+        "company_code": "ECLERX"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ECLERX\", \"gate\": \"Pass\", \"master\": 65.56, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 27,
+      "tool": "score_company",
+      "args": {
+        "company_code": "DATAMATICS"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"DATAMATICS\", \"gate\": \"Pass\", \"master\": 71.38, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 28,
+      "tool": "score_company",
+      "args": {
+        "company_code": "MASTEK"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MASTEK\", \"gate\": \"Pass\", \"master\": 65.41, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 29,
+      "tool": "score_company",
+      "args": {
+        "company_code": "SONACOMS"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SONACOMS\", \"gate\": \"Pass\", \"master\": 57.42, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 30,
+      "tool": "score_company",
+      "args": {
+        "company_code": "HGS"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HGS\", \"gate\": \"Pass\", \"master\": 56.51, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 31,
+      "tool": "score_company",
+      "args": {
+        "company_code": "NIITLTD"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NIITLTD\", \"gate\": \"Pass\", \"master\": 58.29, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 32,
+      "tool": "score_company",
+      "args": {
+        "company_code": "AFFLE"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"AFFLE\", \"gate\": \"Partial\", \"master\": 77.01, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 33,
+      "tool": "score_company",
+      "args": {
+        "company_code": "MPSLTD"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MPSLTD\", \"gate\": \"Pass\", \"master\": 63.24, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 34,
+      "tool": "score_company",
+      "args": {
+        "company_code": "SUBEXLTD"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SUBEXLTD\", \"gate\": \"Pass\", \"master\": 73.82, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 35,
+      "tool": "score_company",
+      "args": {
+        "company_code": "SIS"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SIS\", \"gate\": \"Pass\", \"master\": 56.49, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 36,
+      "tool": "score_company",
+      "args": {
+        "company_code": "ZOMATO"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ZOMATO\", \"gate\": \"Pass\", \"master\": 70.34, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 37,
+      "tool": "score_company",
+      "args": {
+        "company_code": "PAYTM"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"PAYTM\", \"gate\": \"Pass\", \"master\": 63.84, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 38,
+      "tool": "score_company",
+      "args": {
+        "company_code": "POLICYBZR"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"POLICYBZR\", \"gate\": \"Pass\", \"master\": 68.05, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 39,
+      "tool": "score_company",
+      "args": {
+        "company_code": "DELHIVERY"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"DELHIVERY\", \"gate\": \"Pass\", \"master\": 50.38, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 40,
+      "tool": "score_company",
+      "args": {
+        "company_code": "NAZARA"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NAZARA\", \"gate\": \"Partial\", \"master\": 51.27, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 41,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TATACOMM"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATACOMM\", \"gate\": \"Pass\", \"master\": 66.43, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 42,
+      "tool": "score_company",
+      "args": {
+        "company_code": "INDUSTOWER"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INDUSTOWER\", \"gate\": \"Pass\", \"master\": 51.66, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 43,
+      "tool": "score_company",
+      "args": {
+        "company_code": "BHARTIARTL"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"BHARTIARTL\", \"gate\": \"Pass\", \"master\": 67.4, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 44,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TEJASNET"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TEJASNET\", \"gate\": \"Pass\", \"master\": 56.05, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 45,
+      "tool": "score_company",
+      "args": {
+        "company_code": "REDINGTON"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"REDINGTON\", \"gate\": \"Pass\", \"master\": 70.83, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 46,
+      "tool": "score_company",
+      "args": {
+        "company_code": "MAZDOCK"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MAZDOCK\", \"gate\": \"Pass\", \"master\": 49.88, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 47,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TITAN"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TITAN\", \"gate\": \"Pass\", \"master\": 61.9, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 48,
+      "tool": "finalize",
+      "args": {},
+      "thought": "all companies processed",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"companies\": 46, \"gates\": {\"Pass\": 43, \"Partial\": 3}, \"_seconds\": 0.15}"
+    }
+  ],
+  "judgements": []
+}

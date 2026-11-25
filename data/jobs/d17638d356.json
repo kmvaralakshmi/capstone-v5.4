@@ -1,0 +1,139 @@
+{
+  "id": "d17638d356",
+  "company": "Infosys",
+  "mode": "dynamic",
+  "status": "completed",
+  "log": [
+    "Output folder: D:\\capstone-v5.4\\data\\runs\\dynamic\\INFOSYS_20261126_002156",
+    "Mode: DYNAMIC  (live data: True, LLM requested: True)",
+    "[supervisor] LLM health check: OK - model answered: 'OK'",
+    "[supervisor] LLM: ollama:qwen2.5:7b-instruct | dynamic data: True | run 20261126_002203",
+    "[agent0] start | planner=recover, judgements=available",
+    "[agent0] step 1: resolve_company {\"query\": \"Infosys\"} [guardrail]",
+    "[agent0] step 2: check_local {\"company_code\": \"INFY\"} [policy]",
+    "[agent0] step 3: validate_filings {\"company_code\": \"INFY\"} [policy]",
+    "[agent0] step 4: finalize {} [policy]",
+    "[agent0] completed in 112.14s (4 steps): 1 company/companies have validated filing status",
+    "[agent2] start | planner=off, judgements=available",
+    "[agent2] step 1: load_aqi_sources {} [policy]",
+    "[agent4] start | planner=recover, judgements=available",
+    "[agent4] step 1: fetch_prices {} [policy]",
+    "[agent1] start | planner=recover, judgements=available",
+    "[agent1] step 1: read_xbrl {\"company_code\": \"INFY\"} [policy]",
+    "[agent3] start | planner=recover, judgements=available",
+    "[agent3] step 1: load_corpus {} [policy]",
+    "[agent1] step 2: verify_pdf {\"company_code\": \"INFY\"} [policy]",
+    "[agent1] step 3: audit_company {\"company_code\": \"INFY\"} [policy]",
+    "[agent1] step 4: resolve_scale_issue {\"company_code\": \"INFY\", \"quantity\": \"ghg\"} [policy]",
+    "[agent3] step 2: attribute_articles {\"strict\": true} [policy]",
+    "[agent2] step 2: inspect_coverage {} [policy]",
+    "[agent3] step 3: score_articles {} [policy]",
+    "[agent2] step 3: score_company {\"company_code\": \"INFY\"} [policy]",
+    "[agent2] step 4: finalize {} [policy]",
+    "[agent2] completed in 191.4s (4 steps): 1/1 companies have an environmental score",
+    "[agent1] step 5: audit_company {\"company_code\": \"INFY\"} [policy]",
+    "[agent1] step 6: finalize {} [policy]",
+    "[agent1] completed in 238.97s (6 steps): all companies extracted, corroborated and audited; files written",
+    "[agent4] step 2: finalize {} [policy]",
+    "[agent4] completed in 327.35s (2 steps): 1/1 companies have market data",
+    "[agent3] step 4: audit_distribution {} [policy]",
+    "[agent3] step 5: finalize {} [policy]",
+    "[agent3] completed in 724.32s (5 steps): news sentiment written with reliability and shrinkage",
+    "[agent5] start | planner=recover, judgements=available",
+    "[agent5] step 1: load_inputs {} [policy]",
+    "[agent5] step 2: extract_claims {\"company_code\": \"INFY\"} [policy]",
+    "[agent5] step 3: investigate_claim {\"company_code\": \"INFY\", \"claim_id\": \"C1\"} [policy]",
+    "[agent5] step 4: score_company {\"company_code\": \"INFY\"} [policy]",
+    "[agent5] step 5: finalize {} [policy]",
+    "[agent5] completed in 201.53s (5 steps): 6 claims investigated for 1 companies",
+    "[agent6] start | planner=recover, judgements=available",
+    "[agent6] step 1: load_inputs {} [policy]",
+    "[agent6] step 2: score_company {\"company_code\": \"INFY\"} [policy]",
+    "[agent6] step 3: finalize {} [policy]",
+    "[agent6] completed in 0.75s (3 steps): 1 companies scored or withheld",
+    "[agent7] start | planner=recover, judgements=available",
+    "[agent7] step 1: load_scoring_outputs {} [policy]",
+    "[agent7] step 2: build_evidence {\"company_code\": \"INFY\"} [policy]",
+    "[agent7] step 3: explain_company {\"company_code\": \"INFY\"} [policy]",
+    "[agent7] step 4: finalize {} [policy]",
+    "[agent7] completed in 600.95s (4 steps): 1 explanations (0 LLM-written, verified)",
+    "",
+    "=== RUN SUMMARY ===  MODE: DYNAMIC  LLM: ollama:qwen2.5:7b-instruct  | total 1718.917s",
+    "agent0   completed    112.14s  1 company/companies have validated filing status",
+    "  planner=recover decisions=0 judgements=0 budget=none planning/judging=92.15s/0.00s",
+    "agent1   completed    238.97s  all companies extracted, corroborated and audited; files written",
+    "  planner=recover decisions=0 judgements=1 budget=none planning/judging=0.00s/214.58s",
+    "agent2   completed     191.4s  1/1 companies have an environmental score",
+    "  planner=off decisions=0 judgements=0 budget=none planning/judging=0.00s/0.00s",
+    "agent3   completed    724.32s  news sentiment written with reliability and shrinkage",
+    "  planner=recover decisions=0 judgements=2 budget=time budget planning/judging=0.00s/551.49s",
+    "agent4   completed    327.35s  1/1 companies have market data",
+    "  planner=recover decisions=0 judgements=0 budget=none planning/judging=0.00s/0.00s",
+    "agent5   completed    201.53s  6 claims investigated for 1 companies",
+    "  planner=recover decisions=0 judgements=1 budget=none planning/judging=0.00s/200.59s",
+    "agent6   completed      0.75s  1 companies scored or withheld",
+    "  planner=recover decisions=0 judgements=0 budget=none planning/judging=0.00s/0.00s",
+    "agent7   completed    600.95s  1 explanations (0 LLM-written, verified)",
+    "  planner=recover decisions=0 judgements=0 budget=none planning/judging=0.00s/0.00s",
+    "  stage discovery    wall=112.258s  sum_of_parts=112.169s",
+    "  stage acquisition  wall=725.53s  sum_of_parts=1483.009s",
+    "  stage consistency  wall=201.596s  sum_of_parts=201.565s",
+    "  stage scoring      wall=0.765s  sum_of_parts=0.754s",
+    "  stage explanation  wall=600.974s  sum_of_parts=600.963s",
+    "  bottleneck: Agent 3 - ESG News Sentiment Agent (724.341s)"
+  ],
+  "run": "INFOSYS_20261126_002156",
+  "error": null,
+  "warning": null,
+  "expected_agents": [
+    "agent0",
+    "agent1",
+    "agent2",
+    "agent3",
+    "agent4",
+    "agent5",
+    "agent6",
+    "agent7"
+  ],
+  "_staging_dir": null,
+  "progress": {
+    "agents": [
+      {
+        "id": "agent0",
+        "status": "completed"
+      },
+      {
+        "id": "agent1",
+        "status": "completed"
+      },
+      {
+        "id": "agent2",
+        "status": "completed"
+      },
+      {
+        "id": "agent3",
+        "status": "completed"
+      },
+      {
+        "id": "agent4",
+        "status": "completed"
+      },
+      {
+        "id": "agent5",
+        "status": "completed"
+      },
+      {
+        "id": "agent6",
+        "status": "completed"
+      },
+      {
+        "id": "agent7",
+        "status": "completed"
+      }
+    ],
+    "completed": 8,
+    "total": 8,
+    "percent": 100,
+    "current": []
+  }
+}

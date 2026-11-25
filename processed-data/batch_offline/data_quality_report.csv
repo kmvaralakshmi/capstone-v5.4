@@ -1,0 +1,47 @@
+Company_Code,Usable_Scored_Metrics,Missing_Scored_Metrics,Quarantined_Metrics,Quality_Gate_Status
+TCS,16,,,Pass
+INFY,15,GHG Intensity,GHG Intensity,Pass
+WIPRO,16,,,Pass
+HCLTECH,15,GHG Intensity,GHG Intensity,Pass
+TECHM,15,GHG Intensity,GHG Intensity,Pass
+LTIM,16,,,Pass
+MPHASIS,15,GHG Intensity,GHG Intensity,Pass
+PERSISTENT,15,GHG Intensity,GHG Intensity,Pass
+COFORGE,15,GHG Intensity,GHG Intensity,Pass
+LTTS,15,GHG Intensity,GHG Intensity,Pass
+TATAELXSI,15,GHG Intensity,GHG Intensity,Pass
+OFSS,16,,,Pass
+KPITTECH,13,Energy Intensity | GHG Intensity | Water Intensity,Energy Intensity | GHG Intensity | Water Intensity | Total Energy Consumption | Scope 1 and 2 Emissions,Partial
+CYIENT,16,,,Pass
+BSOFT,15,GHG Intensity,GHG Intensity,Pass
+ZENSARTECH,15,GHG Intensity,GHG Intensity | Scope 1 and 2 Emissions,Pass
+TATATECH,15,GHG Intensity,GHG Intensity,Pass
+HAPPSTMNDS,15,GHG Intensity,GHG Intensity,Pass
+SONATSOFTW,16,,,Pass
+NEWGEN,15,GHG Intensity,GHG Intensity,Pass
+TANLA,16,,,Pass
+INTELLECT,15,GHG Intensity,GHG Intensity | Scope 1 and 2 Emissions,Pass
+ROUTE,16,,,Pass
+RATEGAIN,16,,,Pass
+ECLERX,16,,,Pass
+DATAMATICS,16,,,Pass
+MASTEK,15,GHG Intensity,GHG Intensity,Pass
+SONACOMS,15,GHG Intensity,GHG Intensity,Pass
+HGS,14,GHG Intensity | Water Intensity,GHG Intensity | Water Intensity,Pass
+NIITLTD,14,GHG Intensity | Waste Recovered Percentage,GHG Intensity | Scope 1 and 2 Emissions,Pass
+AFFLE,11,Renewable Energy Percentage | Energy Intensity | GHG Intensity | Water Intensity | Waste Recovered Percentage,GHG Intensity | Water Intensity,Partial
+MPSLTD,14,GHG Intensity | Waste Recovered Percentage,GHG Intensity | Scope 1 and 2 Emissions,Pass
+SUBEXLTD,15,Waste Recovered Percentage,,Pass
+SIS,16,,,Pass
+ZOMATO,15,GHG Intensity,GHG Intensity | Scope 1 and 2 Emissions,Pass
+PAYTM,15,GHG Intensity,GHG Intensity,Pass
+POLICYBZR,15,GHG Intensity,GHG Intensity,Pass
+DELHIVERY,15,GHG Intensity,GHG Intensity | Scope 1 and 2 Emissions,Pass
+NAZARA,13,GHG Intensity | Water Intensity | Waste Recovered Percentage,GHG Intensity | Water Intensity | Scope 1 and 2 Emissions,Partial
+TATACOMM,15,GHG Intensity,GHG Intensity,Pass
+INDUSTOWER,16,,Total Energy Consumption | Scope 1 and 2 Emissions,Pass
+BHARTIARTL,16,,,Pass
+TEJASNET,15,GHG Intensity,GHG Intensity,Pass
+REDINGTON,16,,,Pass
+MAZDOCK,15,GHG Intensity,GHG Intensity | Scope 1 and 2 Emissions,Pass
+TITAN,15,GHG Intensity,GHG Intensity,Pass

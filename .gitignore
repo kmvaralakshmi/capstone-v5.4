@@ -1,0 +1,8 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+data/runs/
+data/cache/
+processed-data/batch_dynamic/*
+!processed-data/batch_dynamic/README.txt

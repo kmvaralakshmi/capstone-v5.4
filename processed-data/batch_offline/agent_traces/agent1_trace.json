@@ -1,0 +1,2373 @@
+{
+  "written": "2026-11-25T15:18:55+00:00",
+  "report": {
+    "agent_id": "agent1",
+    "name": "Agent 1 - BRSR Extraction & Audit Agent",
+    "status": "completed",
+    "steps": 229,
+    "seconds": 10.26,
+    "decisions_by_source": {
+      "llm": 0,
+      "policy": 229,
+      "guardrail": 0
+    },
+    "summary": "all companies extracted, corroborated and audited; files written",
+    "findings": [],
+    "artifacts": [
+      ".batch_offline_ce4a27b3039649ae9c7448dd6cc62136.staging\\brsr_extracted_metrics.csv"
+    ],
+    "llm_mode": false,
+    "llm_errors": [],
+    "judgements_by_source": {},
+    "judge_calls": 0,
+    "judge_seconds": 0.0,
+    "judge_budget": 300,
+    "judge_time_budget_seconds": 1800.0,
+    "judge_budget_reached": false,
+    "judge_time_budget_reached": false,
+    "planner_mode": "recover",
+    "llm_planning_calls": 0,
+    "llm_planning_decisions": 0,
+    "llm_judgements": 0,
+    "budget_reason": "none",
+    "llm_planning_seconds": 0.0,
+    "llm_judging_seconds": 0.0,
+    "guardrail_rejections": []
+  },
+  "history": [
+    {
+      "step": 1,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "TCS"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TCS\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 2.91}"
+    },
+    {
+      "step": 2,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "INFY"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INFY\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.38}"
+    },
+    {
+      "step": 3,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "WIPRO"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"WIPRO\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.12}"
+    },
+    {
+      "step": 4,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "HCLTECH"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HCLTECH\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.12}"
+    },
+    {
+      "step": 5,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "TECHM"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TECHM\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.13}"
+    },
+    {
+      "step": 6,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "LTIM"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"LTIM\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.18}"
+    },
+    {
+      "step": 7,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "MPHASIS"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MPHASIS\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.08}"
+    },
+    {
+      "step": 8,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "PERSISTENT"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"PERSISTENT\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.09}"
+    },
+    {
+      "step": 9,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "COFORGE"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"COFORGE\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.14}"
+    },
+    {
+      "step": 10,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "LTTS"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"LTTS\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.12}"
+    },
+    {
+      "step": 11,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "TATAELXSI"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATAELXSI\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.1}"
+    },
+    {
+      "step": 12,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "OFSS"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"OFSS\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.1}"
+    },
+    {
+      "step": 13,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "KPITTECH"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"KPITTECH\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.12}"
+    },
+    {
+      "step": 14,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "CYIENT"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"CYIENT\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.11}"
+    },
+    {
+      "step": 15,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "BSOFT"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"BSOFT\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.11}"
+    },
+    {
+      "step": 16,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "ZENSARTECH"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ZENSARTECH\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.1}"
+    },
+    {
+      "step": 17,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "TATATECH"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATATECH\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.07}"
+    },
+    {
+      "step": 18,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "HAPPSTMNDS"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HAPPSTMNDS\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.08}"
+    },
+    {
+      "step": 19,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "SONATSOFTW"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SONATSOFTW\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.08}"
+    },
+    {
+      "step": 20,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "NEWGEN"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NEWGEN\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.07}"
+    },
+    {
+      "step": 21,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "TANLA"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TANLA\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.08}"
+    },
+    {
+      "step": 22,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "INTELLECT"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INTELLECT\", \"status\": \"read\", \"metrics_found\": 22, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [\"Employee Wellbeing Spend\"], \"_seconds\": 0.08}"
+    },
+    {
+      "step": 23,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "ROUTE"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ROUTE\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.08}"
+    },
+    {
+      "step": 24,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "RATEGAIN"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"RATEGAIN\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.07}"
+    },
+    {
+      "step": 25,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "ECLERX"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ECLERX\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.08}"
+    },
+    {
+      "step": 26,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "DATAMATICS"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"DATAMATICS\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.08}"
+    },
+    {
+      "step": 27,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "MASTEK"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MASTEK\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.08}"
+    },
+    {
+      "step": 28,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "SONACOMS"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SONACOMS\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.1}"
+    },
+    {
+      "step": 29,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "HGS"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HGS\", \"status\": \"read\", \"metrics_found\": 22, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [\"Employee Wellbeing Spend\"], \"_seconds\": 0.09}"
+    },
+    {
+      "step": 30,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "NIITLTD"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NIITLTD\", \"status\": \"read\", \"metrics_found\": 21, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [\"Waste Recovered Percentage\", \"Employee Wellbeing Spend\"], \"_seconds\": 0.09}"
+    },
+    {
+      "step": 31,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "AFFLE"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"AFFLE\", \"status\": \"read\", \"metrics_found\": 17, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [\"Total Energy Consumption\", \"Renewable Energy Percentage\", \"Energy Intensity\", \"Scope 1 and 2 Emissions\", \"GHG Intensity\", \"Waste Recovered Percentage\"], \"_seconds\": 0.07}"
+    },
+    {
+      "step": 32,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "MPSLTD"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MPSLTD\", \"status\": \"read\", \"metrics_found\": 22, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [\"Waste Recovered Percentage\"], \"_seconds\": 0.1}"
+    },
+    {
+      "step": 33,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "SUBEXLTD"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SUBEXLTD\", \"status\": \"read\", \"metrics_found\": 22, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [\"Waste Recovered Percentage\"], \"_seconds\": 0.09}"
+    },
+    {
+      "step": 34,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "SIS"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SIS\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.09}"
+    },
+    {
+      "step": 35,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "ZOMATO"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ZOMATO\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.1}"
+    },
+    {
+      "step": 36,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "PAYTM"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"PAYTM\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.1}"
+    },
+    {
+      "step": 37,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "POLICYBZR"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"POLICYBZR\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.08}"
+    },
+    {
+      "step": 38,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "DELHIVERY"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"DELHIVERY\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.1}"
+    },
+    {
+      "step": 39,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "NAZARA"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NAZARA\", \"status\": \"read\", \"metrics_found\": 22, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [\"Waste Recovered Percentage\"], \"_seconds\": 0.09}"
+    },
+    {
+      "step": 40,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "TATACOMM"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATACOMM\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.09}"
+    },
+    {
+      "step": 41,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "INDUSTOWER"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INDUSTOWER\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.09}"
+    },
+    {
+      "step": 42,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "BHARTIARTL"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"BHARTIARTL\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.1}"
+    },
+    {
+      "step": 43,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "TEJASNET"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TEJASNET\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.08}"
+    },
+    {
+      "step": 44,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "REDINGTON"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"REDINGTON\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.08}"
+    },
+    {
+      "step": 45,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "MAZDOCK"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MAZDOCK\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.08}"
+    },
+    {
+      "step": 46,
+      "tool": "read_xbrl",
+      "args": {
+        "company_code": "TITAN"
+      },
+      "thought": "extract exact XBRL concepts",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TITAN\", \"status\": \"read\", \"metrics_found\": 23, \"metrics_total\": 23, \"period\": [\"2024-04-01\", \"2025-03-31\"], \"missing\": [], \"_seconds\": 0.09}"
+    },
+    {
+      "step": 47,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "TCS"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TCS\", \"pdf\": \"TCS_BR_24-25.pdf\", \"pages\": 43, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 48,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "INFY"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INFY\", \"pdf\": \"INFY_BR_24-25.pdf\", \"pages\": 369, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.12}"
+    },
+    {
+      "step": 49,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "WIPRO"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"WIPRO\", \"pdf\": \"WIPRO_BR_24-25.pdf\", \"pages\": 51, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 50,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "HCLTECH"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HCLTECH\", \"pdf\": \"HCLTECH_BR_24-25.pdf\", \"pages\": 69, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.03}"
+    },
+    {
+      "step": 51,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "TECHM"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TECHM\", \"pdf\": \"TECHM_BR_24-25.pdf\", \"pages\": 43, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 52,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "LTIM"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"LTIM\", \"pdf\": \"LTIM_BR_24-25.pdf\", \"pages\": 238, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.14}"
+    },
+    {
+      "step": 53,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "MPHASIS"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MPHASIS\", \"pdf\": \"MPHASIS_BR_24-25.pdf\", \"pages\": 295, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.14}"
+    },
+    {
+      "step": 54,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "PERSISTENT"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"PERSISTENT\", \"pdf\": \"PERSISTENT_BR_24-25.pdf\", \"pages\": 35, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.03}"
+    },
+    {
+      "step": 55,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "COFORGE"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"COFORGE\", \"pdf\": \"COFORGE_BR_24-25.pdf\", \"pages\": 45, \"MATCH\": 4, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 1, \"NOT_FOUND\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 56,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "LTTS"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"LTTS\", \"pdf\": \"LTTS_BR_24-25.pdf\", \"pages\": 444, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.11}"
+    },
+    {
+      "step": 57,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "TATAELXSI"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATAELXSI\", \"pdf\": \"TATAELXSI_BR_24-25.pdf\", \"pages\": 47, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 58,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "OFSS"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"OFSS\", \"pdf\": \"OFSS_BR_24-25.pdf\", \"pages\": 25, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 59,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "KPITTECH"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"KPITTECH\", \"pdf\": \"KPITTECH_BR_24-25.pdf\", \"pages\": 61, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 60,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "CYIENT"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"CYIENT\", \"pdf\": \"CYIENT_BR_24-25.pdf\", \"pages\": 450, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.09}"
+    },
+    {
+      "step": 61,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "BSOFT"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"BSOFT\", \"pdf\": \"BSOFT_BR_24-25.pdf\", \"pages\": 27, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 62,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "ZENSARTECH"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ZENSARTECH\", \"pdf\": \"ZENSARTECH_BR_24-25.pdf\", \"pages\": 54, \"MATCH\": 4, \"MATCH_AFTER_SCALE\": 1, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.03}"
+    },
+    {
+      "step": 63,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "TATATECH"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATATECH\", \"pdf\": \"TATATECH_BR_24-25.pdf\", \"pages\": 25, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 64,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "HAPPSTMNDS"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HAPPSTMNDS\", \"pdf\": \"HAPPSTMNDS_BR_24-25.pdf\", \"pages\": 39, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 65,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "SONATSOFTW"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SONATSOFTW\", \"pdf\": \"SONATSOFTW_BR_24-25.pdf\", \"pages\": 40, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.05}"
+    },
+    {
+      "step": 66,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "NEWGEN"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NEWGEN\", \"pdf\": \"NEWGEN_BR_24-25.pdf\", \"pages\": 30, \"MATCH\": 4, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 1, \"NOT_FOUND\": 0, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 67,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "TANLA"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TANLA\", \"pdf\": \"TANLA_BR_24-25.pdf\", \"pages\": 43, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 68,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "INTELLECT"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INTELLECT\", \"pdf\": \"INTELLECT_BR_24-25.pdf\", \"pages\": 39, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.04}"
+    },
+    {
+      "step": 69,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "ROUTE"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ROUTE\", \"pdf\": \"ROUTE_BR_24-25.pdf\", \"pages\": 35, \"MATCH\": 4, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 70,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "RATEGAIN"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"RATEGAIN\", \"pdf\": \"RATEGAIN_BR_24-25.pdf\", \"pages\": 46, \"MATCH\": 0, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 5, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 71,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "ECLERX"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ECLERX\", \"pdf\": \"ECLERX_BR_24-25.pdf\", \"pages\": 37, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 72,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "DATAMATICS"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"DATAMATICS\", \"pdf\": \"DATAMATICS_BR_24-25.pdf\", \"pages\": 220, \"MATCH\": 4, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 1, \"_seconds\": 0.11}"
+    },
+    {
+      "step": 73,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "MASTEK"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MASTEK\", \"pdf\": null, \"message\": \"no BRSR PDF for this company\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 74,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "SONACOMS"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SONACOMS\", \"pdf\": \"SONACOMS_BR_24-25.pdf\", \"pages\": 57, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.03}"
+    },
+    {
+      "step": 75,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "HGS"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HGS\", \"pdf\": \"HGS_BR_24-25.pdf\", \"pages\": 29, \"MATCH\": 4, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 76,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "NIITLTD"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NIITLTD\", \"pdf\": null, \"message\": \"no BRSR PDF for this company\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 77,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "AFFLE"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"AFFLE\", \"pdf\": \"AFFLE_BR_24-25.pdf\", \"pages\": 32, \"MATCH\": 1, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.0}"
+    },
+    {
+      "step": 78,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "MPSLTD"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MPSLTD\", \"pdf\": null, \"message\": \"no BRSR PDF for this company\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 79,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "SUBEXLTD"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SUBEXLTD\", \"pdf\": \"SUBEXLTD_BR_24-25.pdf\", \"pages\": 23, \"MATCH\": 4, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 80,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "SIS"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SIS\", \"pdf\": \"SIS_BR_24-25.pdf\", \"pages\": 41, \"MATCH\": 1, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 4, \"NOT_FOUND\": 0, \"_seconds\": 0.03}"
+    },
+    {
+      "step": 81,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "ZOMATO"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ZOMATO\", \"pdf\": \"ZOMATO_BR_24-25.pdf\", \"pages\": 384, \"MATCH\": 4, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 1, \"NOT_FOUND\": 0, \"_seconds\": 0.09}"
+    },
+    {
+      "step": 82,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "PAYTM"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"PAYTM\", \"pdf\": \"PAYTM_BR_24-25.pdf\", \"pages\": 54, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.03}"
+    },
+    {
+      "step": 83,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "POLICYBZR"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"POLICYBZR\", \"pdf\": \"POLICYBZR_BR_24-25.pdf\", \"pages\": 47, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 84,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "DELHIVERY"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"DELHIVERY\", \"pdf\": null, \"message\": \"no BRSR PDF for this company\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 85,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "NAZARA"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NAZARA\", \"pdf\": \"NAZARA_BR_24-25.pdf\", \"pages\": 344, \"MATCH\": 3, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.06}"
+    },
+    {
+      "step": 86,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "TATACOMM"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATACOMM\", \"pdf\": \"TATACOMM_BR_24-25.pdf\", \"pages\": 71, \"MATCH\": 4, \"MATCH_AFTER_SCALE\": 1, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 87,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "INDUSTOWER"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INDUSTOWER\", \"pdf\": \"INDUSTOWER_BR_24-25.pdf\", \"pages\": 253, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.12}"
+    },
+    {
+      "step": 88,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "BHARTIARTL"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"BHARTIARTL\", \"pdf\": \"BHARTIARTL_BR_24-25.pdf\", \"pages\": 16, \"MATCH\": 4, \"MATCH_AFTER_SCALE\": 1, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 89,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "TEJASNET"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TEJASNET\", \"pdf\": \"TEJASNET_BR_24-25.pdf\", \"pages\": 32, \"MATCH\": 4, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 1, \"NOT_FOUND\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 90,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "REDINGTON"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"REDINGTON\", \"pdf\": \"REDINGTON_BR_24-25.pdf\", \"pages\": 17, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 91,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "MAZDOCK"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MAZDOCK\", \"pdf\": null, \"message\": \"no BRSR PDF for this company\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 92,
+      "tool": "verify_pdf",
+      "args": {
+        "company_code": "TITAN"
+      },
+      "thought": "corroborate against the PDF",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TITAN\", \"pdf\": \"TITAN_BR_24-25.pdf\", \"pages\": 455, \"MATCH\": 5, \"MATCH_AFTER_SCALE\": 0, \"MISMATCH\": 0, \"NOT_FOUND\": 0, \"_seconds\": 0.13}"
+    },
+    {
+      "step": 93,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "TCS"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TCS\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 94,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "INFY"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INFY\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"GHG Intensity\", \"reason\": \"ambiguous XBRL unit; PDF value unavailable\", \"candidates\": [1000.0, 100000.0]}], \"_seconds\": 0.04}"
+    },
+    {
+      "step": 95,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "WIPRO"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"WIPRO\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 96,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "HCLTECH"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HCLTECH\", \"open_issues\": [{\"quantity\": \"revenue\", \"metric\": \"GHG Intensity\", \"reason\": \"revenue INR 1,170,550 for 223,420 employees is implausible\", \"candidates\": [100000.0, 1000000.0, 10000000.0]}], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 97,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "TECHM"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TECHM\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"GHG Intensity\", \"reason\": \"ambiguous XBRL unit; PDF value unavailable\", \"candidates\": [0.001, 1000.0]}], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 98,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "LTIM"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"LTIM\", \"open_issues\": [], \"_seconds\": 0.02}"
+    },
+    {
+      "step": 99,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "MPHASIS"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MPHASIS\", \"open_issues\": [{\"quantity\": \"revenue\", \"metric\": \"GHG Intensity\", \"reason\": \"revenue INR 92,710 for 12,269 employees is implausible\", \"candidates\": [100000.0, 1000000.0, 10000000.0]}], \"_seconds\": 0.07}"
+    },
+    {
+      "step": 100,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "PERSISTENT"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"PERSISTENT\", \"open_issues\": [{\"quantity\": \"revenue\", \"metric\": \"GHG Intensity\", \"reason\": \"revenue INR 119,387 for 22,205 employees is implausible\", \"candidates\": [100000.0, 1000000.0, 10000000.0]}], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 101,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "COFORGE"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"COFORGE\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"GHG Intensity\", \"reason\": \"ambiguous XBRL unit; PDF value unavailable\", \"candidates\": [0.001, 1000.0]}], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 102,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "LTTS"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"LTTS\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"GHG Intensity\", \"reason\": \"ambiguous XBRL unit; PDF value unavailable\", \"candidates\": [0.001, 1000.0]}], \"_seconds\": 0.03}"
+    },
+    {
+      "step": 103,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "TATAELXSI"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATAELXSI\", \"open_issues\": [{\"quantity\": \"revenue\", \"metric\": \"GHG Intensity\", \"reason\": \"revenue INR 3,729 for 11,973 employees is implausible\", \"candidates\": [100000.0, 1000000.0, 10000000.0, 1000000000.0]}], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 104,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "OFSS"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"OFSS\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 105,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "KPITTECH"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"KPITTECH\", \"open_issues\": [{\"quantity\": \"energy\", \"metric\": \"Total Energy Consumption\", \"reason\": \"PDF value unavailable; 7.21278e-09 outside plausible range [0.01, 5000]\", \"candidates\": [10000000.0, 1000000000.0]}, {\"quantity\": \"ghg\", \"metric\": \"Scope 1 and 2 Emissions\", \"reason\": \"PDF value unavailable; ambiguous XBRL unit\", \"candidates\": [0.001, 1000.0]}, {\"quantity\": \"water\", \"metric\": \"Water Intensity\", \"reason\": \"0.000304736 outside plausible range [0.005, 50000]\", \"candidates\": [1000.0, 100000.0, 1000000.0, 10000000.0]}], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 106,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "CYIENT"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"CYIENT\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 107,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "BSOFT"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"BSOFT\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"GHG Intensity\", \"reason\": \"ambiguous XBRL unit; PDF value unavailable\", \"candidates\": [0.001, 1000.0]}], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 108,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "ZENSARTECH"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ZENSARTECH\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"Scope 1 and 2 Emissions\", \"reason\": \"PDF value unavailable; ambiguous XBRL unit\", \"candidates\": [0.001, 1000.0]}], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 109,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "TATATECH"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATATECH\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"GHG Intensity\", \"reason\": \"ambiguous XBRL unit; PDF value unavailable\", \"candidates\": [0.001, 1000.0]}], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 110,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "HAPPSTMNDS"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HAPPSTMNDS\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"GHG Intensity\", \"reason\": \"ambiguous XBRL unit; PDF value unavailable\", \"candidates\": [0.001, 1000.0]}], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 111,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "SONATSOFTW"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SONATSOFTW\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 112,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "NEWGEN"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NEWGEN\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"GHG Intensity\", \"reason\": \"ambiguous XBRL unit; PDF value unavailable\", \"candidates\": [0.001, 1000.0]}], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 113,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "TANLA"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TANLA\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 114,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "INTELLECT"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INTELLECT\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"Scope 1 and 2 Emissions\", \"reason\": \"PDF value unavailable; ambiguous XBRL unit\", \"candidates\": [0.001, 1000.0]}], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 115,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "ROUTE"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ROUTE\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 116,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "RATEGAIN"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"RATEGAIN\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 117,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "ECLERX"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ECLERX\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 118,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "DATAMATICS"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"DATAMATICS\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 119,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "MASTEK"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MASTEK\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"GHG Intensity\", \"reason\": \"0 outside plausible range [0.0005, 50000]\", \"candidates\": []}], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 120,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "SONACOMS"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SONACOMS\", \"open_issues\": [{\"quantity\": \"revenue\", \"metric\": \"GHG Intensity\", \"reason\": \"revenue INR 35,460 for 1,495 employees is implausible\", \"candidates\": [1000.0, 100000.0, 1000000.0, 10000000.0]}], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 121,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "HGS"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HGS\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"GHG Intensity\", \"reason\": \"ambiguous XBRL unit; PDF value unavailable\", \"candidates\": [0.001, 1000.0]}, {\"quantity\": \"water\", \"metric\": \"Water Intensity\", \"reason\": \"0 outside plausible range [0.005, 50000]\", \"candidates\": []}], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 122,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "NIITLTD"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NIITLTD\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"Scope 1 and 2 Emissions\", \"reason\": \"PDF value unavailable; ambiguous XBRL unit\", \"candidates\": [1000.0]}], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 123,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "AFFLE"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"AFFLE\", \"open_issues\": [{\"quantity\": \"revenue\", \"metric\": \"GHG Intensity\", \"reason\": \"revenue INR 7,144 for 617 employees is implausible\", \"candidates\": [100000.0, 1000000.0, 10000000.0]}, {\"quantity\": \"water\", \"metric\": \"Water Intensity\", \"reason\": \"0 outside plausible range [0.005, 50000]\", \"candidates\": []}], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 124,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "MPSLTD"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MPSLTD\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"Scope 1 and 2 Emissions\", \"reason\": \"PDF value unavailable; ambiguous XBRL unit\", \"candidates\": [0.001, 1000.0]}], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 125,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "SUBEXLTD"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SUBEXLTD\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 126,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "SIS"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SIS\", \"open_issues\": [], \"_seconds\": 0.05}"
+    },
+    {
+      "step": 127,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "ZOMATO"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ZOMATO\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"Scope 1 and 2 Emissions\", \"reason\": \"PDF value unavailable; ambiguous XBRL unit\", \"candidates\": [1000.0]}], \"_seconds\": 0.02}"
+    },
+    {
+      "step": 128,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "PAYTM"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"PAYTM\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"GHG Intensity\", \"reason\": \"ambiguous XBRL unit; PDF value unavailable\", \"candidates\": [1000.0, 100000.0]}], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 129,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "POLICYBZR"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"POLICYBZR\", \"open_issues\": [{\"quantity\": \"revenue\", \"metric\": \"GHG Intensity\", \"reason\": \"revenue INR 4,977 for 22,329 employees is implausible\", \"candidates\": [100000.0, 1000000.0, 10000000.0, 1000000000.0]}], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 130,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "DELHIVERY"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"DELHIVERY\", \"open_issues\": [{\"quantity\": \"energy\", \"metric\": \"Total Energy Consumption\", \"reason\": \"PDF value unavailable; 2.07568e-07 outside plausible range [0.01, 5000]\", \"candidates\": [100000.0, 1000000.0, 10000000.0, 1000000000.0]}, {\"quantity\": \"ghg\", \"metric\": \"Scope 1 and 2 Emissions\", \"reason\": \"PDF value unavailable; ambiguous XBRL unit\", \"candidates\": [1e-05, 0.001]}], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 131,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "NAZARA"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NAZARA\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"Scope 1 and 2 Emissions\", \"reason\": \"PDF value unavailable; ambiguous XBRL unit\", \"candidates\": [1000.0]}, {\"quantity\": \"water\", \"metric\": \"Water Intensity\", \"reason\": \"0 outside plausible range [0.005, 50000]\", \"candidates\": []}], \"_seconds\": 0.06}"
+    },
+    {
+      "step": 132,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "TATACOMM"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATACOMM\", \"open_issues\": [{\"quantity\": \"revenue\", \"metric\": \"GHG Intensity\", \"reason\": \"revenue INR 23,109 for 13,047 employees is implausible\", \"candidates\": [100000.0, 1000000.0, 10000000.0]}], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 133,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "INDUSTOWER"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INDUSTOWER\", \"open_issues\": [], \"_seconds\": 0.03}"
+    },
+    {
+      "step": 134,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "BHARTIARTL"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"BHARTIARTL\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 135,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "TEJASNET"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TEJASNET\", \"open_issues\": [{\"quantity\": \"revenue\", \"metric\": \"GHG Intensity\", \"reason\": \"revenue INR 8,916 for 2,370 employees is implausible\", \"candidates\": [100000.0, 1000000.0, 10000000.0]}], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 136,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "REDINGTON"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"REDINGTON\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 137,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "MAZDOCK"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MAZDOCK\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"Scope 1 and 2 Emissions\", \"reason\": \"PDF value unavailable; ambiguous XBRL unit\", \"candidates\": [0.001]}], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 138,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "TITAN"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TITAN\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"GHG Intensity\", \"reason\": \"ambiguous XBRL unit; PDF value unavailable\", \"candidates\": [0.001, 1000.0]}], \"_seconds\": 0.04}"
+    },
+    {
+      "step": 139,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "INFY",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 140,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "INFY"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INFY\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 141,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "HCLTECH",
+        "quantity": "revenue"
+      },
+      "thought": "resolve open revenue scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"revenue\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 142,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "HCLTECH"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HCLTECH\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 143,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "TECHM",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 144,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "TECHM"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TECHM\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 145,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "MPHASIS",
+        "quantity": "revenue"
+      },
+      "thought": "resolve open revenue scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"revenue\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 146,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "MPHASIS"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MPHASIS\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 147,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "PERSISTENT",
+        "quantity": "revenue"
+      },
+      "thought": "resolve open revenue scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"revenue\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 148,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "PERSISTENT"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"PERSISTENT\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 149,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "COFORGE",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 150,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "COFORGE"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"COFORGE\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 151,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "LTTS",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.03}"
+    },
+    {
+      "step": 152,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "LTTS"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"LTTS\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 153,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "TATAELXSI",
+        "quantity": "revenue"
+      },
+      "thought": "resolve open revenue scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"revenue\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 154,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "TATAELXSI"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATAELXSI\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 155,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "KPITTECH",
+        "quantity": "energy"
+      },
+      "thought": "resolve open energy scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"energy\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 156,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "KPITTECH"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"KPITTECH\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"Scope 1 and 2 Emissions\", \"reason\": \"PDF value unavailable; ambiguous XBRL unit\", \"candidates\": [0.001, 1000.0]}, {\"quantity\": \"water\", \"metric\": \"Water Intensity\", \"reason\": \"0.000304736 outside plausible range [0.005, 50000]\", \"candidates\": [1000.0, 100000.0, 1000000.0, 10000000.0]}], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 157,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "KPITTECH",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 158,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "KPITTECH"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"KPITTECH\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"GHG Intensity\", \"reason\": \"ambiguous XBRL unit; PDF value unavailable\", \"candidates\": [0.001, 1000.0]}, {\"quantity\": \"water\", \"metric\": \"Water Intensity\", \"reason\": \"0.000304736 outside plausible range [0.005, 50000]\", \"candidates\": [1000.0, 100000.0, 1000000.0, 10000000.0]}], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 159,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "KPITTECH",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 160,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "KPITTECH"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"KPITTECH\", \"open_issues\": [{\"quantity\": \"water\", \"metric\": \"Water Intensity\", \"reason\": \"0.000304736 outside plausible range [0.005, 50000]\", \"candidates\": [1000.0, 100000.0, 1000000.0, 10000000.0]}], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 161,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "KPITTECH",
+        "quantity": "water"
+      },
+      "thought": "resolve open water scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"water\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 162,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "KPITTECH"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"KPITTECH\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 163,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "BSOFT",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 164,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "BSOFT"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"BSOFT\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 165,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "ZENSARTECH",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 166,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "ZENSARTECH"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ZENSARTECH\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"GHG Intensity\", \"reason\": \"ambiguous XBRL unit; PDF value unavailable\", \"candidates\": [1000.0, 100000.0]}], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 167,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "ZENSARTECH",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 168,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "ZENSARTECH"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ZENSARTECH\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 169,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "TATATECH",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 170,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "TATATECH"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATATECH\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 171,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "HAPPSTMNDS",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 172,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "HAPPSTMNDS"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HAPPSTMNDS\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 173,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "NEWGEN",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 174,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "NEWGEN"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NEWGEN\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 175,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "INTELLECT",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 176,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "INTELLECT"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INTELLECT\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"GHG Intensity\", \"reason\": \"ambiguous XBRL unit; PDF value unavailable\", \"candidates\": [0.001, 1000.0]}], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 177,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "INTELLECT",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 178,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "INTELLECT"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INTELLECT\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 179,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "MASTEK",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 180,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "MASTEK"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MASTEK\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 181,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "SONACOMS",
+        "quantity": "revenue"
+      },
+      "thought": "resolve open revenue scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"revenue\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 182,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "SONACOMS"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SONACOMS\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 183,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "HGS",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 184,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "HGS"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HGS\", \"open_issues\": [{\"quantity\": \"water\", \"metric\": \"Water Intensity\", \"reason\": \"0 outside plausible range [0.005, 50000]\", \"candidates\": []}], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 185,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "HGS",
+        "quantity": "water"
+      },
+      "thought": "resolve open water scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"water\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 186,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "HGS"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HGS\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 187,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "NIITLTD",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 188,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "NIITLTD"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NIITLTD\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"GHG Intensity\", \"reason\": \"ambiguous XBRL unit; PDF value unavailable\", \"candidates\": [0.001, 1000.0]}], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 189,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "NIITLTD",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 190,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "NIITLTD"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NIITLTD\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 191,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "AFFLE",
+        "quantity": "revenue"
+      },
+      "thought": "resolve open revenue scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"revenue\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 192,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "AFFLE"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"AFFLE\", \"open_issues\": [{\"quantity\": \"water\", \"metric\": \"Water Intensity\", \"reason\": \"0 outside plausible range [0.005, 50000]\", \"candidates\": []}], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 193,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "AFFLE",
+        "quantity": "water"
+      },
+      "thought": "resolve open water scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"water\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 194,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "AFFLE"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"AFFLE\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 195,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "MPSLTD",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 196,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "MPSLTD"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MPSLTD\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"GHG Intensity\", \"reason\": \"ambiguous XBRL unit; PDF value unavailable\", \"candidates\": [0.001, 1000.0]}], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 197,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "MPSLTD",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 198,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "MPSLTD"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MPSLTD\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 199,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "ZOMATO",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 200,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "ZOMATO"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ZOMATO\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"GHG Intensity\", \"reason\": \"ambiguous XBRL unit; PDF value unavailable\", \"candidates\": [1000.0, 100000.0, 1000000.0]}], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 201,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "ZOMATO",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 202,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "ZOMATO"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ZOMATO\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 203,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "PAYTM",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 204,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "PAYTM"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"PAYTM\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 205,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "POLICYBZR",
+        "quantity": "revenue"
+      },
+      "thought": "resolve open revenue scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"revenue\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 206,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "POLICYBZR"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"POLICYBZR\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 207,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "DELHIVERY",
+        "quantity": "energy"
+      },
+      "thought": "resolve open energy scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"energy\", \"decision\": 1000000000.0, \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 208,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "DELHIVERY"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"DELHIVERY\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"Scope 1 and 2 Emissions\", \"reason\": \"PDF value unavailable; ambiguous XBRL unit\", \"candidates\": [1e-05, 0.001]}], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 209,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "DELHIVERY",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 210,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "DELHIVERY"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"DELHIVERY\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"GHG Intensity\", \"reason\": \"ambiguous XBRL unit; PDF value unavailable\", \"candidates\": [0.001, 1000.0]}], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 211,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "DELHIVERY",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 212,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "DELHIVERY"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"DELHIVERY\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 213,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "NAZARA",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 214,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "NAZARA"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NAZARA\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"GHG Intensity\", \"reason\": \"ambiguous XBRL unit; PDF value unavailable\", \"candidates\": [0.001, 1000.0]}, {\"quantity\": \"water\", \"metric\": \"Water Intensity\", \"reason\": \"0 outside plausible range [0.005, 50000]\", \"candidates\": []}], \"_seconds\": 0.03}"
+    },
+    {
+      "step": 215,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "NAZARA",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 216,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "NAZARA"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NAZARA\", \"open_issues\": [{\"quantity\": \"water\", \"metric\": \"Water Intensity\", \"reason\": \"0 outside plausible range [0.005, 50000]\", \"candidates\": []}], \"_seconds\": 0.02}"
+    },
+    {
+      "step": 217,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "NAZARA",
+        "quantity": "water"
+      },
+      "thought": "resolve open water scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"water\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 218,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "NAZARA"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NAZARA\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 219,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "TATACOMM",
+        "quantity": "revenue"
+      },
+      "thought": "resolve open revenue scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"revenue\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 220,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "TATACOMM"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATACOMM\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 221,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "TEJASNET",
+        "quantity": "revenue"
+      },
+      "thought": "resolve open revenue scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"revenue\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 222,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "TEJASNET"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TEJASNET\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 223,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "MAZDOCK",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 224,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "MAZDOCK"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MAZDOCK\", \"open_issues\": [{\"quantity\": \"ghg\", \"metric\": \"GHG Intensity\", \"reason\": \"ambiguous XBRL unit; PDF value unavailable\", \"candidates\": [0.001, 1000.0]}], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 225,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "MAZDOCK",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 226,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "MAZDOCK"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MAZDOCK\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 227,
+      "tool": "resolve_scale_issue",
+      "args": {
+        "company_code": "TITAN",
+        "quantity": "ghg"
+      },
+      "thought": "resolve open ghg scale issue",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"quantity\": \"ghg\", \"decision\": \"quarantine\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 228,
+      "tool": "audit_company",
+      "args": {
+        "company_code": "TITAN"
+      },
+      "thought": "plausibility audit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TITAN\", \"open_issues\": [], \"_seconds\": 0.0}"
+    },
+    {
+      "step": 229,
+      "tool": "finalize",
+      "args": {},
+      "thought": "all companies audited",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"rows\": 1058, \"coverage\": {\"companies\": 46, \"mean_scored_metrics_per_company\": 15.09, \"companies_below_6_scored_metrics\": [], \"repairs\": 6, \"pdf_corroborated_values\": 187, \"pdf_mismatches\": 4}, \"_seconds\": 0.06}"
+    }
+  ],
+  "judgements": []
+}

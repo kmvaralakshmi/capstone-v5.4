@@ -1,0 +1,184 @@
+{
+  "written": "2026-11-25T15:19:05+00:00",
+  "report": {
+    "agent_id": "agent8",
+    "name": "Agent 8 - Validation & Research Agent",
+    "status": "completed",
+    "steps": 10,
+    "seconds": 3.41,
+    "decisions_by_source": {
+      "llm": 0,
+      "policy": 10,
+      "guardrail": 0
+    },
+    "summary": "validation_summary.json written",
+    "findings": [],
+    "artifacts": [],
+    "llm_mode": false,
+    "llm_errors": [],
+    "judgements_by_source": {
+      "rule": 7
+    },
+    "judge_calls": 7,
+    "judge_seconds": 0.0,
+    "judge_budget": 40,
+    "judge_time_budget_seconds": 420.0,
+    "judge_budget_reached": false,
+    "judge_time_budget_reached": false,
+    "planner_mode": "recover",
+    "llm_planning_calls": 0,
+    "llm_planning_decisions": 0,
+    "llm_judgements": 0,
+    "budget_reason": "none",
+    "llm_planning_seconds": 0.0,
+    "llm_judging_seconds": 0.0,
+    "guardrail_rejections": []
+  },
+  "history": [
+    {
+      "step": 1,
+      "tool": "load_results",
+      "args": {},
+      "thought": "load outputs",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"scored_companies\": 46, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 2,
+      "tool": "run_nse_top200",
+      "args": {},
+      "thought": "next analysis",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"analysis\": \"nse_top200\", \"status\": \"ok\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 3,
+      "tool": "run_nse_cfa",
+      "args": {},
+      "thought": "next analysis",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"analysis\": \"nse_cfa\", \"status\": \"ok\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 4,
+      "tool": "run_esg_stock",
+      "args": {},
+      "thought": "next analysis",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"analysis\": \"esg_stock\", \"status\": \"insufficient sample (n=7); run in --dynamic mode so more companies have prices\", \"_seconds\": 1.24}"
+    },
+    {
+      "step": 5,
+      "tool": "run_esg_news",
+      "args": {},
+      "thought": "next analysis",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"analysis\": \"esg_news\", \"status\": \"insufficient sample (n=3); run in --dynamic mode (GDELT) for more articles\", \"_seconds\": 0.09}"
+    },
+    {
+      "step": 6,
+      "tool": "run_esg_air",
+      "args": {},
+      "thought": "next analysis",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"analysis\": \"esg_air\", \"status\": \"ok\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 7,
+      "tool": "run_sensitivity",
+      "args": {},
+      "thought": "next analysis",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"analysis\": \"sensitivity\", \"status\": \"ok\", \"_seconds\": 2.0}"
+    },
+    {
+      "step": 8,
+      "tool": "run_calibration",
+      "args": {},
+      "thought": "next analysis",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"analysis\": \"calibration\", \"status\": \"ok\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 9,
+      "tool": "interpret",
+      "args": {},
+      "thought": "interpret the results",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"interpreted\": 7, \"_seconds\": 0.0}"
+    },
+    {
+      "step": 10,
+      "tool": "finalize",
+      "args": {},
+      "thought": "write summary",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"analyses\": {\"nse_top200\": \"ok\", \"nse_cfa\": \"ok\", \"esg_stock\": \"insufficient sample (n=7); run in --dynamic mode so more companies have prices\", \"esg_news\": \"insufficient sample (n=3); run in --dynamic mode (GDELT) for more articles\", \"esg_air\": \"ok\", \"sensitivity\": \"ok\", \"calibration\": \"ok\"}, \"_seconds\": 0.0}"
+    }
+  ],
+  "judgements": [
+    {
+      "task": "interpret the 'nse_top200' validation result cautiously",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "nse_top200",
+      "answer": {
+        "interpretation": "Results are statistical associations or descriptive comparisons; see the statistics and caveats."
+      }
+    },
+    {
+      "task": "interpret the 'nse_cfa' validation result cautiously",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "nse_cfa",
+      "answer": {
+        "interpretation": "Results are statistical associations or descriptive comparisons; see the statistics and caveats."
+      }
+    },
+    {
+      "task": "interpret the 'esg_stock' validation result cautiously",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "esg_stock",
+      "answer": {
+        "interpretation": "Not interpretable yet: insufficient sample (n=7); run in --dynamic mode so more companies have prices."
+      }
+    },
+    {
+      "task": "interpret the 'esg_news' validation result cautiously",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "esg_news",
+      "answer": {
+        "interpretation": "Not interpretable yet: insufficient sample (n=3); run in --dynamic mode (GDELT) for more articles."
+      }
+    },
+    {
+      "task": "interpret the 'esg_air' validation result cautiously",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "esg_air",
+      "answer": {
+        "interpretation": "Results are statistical associations or descriptive comparisons; see the statistics and caveats."
+      }
+    },
+    {
+      "task": "interpret the 'sensitivity' validation result cautiously",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "sensitivity",
+      "answer": {
+        "interpretation": "Across 300 perturbations the median Spearman correlation with the baseline ranking is 0.977 (5th percentile 0.959); rankings are robust to these choices."
+      }
+    },
+    {
+      "task": "interpret the 'calibration' validation result cautiously",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "calibration",
+      "answer": {
+        "interpretation": "Results are statistical associations or descriptive comparisons; see the statistics and caveats."
+      }
+    }
+  ]
+}

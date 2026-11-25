@@ -1,0 +1,695 @@
+Company_Code,Pillar,Metric_Name,Value,Unit,Score_0_10,Anchor_0,Anchor_10,Source,Status,Confidence
+TCS,Environmental,Renewable Energy Percentage,79.2218337070129,%,10.0,0,60.0,XBRL_DERIVED,VALID,0.9
+TCS,Environmental,Energy Intensity,846.6111111111111,kWh/employee,7.53,20000,300.0,MANUAL_PDF,REPAIRED,0.9
+TCS,Environmental,GHG Intensity,0.29802838746063826,tCO2e/INR crore revenue,8.563,200,0.1,XBRL_DERIVED,VALID,0.9
+TCS,Environmental,Water Intensity,4.5,KL/employee,7.927,100,2.0,MANUAL_PDF,REPAIRED,0.9
+TCS,Environmental,Waste Recovered Percentage,58.847039967945506,%,7.356,0,80.0,XBRL_DERIVED,VALID,0.9
+TCS,Social,Female Employees Percentage,35.204998856868414,%,8.801,0,40.0,XBRL_DERIVED,VALID,0.9
+TCS,Social,Employee Turnover Rate,13.3,%,8.9,40,10.0,XBRL_EXACT,VALID,0.95
+TCS,Social,Lost Time Injury Frequency Rate,0.025,per million hours,9.75,1,0.0,XBRL_EXACT,VALID,0.95
+TCS,Social,Human Rights Training Coverage,96.3,%,9.63,0,100.0,XBRL_EXACT,VALID,0.95
+TCS,Social,Differently Abled Employees Percentage,0.16694655571985217,%,0.835,0,2.0,XBRL_DERIVED,VALID,0.9
+TCS,Governance,Female Directors Percentage,25.0,%,7.576,0,33.0,XBRL_EXACT,VALID,0.95
+TCS,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+TCS,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+TCS,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+TCS,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+TCS,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+INFY,Environmental,Renewable Energy Percentage,68.87095294872971,%,10.0,0,60.0,XBRL_DERIVED,VALID,0.9
+INFY,Environmental,Energy Intensity,730.0609641776223,kWh/employee,7.882,20000,300.0,XBRL_DERIVED,VALID,0.9
+INFY,Environmental,Water Intensity,6.043442384834568,KL/employee,7.173,100,2.0,XBRL_DERIVED,VALID,0.9
+INFY,Environmental,Waste Recovered Percentage,96.63047262692079,%,10.0,0,80.0,XBRL_DERIVED,VALID,0.9
+INFY,Social,Female Employees Percentage,39.04220929729462,%,9.761,0,40.0,XBRL_DERIVED,VALID,0.9
+INFY,Social,Employee Turnover Rate,14.099999999999998,%,8.633,40,10.0,XBRL_EXACT,VALID,0.95
+INFY,Social,Lost Time Injury Frequency Rate,0.088,per million hours,9.12,1,0.0,XBRL_EXACT,VALID,0.95
+INFY,Social,Human Rights Training Coverage,98.6,%,9.86,0,100.0,XBRL_EXACT,VALID,0.95
+INFY,Social,Differently Abled Employees Percentage,0.33840372336809055,%,1.692,0,2.0,XBRL_DERIVED,VALID,0.9
+INFY,Governance,Female Directors Percentage,22.23,%,6.736,0,33.0,XBRL_EXACT,VALID,0.95
+INFY,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+INFY,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+INFY,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+INFY,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+INFY,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+WIPRO,Environmental,Renewable Energy Percentage,79.13537452645609,%,10.0,0,60.0,XBRL_DERIVED,VALID,0.9
+WIPRO,Environmental,Energy Intensity,932.2821300438812,kWh/employee,7.3,20000,300.0,XBRL_DERIVED,VALID,0.9
+WIPRO,Environmental,GHG Intensity,0.3531548439527481,tCO2e/INR crore revenue,8.34,200,0.1,XBRL_DERIVED,VALID,0.9
+WIPRO,Environmental,Water Intensity,5.803357389505828,KL/employee,7.277,100,2.0,XBRL_DERIVED,VALID,0.9
+WIPRO,Environmental,Waste Recovered Percentage,37.74002954209749,%,4.718,0,80.0,XBRL_DERIVED,VALID,0.9
+WIPRO,Social,Female Employees Percentage,37.13438612376058,%,9.284,0,40.0,XBRL_DERIVED,VALID,0.9
+WIPRO,Social,Employee Turnover Rate,14.81,%,8.397,40,10.0,XBRL_EXACT,VALID,0.95
+WIPRO,Social,Lost Time Injury Frequency Rate,0.27,per million hours,7.3,1,0.0,XBRL_EXACT,VALID,0.95
+WIPRO,Social,Human Rights Training Coverage,82.23,%,8.223,0,100.0,XBRL_EXACT,VALID,0.95
+WIPRO,Social,Differently Abled Employees Percentage,0.9156436135744277,%,4.578,0,2.0,XBRL_DERIVED,VALID,0.9
+WIPRO,Governance,Female Directors Percentage,22.23,%,6.736,0,33.0,XBRL_EXACT,VALID,0.95
+WIPRO,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+WIPRO,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+WIPRO,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+WIPRO,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+WIPRO,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+HCLTECH,Environmental,Renewable Energy Percentage,34.38365442446115,%,5.731,0,60.0,XBRL_DERIVED,VALID,0.9
+HCLTECH,Environmental,Energy Intensity,1169.562271854703,kWh/employee,6.76,20000,300.0,XBRL_DERIVED,VALID,0.9
+HCLTECH,Environmental,Water Intensity,3.7329383672007874,KL/employee,8.405,100,2.0,XBRL_DERIVED,VALID,0.9
+HCLTECH,Environmental,Waste Recovered Percentage,92.08379321246139,%,10.0,0,80.0,XBRL_DERIVED,VALID,0.9
+HCLTECH,Social,Female Employees Percentage,28.80852206606391,%,7.202,0,40.0,XBRL_DERIVED,VALID,0.9
+HCLTECH,Social,Employee Turnover Rate,12.989999999999998,%,9.003,40,10.0,XBRL_EXACT,VALID,0.95
+HCLTECH,Social,Lost Time Injury Frequency Rate,0.00888,per million hours,9.911,1,0.0,XBRL_EXACT,VALID,0.95
+HCLTECH,Social,Human Rights Training Coverage,92.89,%,9.289,0,100.0,XBRL_EXACT,VALID,0.95
+HCLTECH,Social,Differently Abled Employees Percentage,0.42878882821591624,%,2.144,0,2.0,XBRL_DERIVED,VALID,0.9
+HCLTECH,Governance,Female Directors Percentage,50.0,%,10.0,0,33.0,XBRL_EXACT,VALID,0.95
+HCLTECH,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+HCLTECH,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+HCLTECH,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+HCLTECH,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+HCLTECH,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+TECHM,Environmental,Renewable Energy Percentage,22.647435410439954,%,3.775,0,60.0,XBRL_DERIVED,VALID,0.9
+TECHM,Environmental,Energy Intensity,1140.4877953940672,kWh/employee,6.82,20000,300.0,XBRL_DERIVED,VALID,0.9
+TECHM,Environmental,Water Intensity,4.618333586926752,KL/employee,7.861,100,2.0,XBRL_DERIVED,VALID,0.9
+TECHM,Environmental,Waste Recovered Percentage,98.71628209294768,%,10.0,0,80.0,XBRL_DERIVED,VALID,0.9
+TECHM,Social,Female Employees Percentage,34.16055506527494,%,8.54,0,40.0,XBRL_DERIVED,VALID,0.9
+TECHM,Social,Employee Turnover Rate,11.799999999999999,%,9.4,40,10.0,XBRL_EXACT,VALID,0.95
+TECHM,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+TECHM,Social,Human Rights Training Coverage,96.13000000000001,%,9.613,0,100.0,XBRL_EXACT,VALID,0.95
+TECHM,Social,Differently Abled Employees Percentage,0.26399074891208424,%,1.32,0,2.0,XBRL_DERIVED,VALID,0.9
+TECHM,Governance,Female Directors Percentage,40.0,%,10.0,0,33.0,XBRL_EXACT,VALID,0.95
+TECHM,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+TECHM,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+TECHM,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+TECHM,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+TECHM,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+LTIM,Environmental,Renewable Energy Percentage,56.76514465892232,%,9.461,0,60.0,XBRL_DERIVED,VALID,0.9
+LTIM,Environmental,Energy Intensity,797.2944120891503,kWh/employee,7.673,20000,300.0,XBRL_DERIVED,VALID,0.9
+LTIM,Environmental,GHG Intensity,0.5204416821338234,tCO2e/INR crore revenue,7.83,200,0.1,XBRL_DERIVED,VALID,0.8
+LTIM,Environmental,Water Intensity,4.2918500243158935,KL/employee,8.048,100,2.0,XBRL_DERIVED,VALID,0.9
+LTIM,Environmental,Waste Recovered Percentage,97.21026111741655,%,10.0,0,80.0,XBRL_DERIVED,VALID,0.9
+LTIM,Social,Female Employees Percentage,30.37232969978768,%,7.593,0,40.0,XBRL_DERIVED,VALID,0.9
+LTIM,Social,Employee Turnover Rate,14.35,%,8.55,40,10.0,XBRL_EXACT,VALID,0.95
+LTIM,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+LTIM,Social,Human Rights Training Coverage,100.0,%,10.0,0,100.0,XBRL_EXACT,VALID,0.95
+LTIM,Social,Differently Abled Employees Percentage,0.07235460875134923,%,0.362,0,2.0,XBRL_DERIVED,VALID,0.9
+LTIM,Governance,Female Directors Percentage,9.1,%,2.758,0,33.0,XBRL_EXACT,VALID,0.95
+LTIM,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+LTIM,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+LTIM,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+LTIM,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+LTIM,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+MPHASIS,Environmental,Renewable Energy Percentage,55.16341548919822,%,9.194,0,60.0,XBRL_DERIVED,VALID,0.9
+MPHASIS,Environmental,Energy Intensity,2095.0426096485266,kWh/employee,5.372,20000,300.0,XBRL_RESCALED_PDF,REPAIRED,0.9
+MPHASIS,Environmental,Water Intensity,6.356426766647648,KL/employee,7.044,100,2.0,XBRL_DERIVED,VALID,0.9
+MPHASIS,Environmental,Waste Recovered Percentage,73.63961204696274,%,9.205,0,80.0,XBRL_DERIVED,VALID,0.9
+MPHASIS,Social,Female Employees Percentage,26.742195777977013,%,6.686,0,40.0,XBRL_DERIVED,VALID,0.9
+MPHASIS,Social,Employee Turnover Rate,26.93,%,4.357,40,10.0,XBRL_EXACT,VALID,0.95
+MPHASIS,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+MPHASIS,Social,Human Rights Training Coverage,92.13,%,9.213,0,100.0,XBRL_EXACT,VALID,0.95
+MPHASIS,Social,Differently Abled Employees Percentage,0.34232618795337844,%,1.712,0,2.0,XBRL_DERIVED,VALID,0.9
+MPHASIS,Governance,Female Directors Percentage,25.0,%,7.576,0,33.0,XBRL_EXACT,VALID,0.95
+MPHASIS,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+MPHASIS,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+MPHASIS,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+MPHASIS,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+MPHASIS,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+PERSISTENT,Environmental,Renewable Energy Percentage,56.96557857426839,%,9.494,0,60.0,XBRL_DERIVED,VALID,0.9
+PERSISTENT,Environmental,Energy Intensity,749.1804898796566,kWh/employee,7.821,20000,300.0,XBRL_DERIVED,VALID,0.9
+PERSISTENT,Environmental,Water Intensity,3.4917279891916237,KL/employee,8.576,100,2.0,XBRL_DERIVED,VALID,0.9
+PERSISTENT,Environmental,Waste Recovered Percentage,99.18978639823226,%,10.0,0,80.0,XBRL_DERIVED,VALID,0.9
+PERSISTENT,Social,Female Employees Percentage,30.27696464760189,%,7.569,0,40.0,XBRL_DERIVED,VALID,0.9
+PERSISTENT,Social,Employee Turnover Rate,12.9,%,9.033,40,10.0,XBRL_EXACT,VALID,0.95
+PERSISTENT,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+PERSISTENT,Social,Human Rights Training Coverage,97.02,%,9.702,0,100.0,XBRL_EXACT,VALID,0.95
+PERSISTENT,Social,Differently Abled Employees Percentage,0.229678000450349,%,1.148,0,2.0,XBRL_DERIVED,VALID,0.9
+PERSISTENT,Governance,Female Directors Percentage,22.23,%,6.736,0,33.0,XBRL_EXACT,VALID,0.95
+PERSISTENT,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+PERSISTENT,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+PERSISTENT,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+PERSISTENT,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+PERSISTENT,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+COFORGE,Environmental,Renewable Energy Percentage,12.139198424814873,%,2.023,0,60.0,XBRL_DERIVED,VALID,0.9
+COFORGE,Environmental,Energy Intensity,759.898950472721,kWh/employee,7.787,20000,300.0,XBRL_DERIVED,VALID,0.9
+COFORGE,Environmental,Water Intensity,5.102341920374707,KL/employee,7.606,100,2.0,XBRL_DERIVED,VALID,0.9
+COFORGE,Environmental,Waste Recovered Percentage,97.40202242017462,%,10.0,0,80.0,XBRL_DERIVED,VALID,0.9
+COFORGE,Social,Female Employees Percentage,28.69633099141296,%,7.174,0,40.0,XBRL_DERIVED,VALID,0.9
+COFORGE,Social,Employee Turnover Rate,19.0,%,7.0,40,10.0,XBRL_EXACT,VALID,0.95
+COFORGE,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+COFORGE,Social,Human Rights Training Coverage,87.13,%,8.713,0,100.0,XBRL_EXACT,VALID,0.95
+COFORGE,Social,Differently Abled Employees Percentage,0.0,%,0.0,0,2.0,XBRL_DERIVED,VALID,0.9
+COFORGE,Governance,Female Directors Percentage,16.669999999999998,%,5.052,0,33.0,XBRL_EXACT,VALID,0.95
+COFORGE,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+COFORGE,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+COFORGE,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+COFORGE,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+COFORGE,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+LTTS,Environmental,Renewable Energy Percentage,25.672100901041617,%,4.279,0,60.0,XBRL_DERIVED,VALID,0.9
+LTTS,Environmental,Energy Intensity,1353.1825291146195,kWh/employee,6.413,20000,300.0,XBRL_DERIVED,VALID,0.9
+LTTS,Environmental,Water Intensity,10.677239870648659,KL/employee,5.718,100,2.0,XBRL_DERIVED,VALID,0.9
+LTTS,Environmental,Waste Recovered Percentage,14.456311117119553,%,1.807,0,80.0,XBRL_DERIVED,VALID,0.9
+LTTS,Social,Female Employees Percentage,20.139813581890813,%,5.035,0,40.0,XBRL_DERIVED,VALID,0.9
+LTTS,Social,Employee Turnover Rate,24.4,%,5.2,40,10.0,XBRL_EXACT,VALID,0.95
+LTTS,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+LTTS,Social,Human Rights Training Coverage,63.739999999999995,%,6.374,0,100.0,XBRL_EXACT,VALID,0.95
+LTTS,Social,Differently Abled Employees Percentage,0.1426669202967472,%,0.713,0,2.0,XBRL_DERIVED,VALID,0.9
+LTTS,Governance,Female Directors Percentage,18.19,%,5.512,0,33.0,XBRL_EXACT,VALID,0.95
+LTTS,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+LTTS,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+LTTS,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+LTTS,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+LTTS,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+TATAELXSI,Environmental,Renewable Energy Percentage,50.71919022378799,%,8.453,0,60.0,XBRL_DERIVED,VALID,0.9
+TATAELXSI,Environmental,Energy Intensity,1162.1945674062936,kWh/employee,6.775,20000,300.0,XBRL_DERIVED,VALID,0.9
+TATAELXSI,Environmental,Water Intensity,6.155850663993986,KL/employee,7.126,100,2.0,XBRL_DERIVED,VALID,0.9
+TATAELXSI,Environmental,Waste Recovered Percentage,31.312910284463896,%,3.914,0,80.0,XBRL_DERIVED,VALID,0.9
+TATAELXSI,Social,Female Employees Percentage,35.053871210223,%,8.763,0,40.0,XBRL_DERIVED,VALID,0.9
+TATAELXSI,Social,Employee Turnover Rate,13.3,%,8.9,40,10.0,XBRL_EXACT,VALID,0.95
+TATAELXSI,Social,Lost Time Injury Frequency Rate,0.04,per million hours,9.6,1,0.0,XBRL_EXACT,VALID,0.95
+TATAELXSI,Social,Human Rights Training Coverage,100.0,%,10.0,0,100.0,XBRL_EXACT,VALID,0.95
+TATAELXSI,Social,Differently Abled Employees Percentage,0.08352125615969264,%,0.418,0,2.0,XBRL_DERIVED,VALID,0.9
+TATAELXSI,Governance,Female Directors Percentage,16.669999999999998,%,5.052,0,33.0,XBRL_EXACT,VALID,0.95
+TATAELXSI,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+TATAELXSI,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+TATAELXSI,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+TATAELXSI,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+TATAELXSI,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+OFSS,Environmental,Renewable Energy Percentage,17.20074183627955,%,2.867,0,60.0,XBRL_DERIVED,VALID,0.9
+OFSS,Environmental,Energy Intensity,1470.7893101305158,kWh/employee,6.215,20000,300.0,XBRL_DERIVED,VALID,0.9
+OFSS,Environmental,GHG Intensity,1.4105639219397157,tCO2e/INR crore revenue,6.518,200,0.1,XBRL_DERIVED,VALID,0.9
+OFSS,Environmental,Water Intensity,3.9961466749533874,KL/employee,8.231,100,2.0,XBRL_DERIVED,VALID,0.9
+OFSS,Environmental,Waste Recovered Percentage,68.03205699020481,%,8.504,0,80.0,XBRL_DERIVED,VALID,0.9
+OFSS,Social,Female Employees Percentage,32.18147917961467,%,8.045,0,40.0,XBRL_DERIVED,VALID,0.9
+OFSS,Social,Employee Turnover Rate,11.55,%,9.483,40,10.0,XBRL_EXACT,VALID,0.95
+OFSS,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+OFSS,Social,Human Rights Training Coverage,99.63,%,9.963,0,100.0,XBRL_EXACT,VALID,0.95
+OFSS,Social,Differently Abled Employees Percentage,0.0,%,0.0,0,2.0,XBRL_DERIVED,VALID,0.9
+OFSS,Governance,Female Directors Percentage,30.0,%,9.091,0,33.0,XBRL_EXACT,VALID,0.95
+OFSS,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+OFSS,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+OFSS,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+OFSS,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+OFSS,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+KPITTECH,Environmental,Renewable Energy Percentage,43.97288762227528,%,7.329,0,60.0,XBRL_DERIVED,VALID,0.9
+KPITTECH,Environmental,Waste Recovered Percentage,76.66126181398542,%,9.583,0,80.0,XBRL_DERIVED,VALID,0.9
+KPITTECH,Social,Female Employees Percentage,32.225525589297085,%,8.056,0,40.0,XBRL_DERIVED,VALID,0.9
+KPITTECH,Social,Employee Turnover Rate,25.0,%,5.0,40,10.0,XBRL_EXACT,VALID,0.95
+KPITTECH,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+KPITTECH,Social,Human Rights Training Coverage,101.44999999999999,%,10.0,0,100.0,XBRL_EXACT,VALID,0.95
+KPITTECH,Social,Differently Abled Employees Percentage,0.0,%,0.0,0,2.0,XBRL_DERIVED,VALID,0.9
+KPITTECH,Governance,Female Directors Percentage,7.1499999999999995,%,2.167,0,33.0,XBRL_EXACT,VALID,0.95
+KPITTECH,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+KPITTECH,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+KPITTECH,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+KPITTECH,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+KPITTECH,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+CYIENT,Environmental,Renewable Energy Percentage,23.586533110740117,%,3.931,0,60.0,XBRL_DERIVED,VALID,0.9
+CYIENT,Environmental,Energy Intensity,1680.1301469763268,kWh/employee,5.898,20000,300.0,XBRL_DERIVED,VALID,0.9
+CYIENT,Environmental,GHG Intensity,4.8670036460059665,tCO2e/INR crore revenue,4.889,200,0.1,XBRL_DERIVED,VALID,0.9
+CYIENT,Environmental,Water Intensity,6.896751935375295,KL/employee,6.836,100,2.0,XBRL_DERIVED,VALID,0.9
+CYIENT,Environmental,Waste Recovered Percentage,68.83039186359558,%,8.604,0,80.0,XBRL_DERIVED,VALID,0.9
+CYIENT,Social,Female Employees Percentage,24.99158532480646,%,6.248,0,40.0,XBRL_DERIVED,VALID,0.9
+CYIENT,Social,Employee Turnover Rate,27.6,%,4.133,40,10.0,XBRL_EXACT,VALID,0.95
+CYIENT,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+CYIENT,Social,Human Rights Training Coverage,100.0,%,10.0,0,100.0,XBRL_EXACT,VALID,0.95
+CYIENT,Social,Differently Abled Employees Percentage,0.6226859643217773,%,3.113,0,2.0,XBRL_DERIVED,VALID,0.9
+CYIENT,Governance,Female Directors Percentage,22.23,%,6.736,0,33.0,XBRL_EXACT,VALID,0.95
+CYIENT,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+CYIENT,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+CYIENT,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+CYIENT,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+CYIENT,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+BSOFT,Environmental,Renewable Energy Percentage,8.953500220780546,%,1.492,0,60.0,XBRL_DERIVED,VALID,0.9
+BSOFT,Environmental,Energy Intensity,751.5213706630725,kWh/employee,7.813,20000,300.0,XBRL_DERIVED,VALID,0.9
+BSOFT,Environmental,Water Intensity,3.2198125344605772,KL/employee,8.783,100,2.0,XBRL_DERIVED,VALID,0.9
+BSOFT,Environmental,Waste Recovered Percentage,70.45053868756122,%,8.806,0,80.0,XBRL_DERIVED,VALID,0.9
+BSOFT,Social,Female Employees Percentage,24.903510384120565,%,6.226,0,40.0,XBRL_DERIVED,VALID,0.9
+BSOFT,Social,Employee Turnover Rate,15.299999999999999,%,8.233,40,10.0,XBRL_EXACT,VALID,0.95
+BSOFT,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+BSOFT,Social,Human Rights Training Coverage,93.24,%,9.324,0,100.0,XBRL_EXACT,VALID,0.95
+BSOFT,Social,Differently Abled Employees Percentage,0.19297923175886786,%,0.965,0,2.0,XBRL_DERIVED,VALID,0.9
+BSOFT,Governance,Female Directors Percentage,42.86,%,10.0,0,33.0,XBRL_EXACT,VALID,0.95
+BSOFT,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+BSOFT,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+BSOFT,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+BSOFT,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+BSOFT,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+ZENSARTECH,Environmental,Renewable Energy Percentage,53.28002048846271,%,8.88,0,60.0,XBRL_DERIVED,VALID,0.9
+ZENSARTECH,Environmental,Energy Intensity,589.3380673906989,kWh/employee,8.392,20000,300.0,XBRL_DERIVED,VALID,0.9
+ZENSARTECH,Environmental,Water Intensity,1.8838365914786968,KL/employee,10.0,100,2.0,XBRL_DERIVED,VALID,0.9
+ZENSARTECH,Environmental,Waste Recovered Percentage,100.0,%,10.0,0,80.0,XBRL_DERIVED,VALID,0.9
+ZENSARTECH,Social,Female Employees Percentage,29.914786967418543,%,7.479,0,40.0,XBRL_DERIVED,VALID,0.9
+ZENSARTECH,Social,Employee Turnover Rate,24.9,%,5.033,40,10.0,XBRL_EXACT,VALID,0.95
+ZENSARTECH,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+ZENSARTECH,Social,Human Rights Training Coverage,99.68,%,9.968,0,100.0,XBRL_EXACT,VALID,0.95
+ZENSARTECH,Social,Differently Abled Employees Percentage,0.4110275689223058,%,2.055,0,2.0,XBRL_DERIVED,VALID,0.9
+ZENSARTECH,Governance,Female Directors Percentage,11.12,%,3.37,0,33.0,XBRL_EXACT,VALID,0.95
+ZENSARTECH,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+ZENSARTECH,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+ZENSARTECH,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+ZENSARTECH,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+ZENSARTECH,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+TATATECH,Environmental,Renewable Energy Percentage,0.1751750311305025,%,0.029,0,60.0,XBRL_DERIVED,VALID,0.9
+TATATECH,Environmental,Energy Intensity,1214.4604759108577,kWh/employee,6.671,20000,300.0,XBRL_DERIVED,VALID,0.9
+TATATECH,Environmental,Water Intensity,9.350557839107458,KL/employee,6.058,100,2.0,XBRL_DERIVED,VALID,0.9
+TATATECH,Environmental,Waste Recovered Percentage,8.587833490075731,%,1.073,0,80.0,XBRL_DERIVED,VALID,0.9
+TATATECH,Social,Female Employees Percentage,15.887928865028101,%,3.972,0,40.0,XBRL_DERIVED,VALID,0.9
+TATATECH,Social,Employee Turnover Rate,16.6,%,7.8,40,10.0,XBRL_EXACT,VALID,0.95
+TATATECH,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+TATATECH,Social,Human Rights Training Coverage,94.41000000000001,%,9.441,0,100.0,XBRL_EXACT,VALID,0.95
+TATATECH,Social,Differently Abled Employees Percentage,0.06710846405502895,%,0.336,0,2.0,XBRL_DERIVED,VALID,0.9
+TATATECH,Governance,Female Directors Percentage,28.58,%,8.661,0,33.0,XBRL_EXACT,VALID,0.95
+TATATECH,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+TATATECH,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+TATATECH,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+TATATECH,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+TATATECH,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+HAPPSTMNDS,Environmental,Renewable Energy Percentage,9.869095836987396,%,1.645,0,60.0,XBRL_DERIVED,VALID,0.9
+HAPPSTMNDS,Environmental,Energy Intensity,1009.3583708555055,kWh/employee,7.111,20000,300.0,XBRL_DERIVED,VALID,0.9
+HAPPSTMNDS,Environmental,Water Intensity,14.657920589439215,KL/employee,4.908,100,2.0,XBRL_DERIVED,VALID,0.9
+HAPPSTMNDS,Environmental,Waste Recovered Percentage,0.0,%,0.0,0,80.0,XBRL_DERIVED,VALID,0.9
+HAPPSTMNDS,Social,Female Employees Percentage,27.445763405648794,%,6.861,0,40.0,XBRL_DERIVED,VALID,0.9
+HAPPSTMNDS,Social,Employee Turnover Rate,16.63,%,7.79,40,10.0,XBRL_EXACT,VALID,0.95
+HAPPSTMNDS,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+HAPPSTMNDS,Social,Human Rights Training Coverage,100.0,%,10.0,0,100.0,XBRL_EXACT,VALID,0.95
+HAPPSTMNDS,Social,Differently Abled Employees Percentage,0.12279983626688497,%,0.614,0,2.0,XBRL_DERIVED,VALID,0.9
+HAPPSTMNDS,Governance,Female Directors Percentage,25.0,%,7.576,0,33.0,XBRL_EXACT,VALID,0.95
+HAPPSTMNDS,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+HAPPSTMNDS,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+HAPPSTMNDS,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+HAPPSTMNDS,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+HAPPSTMNDS,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+SONATSOFTW,Environmental,Renewable Energy Percentage,77.65328562681411,%,10.0,0,60.0,XBRL_DERIVED,VALID,0.9
+SONATSOFTW,Environmental,Energy Intensity,518.875030315629,kWh/employee,8.695,20000,300.0,XBRL_DERIVED,VALID,0.9
+SONATSOFTW,Environmental,GHG Intensity,0.07077703118462182,tCO2e/INR crore revenue,10.0,200,0.1,XBRL_DERIVED,VALID,0.9
+SONATSOFTW,Environmental,Water Intensity,1.1361085126286248,KL/employee,10.0,100,2.0,XBRL_DERIVED,VALID,0.9
+SONATSOFTW,Environmental,Waste Recovered Percentage,0.0,%,0.0,0,80.0,XBRL_DERIVED,VALID,0.9
+SONATSOFTW,Social,Female Employees Percentage,30.371063299033363,%,7.593,0,40.0,XBRL_DERIVED,VALID,0.9
+SONATSOFTW,Social,Employee Turnover Rate,19.0,%,7.0,40,10.0,XBRL_EXACT,VALID,0.95
+SONATSOFTW,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+SONATSOFTW,Social,Human Rights Training Coverage,91.67999999999999,%,9.168,0,100.0,XBRL_EXACT,VALID,0.95
+SONATSOFTW,Social,Differently Abled Employees Percentage,0.732772061116308,%,3.664,0,2.0,XBRL_DERIVED,VALID,0.9
+SONATSOFTW,Governance,Female Directors Percentage,14.29,%,4.33,0,33.0,XBRL_EXACT,VALID,0.95
+SONATSOFTW,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+SONATSOFTW,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+SONATSOFTW,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+SONATSOFTW,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+SONATSOFTW,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+NEWGEN,Environmental,Renewable Energy Percentage,6.55922580682835,%,1.093,0,60.0,XBRL_DERIVED,VALID,0.9
+NEWGEN,Environmental,Energy Intensity,941.9650715071507,kWh/employee,7.276,20000,300.0,XBRL_DERIVED,VALID,0.9
+NEWGEN,Environmental,Water Intensity,5.956579207920792,KL/employee,7.21,100,2.0,XBRL_DERIVED,VALID,0.9
+NEWGEN,Environmental,Waste Recovered Percentage,94.13145539906104,%,10.0,0,80.0,XBRL_DERIVED,VALID,0.9
+NEWGEN,Social,Female Employees Percentage,25.04950495049505,%,6.262,0,40.0,XBRL_DERIVED,VALID,0.9
+NEWGEN,Social,Employee Turnover Rate,21.0,%,6.333,40,10.0,XBRL_EXACT,VALID,0.95
+NEWGEN,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+NEWGEN,Social,Human Rights Training Coverage,80.19,%,8.019,0,100.0,XBRL_EXACT,VALID,0.95
+NEWGEN,Social,Differently Abled Employees Percentage,0.19801980198019803,%,0.99,0,2.0,XBRL_DERIVED,VALID,0.9
+NEWGEN,Governance,Female Directors Percentage,28.58,%,8.661,0,33.0,XBRL_EXACT,VALID,0.95
+NEWGEN,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+NEWGEN,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+NEWGEN,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+NEWGEN,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+NEWGEN,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+TANLA,Environmental,Renewable Energy Percentage,0.05262605537295295,%,0.009,0,60.0,XBRL_DERIVED,VALID,0.9
+TANLA,Environmental,Energy Intensity,1841.0310259856628,kWh/employee,5.68,20000,300.0,XBRL_DERIVED,VALID,0.9
+TANLA,Environmental,GHG Intensity,0.28093302795170344,tCO2e/INR crore revenue,8.641,200,0.1,XBRL_DERIVED,VALID,0.9
+TANLA,Environmental,Water Intensity,8.124395161290321,KL/employee,6.417,100,2.0,XBRL_DERIVED,VALID,0.9
+TANLA,Environmental,Waste Recovered Percentage,0.0,%,0.0,0,80.0,XBRL_DERIVED,VALID,0.9
+TANLA,Social,Female Employees Percentage,20.262096774193548,%,5.066,0,40.0,XBRL_DERIVED,VALID,0.9
+TANLA,Social,Employee Turnover Rate,33.64,%,2.12,40,10.0,XBRL_EXACT,VALID,0.95
+TANLA,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+TANLA,Social,Human Rights Training Coverage,83.63000000000001,%,8.363,0,100.0,XBRL_EXACT,VALID,0.95
+TANLA,Social,Differently Abled Employees Percentage,0.0,%,0.0,0,2.0,XBRL_DERIVED,VALID,0.9
+TANLA,Governance,Female Directors Percentage,14.29,%,4.33,0,33.0,XBRL_EXACT,VALID,0.95
+TANLA,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+TANLA,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+TANLA,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+TANLA,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+TANLA,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+INTELLECT,Environmental,Renewable Energy Percentage,28.646878627709626,%,4.774,0,60.0,XBRL_DERIVED,VALID,0.9
+INTELLECT,Environmental,Energy Intensity,1116.0275582484487,kWh/employee,6.872,20000,300.0,XBRL_DERIVED,VALID,0.9
+INTELLECT,Environmental,Water Intensity,5.832404285212505,KL/employee,7.264,100,2.0,XBRL_DERIVED,VALID,0.9
+INTELLECT,Environmental,Waste Recovered Percentage,75.20032158649337,%,9.4,0,80.0,XBRL_DERIVED,VALID,0.9
+INTELLECT,Social,Female Employees Percentage,26.53670530382859,%,6.634,0,40.0,XBRL_DERIVED,VALID,0.9
+INTELLECT,Social,Employee Turnover Rate,15.86,%,8.047,40,10.0,XBRL_EXACT,VALID,0.95
+INTELLECT,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+INTELLECT,Social,Human Rights Training Coverage,100.0,%,10.0,0,100.0,XBRL_EXACT,VALID,0.95
+INTELLECT,Social,Differently Abled Employees Percentage,0.825430277485072,%,4.127,0,2.0,XBRL_DERIVED,VALID,0.9
+INTELLECT,Governance,Female Directors Percentage,16.669999999999998,%,5.052,0,33.0,XBRL_EXACT,VALID,0.95
+INTELLECT,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+INTELLECT,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+INTELLECT,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+INTELLECT,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+INTELLECT,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+ROUTE,Environmental,Renewable Energy Percentage,0.0,%,0.0,0,60.0,XBRL_DERIVED,VALID,0.9
+ROUTE,Environmental,Energy Intensity,726.7307692307693,kWh/employee,7.893,20000,300.0,XBRL_DERIVED,VALID,0.9
+ROUTE,Environmental,GHG Intensity,0.22704666694710063,tCO2e/INR crore revenue,8.921,200,0.1,XBRL_DERIVED,VALID,0.9
+ROUTE,Environmental,Water Intensity,7.158038461538461,KL/employee,6.741,100,2.0,XBRL_DERIVED,VALID,0.9
+ROUTE,Environmental,Waste Recovered Percentage,0.0,%,0.0,0,80.0,XBRL_DERIVED,VALID,0.9
+ROUTE,Social,Female Employees Percentage,21.153846153846153,%,5.288,0,40.0,XBRL_DERIVED,VALID,0.9
+ROUTE,Social,Employee Turnover Rate,9.0,%,10.0,40,10.0,XBRL_EXACT,VALID,0.95
+ROUTE,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+ROUTE,Social,Human Rights Training Coverage,100.0,%,10.0,0,100.0,XBRL_EXACT,VALID,0.95
+ROUTE,Social,Differently Abled Employees Percentage,0.19230769230769232,%,0.962,0,2.0,XBRL_DERIVED,VALID,0.9
+ROUTE,Governance,Female Directors Percentage,16.669999999999998,%,5.052,0,33.0,XBRL_EXACT,VALID,0.95
+ROUTE,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+ROUTE,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+ROUTE,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+ROUTE,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+ROUTE,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+RATEGAIN,Environmental,Renewable Energy Percentage,0.0,%,0.0,0,60.0,XBRL_DERIVED,VALID,0.9
+RATEGAIN,Environmental,Energy Intensity,353.24987354577644,kWh/employee,9.611,20000,300.0,XBRL_DERIVED,VALID,0.9
+RATEGAIN,Environmental,GHG Intensity,0.8237340328467154,tCO2e/INR crore revenue,7.226,200,0.1,XBRL_DERIVED,VALID,0.9
+RATEGAIN,Environmental,Water Intensity,40.79666160849772,KL/employee,2.292,100,2.0,XBRL_DERIVED,VALID,0.9
+RATEGAIN,Environmental,Waste Recovered Percentage,81.81818181818183,%,10.0,0,80.0,XBRL_DERIVED,VALID,0.9
+RATEGAIN,Social,Female Employees Percentage,22.610015174506827,%,5.653,0,40.0,XBRL_DERIVED,VALID,0.9
+RATEGAIN,Social,Employee Turnover Rate,16.1,%,7.967,40,10.0,XBRL_EXACT,VALID,0.95
+RATEGAIN,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+RATEGAIN,Social,Human Rights Training Coverage,32.18,%,3.218,0,100.0,XBRL_EXACT,VALID,0.95
+RATEGAIN,Social,Differently Abled Employees Percentage,0.15174506828528073,%,0.759,0,2.0,XBRL_DERIVED,VALID,0.9
+RATEGAIN,Governance,Female Directors Percentage,33.339999999999996,%,10.0,0,33.0,XBRL_EXACT,VALID,0.95
+RATEGAIN,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+RATEGAIN,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+RATEGAIN,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+RATEGAIN,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+RATEGAIN,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+ECLERX,Environmental,Renewable Energy Percentage,64.08426424262643,%,10.0,0,60.0,XBRL_DERIVED,VALID,0.9
+ECLERX,Environmental,Energy Intensity,1073.7969251470602,kWh/employee,6.964,20000,300.0,XBRL_DERIVED,VALID,0.9
+ECLERX,Environmental,GHG Intensity,1.8189774660551636,tCO2e/INR crore revenue,6.184,200,0.1,XBRL_DERIVED,VALID,0.9
+ECLERX,Environmental,Water Intensity,7.096145978234187,KL/employee,6.763,100,2.0,XBRL_DERIVED,VALID,0.9
+ECLERX,Environmental,Waste Recovered Percentage,42.697421434327154,%,5.337,0,80.0,XBRL_DERIVED,VALID,0.9
+ECLERX,Social,Female Employees Percentage,36.16725308894526,%,9.042,0,40.0,XBRL_DERIVED,VALID,0.9
+ECLERX,Social,Employee Turnover Rate,38.2,%,0.6,40,10.0,XBRL_EXACT,VALID,0.95
+ECLERX,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+ECLERX,Social,Human Rights Training Coverage,64.25,%,6.425,0,100.0,XBRL_EXACT,VALID,0.95
+ECLERX,Social,Differently Abled Employees Percentage,0.09819163734555274,%,0.491,0,2.0,XBRL_DERIVED,VALID,0.9
+ECLERX,Governance,Female Directors Percentage,11.12,%,3.37,0,33.0,XBRL_EXACT,VALID,0.95
+ECLERX,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+ECLERX,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+ECLERX,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+ECLERX,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+ECLERX,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+DATAMATICS,Environmental,Renewable Energy Percentage,0.0,%,0.0,0,60.0,XBRL_DERIVED,VALID,0.9
+DATAMATICS,Environmental,Energy Intensity,1200.2703882842939,kWh/employee,6.699,20000,300.0,XBRL_DERIVED,VALID,0.9
+DATAMATICS,Environmental,GHG Intensity,6.041240957663008,tCO2e/INR crore revenue,4.604,200,0.1,XBRL_DERIVED,VALID,0.9
+DATAMATICS,Environmental,Water Intensity,0.04563280935106812,KL/employee,10.0,100,2.0,XBRL_DERIVED,VALID,0.9
+DATAMATICS,Environmental,Waste Recovered Percentage,10.122637716123844,%,1.265,0,80.0,XBRL_DERIVED,VALID,0.9
+DATAMATICS,Social,Female Employees Percentage,39.9838774687626,%,9.996,0,40.0,XBRL_DERIVED,VALID,0.9
+DATAMATICS,Social,Employee Turnover Rate,24.0,%,5.333,40,10.0,XBRL_EXACT,VALID,0.95
+DATAMATICS,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+DATAMATICS,Social,Human Rights Training Coverage,100.0,%,10.0,0,100.0,XBRL_EXACT,VALID,0.95
+DATAMATICS,Social,Differently Abled Employees Percentage,2.2974607013301087,%,10.0,0,2.0,XBRL_DERIVED,VALID,0.9
+DATAMATICS,Governance,Female Directors Percentage,25.0,%,7.576,0,33.0,XBRL_EXACT,VALID,0.95
+DATAMATICS,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+DATAMATICS,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+DATAMATICS,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+DATAMATICS,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+DATAMATICS,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+MASTEK,Environmental,Renewable Energy Percentage,0.0,%,0.0,0,60.0,XBRL_DERIVED,VALID,0.9
+MASTEK,Environmental,Energy Intensity,393.83624974351085,kWh/employee,9.352,20000,300.0,XBRL_DERIVED,VALID,0.9
+MASTEK,Environmental,Water Intensity,3.944958448753463,KL/employee,8.264,100,2.0,XBRL_DERIVED,VALID,0.9
+MASTEK,Environmental,Waste Recovered Percentage,12.467532467532468,%,1.558,0,80.0,XBRL_DERIVED,VALID,0.9
+MASTEK,Social,Female Employees Percentage,30.56325023084026,%,7.641,0,40.0,XBRL_DERIVED,VALID,0.9
+MASTEK,Social,Employee Turnover Rate,19.3,%,6.9,40,10.0,XBRL_EXACT,VALID,0.95
+MASTEK,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+MASTEK,Social,Human Rights Training Coverage,96.2,%,9.62,0,100.0,XBRL_EXACT,VALID,0.95
+MASTEK,Social,Differently Abled Employees Percentage,0.11542012927054479,%,0.577,0,2.0,XBRL_DERIVED,VALID,0.9
+MASTEK,Governance,Female Directors Percentage,16.669999999999998,%,5.052,0,33.0,XBRL_EXACT,VALID,0.95
+MASTEK,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+MASTEK,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+MASTEK,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+MASTEK,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+MASTEK,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+SONACOMS,Environmental,Renewable Energy Percentage,3.473205463824066,%,0.579,0,60.0,XBRL_DERIVED,VALID,0.9
+SONACOMS,Environmental,Energy Intensity,72963.95392047566,kWh/employee,0.0,20000,300.0,XBRL_DERIVED,VALID,0.9
+SONACOMS,Environmental,Water Intensity,99.4247491638796,KL/employee,0.015,100,2.0,XBRL_DERIVED,VALID,0.9
+SONACOMS,Environmental,Waste Recovered Percentage,96.8122338002333,%,10.0,0,80.0,XBRL_DERIVED,VALID,0.9
+SONACOMS,Social,Female Employees Percentage,8.160535117056856,%,2.04,0,40.0,XBRL_DERIVED,VALID,0.9
+SONACOMS,Social,Employee Turnover Rate,12.0,%,9.333,40,10.0,XBRL_EXACT,VALID,0.95
+SONACOMS,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+SONACOMS,Social,Human Rights Training Coverage,100.0,%,10.0,0,100.0,XBRL_EXACT,VALID,0.95
+SONACOMS,Social,Differently Abled Employees Percentage,0.26755852842809363,%,1.338,0,2.0,XBRL_DERIVED,VALID,0.9
+SONACOMS,Governance,Female Directors Percentage,22.23,%,6.736,0,33.0,XBRL_EXACT,VALID,0.95
+SONACOMS,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+SONACOMS,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+SONACOMS,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+SONACOMS,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+SONACOMS,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+HGS,Environmental,Renewable Energy Percentage,0.0,%,0.0,0,60.0,XBRL_DERIVED,VALID,0.9
+HGS,Environmental,Energy Intensity,1725.892455377231,kWh/employee,5.834,20000,300.0,XBRL_DERIVED,VALID,0.9
+HGS,Environmental,Waste Recovered Percentage,0.0,%,0.0,0,80.0,XBRL_DERIVED,VALID,0.9
+HGS,Social,Female Employees Percentage,43.39283035848208,%,10.0,0,40.0,XBRL_DERIVED,VALID,0.9
+HGS,Social,Employee Turnover Rate,36.0,%,1.333,40,10.0,XBRL_EXACT,VALID,0.95
+HGS,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+HGS,Social,Human Rights Training Coverage,100.0,%,10.0,0,100.0,XBRL_EXACT,VALID,0.95
+HGS,Social,Differently Abled Employees Percentage,0.47997600119994,%,2.4,0,2.0,XBRL_DERIVED,VALID,0.9
+HGS,Governance,Female Directors Percentage,10.0,%,3.03,0,33.0,XBRL_EXACT,VALID,0.95
+HGS,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+HGS,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+HGS,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+HGS,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+HGS,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+NIITLTD,Environmental,Renewable Energy Percentage,6.237010610280445,%,1.04,0,60.0,XBRL_DERIVED,VALID,0.9
+NIITLTD,Environmental,Energy Intensity,1432.236683538202,kWh/employee,6.278,20000,300.0,XBRL_DERIVED,VALID,0.9
+NIITLTD,Environmental,Water Intensity,7.6496746203904555,KL/employee,6.571,100,2.0,XBRL_DERIVED,VALID,0.9
+NIITLTD,Social,Female Employees Percentage,34.38177874186551,%,8.595,0,40.0,XBRL_DERIVED,VALID,0.9
+NIITLTD,Social,Employee Turnover Rate,30.0,%,3.333,40,10.0,XBRL_EXACT,VALID,0.95
+NIITLTD,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+NIITLTD,Social,Human Rights Training Coverage,13.43,%,1.343,0,100.0,XBRL_EXACT,VALID,0.95
+NIITLTD,Social,Differently Abled Employees Percentage,0.0,%,0.0,0,2.0,XBRL_DERIVED,VALID,0.9
+NIITLTD,Governance,Female Directors Percentage,20.0,%,6.061,0,33.0,XBRL_EXACT,VALID,0.95
+NIITLTD,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+NIITLTD,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+NIITLTD,Governance,Anti-Corruption Policy,0.0,flag,0.0,0,1.0,XBRL_EXACT,VALID,0.95
+NIITLTD,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+NIITLTD,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+AFFLE,Social,Female Employees Percentage,37.60129659643436,%,9.4,0,40.0,XBRL_DERIVED,VALID,0.9
+AFFLE,Social,Employee Turnover Rate,33.0,%,2.333,40,10.0,XBRL_EXACT,VALID,0.95
+AFFLE,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+AFFLE,Social,Human Rights Training Coverage,100.0,%,10.0,0,100.0,XBRL_EXACT,VALID,0.95
+AFFLE,Social,Differently Abled Employees Percentage,0.0,%,0.0,0,2.0,XBRL_DERIVED,VALID,0.9
+AFFLE,Governance,Female Directors Percentage,25.0,%,7.576,0,33.0,XBRL_EXACT,VALID,0.95
+AFFLE,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+AFFLE,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+AFFLE,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+AFFLE,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+AFFLE,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+MPSLTD,Environmental,Renewable Energy Percentage,0.0,%,0.0,0,60.0,XBRL_DERIVED,VALID,0.9
+MPSLTD,Environmental,Energy Intensity,1513.157191597813,kWh/employee,6.147,20000,300.0,XBRL_DERIVED,VALID,0.9
+MPSLTD,Environmental,Water Intensity,0.09618941916389197,KL/employee,10.0,100,2.0,XBRL_DERIVED,VALID,0.9
+MPSLTD,Social,Female Employees Percentage,34.295227524972255,%,8.574,0,40.0,XBRL_DERIVED,VALID,0.9
+MPSLTD,Social,Employee Turnover Rate,19.400000000000002,%,6.867,40,10.0,XBRL_EXACT,VALID,0.95
+MPSLTD,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+MPSLTD,Social,Human Rights Training Coverage,32.25,%,3.225,0,100.0,XBRL_EXACT,VALID,0.95
+MPSLTD,Social,Differently Abled Employees Percentage,0.0,%,0.0,0,2.0,XBRL_DERIVED,VALID,0.9
+MPSLTD,Governance,Female Directors Percentage,57.15,%,10.0,0,33.0,XBRL_EXACT,VALID,0.95
+MPSLTD,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+MPSLTD,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+MPSLTD,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+MPSLTD,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+MPSLTD,Governance,Board Sustainability Committee,0.0,flag,0.0,0,1.0,XBRL_EXACT,VALID,0.95
+SUBEXLTD,Environmental,Renewable Energy Percentage,35.68776735606923,%,5.948,0,60.0,XBRL_DERIVED,VALID,0.9
+SUBEXLTD,Environmental,Energy Intensity,1679.9182489451475,kWh/employee,5.898,20000,300.0,XBRL_DERIVED,VALID,0.9
+SUBEXLTD,Environmental,GHG Intensity,0.005133700927697777,tCO2e/INR crore revenue,10.0,200,0.1,XBRL_DERIVED,VALID,0.9
+SUBEXLTD,Environmental,Water Intensity,10.284810126582279,KL/employee,5.814,100,2.0,XBRL_DERIVED,VALID,0.9
+SUBEXLTD,Social,Female Employees Percentage,34.01898734177215,%,8.505,0,40.0,XBRL_DERIVED,VALID,0.9
+SUBEXLTD,Social,Employee Turnover Rate,24.0,%,5.333,40,10.0,XBRL_EXACT,VALID,0.95
+SUBEXLTD,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+SUBEXLTD,Social,Human Rights Training Coverage,100.0,%,10.0,0,100.0,XBRL_EXACT,VALID,0.95
+SUBEXLTD,Social,Differently Abled Employees Percentage,0.0,%,0.0,0,2.0,XBRL_DERIVED,VALID,0.9
+SUBEXLTD,Governance,Female Directors Percentage,50.0,%,10.0,0,33.0,XBRL_EXACT,VALID,0.95
+SUBEXLTD,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+SUBEXLTD,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+SUBEXLTD,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+SUBEXLTD,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+SUBEXLTD,Governance,Board Sustainability Committee,0.0,flag,0.0,0,1.0,XBRL_EXACT,VALID,0.95
+SIS,Environmental,Renewable Energy Percentage,0.0,%,0.0,0,60.0,XBRL_DERIVED,VALID,0.9
+SIS,Environmental,Energy Intensity,633.9642616730921,kWh/employee,8.218,20000,300.0,XBRL_RESCALED_PDF,REPAIRED,0.9
+SIS,Environmental,GHG Intensity,1.3446577891596476,tCO2e/INR crore revenue,6.581,200,0.1,XBRL_RESCALED_PDF,REPAIRED,0.9
+SIS,Environmental,Water Intensity,6.575000183587296,KL/employee,6.958,100,2.0,XBRL_RESCALED_PDF,REPAIRED,0.9
+SIS,Environmental,Waste Recovered Percentage,3.6876070064533124e-07,%,0.0,0,80.0,XBRL_DERIVED,VALID,0.9
+SIS,Social,Female Employees Percentage,4.839361116210758,%,1.21,0,40.0,XBRL_DERIVED,VALID,0.9
+SIS,Social,Employee Turnover Rate,39.76,%,0.08,40,10.0,XBRL_EXACT,VALID,0.95
+SIS,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+SIS,Social,Human Rights Training Coverage,100.0,%,10.0,0,100.0,XBRL_EXACT,VALID,0.95
+SIS,Social,Differently Abled Employees Percentage,0.12116761520102809,%,0.606,0,2.0,XBRL_DERIVED,VALID,0.9
+SIS,Governance,Female Directors Percentage,27.279999999999998,%,8.267,0,33.0,XBRL_EXACT,VALID,0.95
+SIS,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+SIS,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+SIS,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+SIS,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+SIS,Governance,Board Sustainability Committee,0.0,flag,0.0,0,1.0,XBRL_EXACT,VALID,0.95
+ZOMATO,Environmental,Renewable Energy Percentage,0.0,%,0.0,0,60.0,XBRL_DERIVED,VALID,0.9
+ZOMATO,Environmental,Energy Intensity,23.901846218230396,kWh/employee,10.0,20000,300.0,XBRL_DERIVED,VALID,0.9
+ZOMATO,Environmental,Water Intensity,0.037699550919889906,KL/employee,10.0,100,2.0,XBRL_DERIVED,VALID,0.9
+ZOMATO,Environmental,Waste Recovered Percentage,74.03225806451613,%,9.254,0,80.0,XBRL_DERIVED,VALID,0.9
+ZOMATO,Social,Female Employees Percentage,29.074315514993483,%,7.269,0,40.0,XBRL_DERIVED,VALID,0.9
+ZOMATO,Social,Employee Turnover Rate,44.330000000000005,%,0.0,40,10.0,XBRL_EXACT,VALID,0.95
+ZOMATO,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+ZOMATO,Social,Human Rights Training Coverage,94.44,%,9.444,0,100.0,XBRL_EXACT,VALID,0.95
+ZOMATO,Social,Differently Abled Employees Percentage,0.20281037230189775,%,1.014,0,2.0,XBRL_DERIVED,VALID,0.9
+ZOMATO,Governance,Female Directors Percentage,50.0,%,10.0,0,33.0,XBRL_EXACT,VALID,0.95
+ZOMATO,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+ZOMATO,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+ZOMATO,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+ZOMATO,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+ZOMATO,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+PAYTM,Environmental,Renewable Energy Percentage,0.0,%,0.0,0,60.0,XBRL_DERIVED,VALID,0.9
+PAYTM,Environmental,Energy Intensity,199.05101437409024,kWh/employee,10.0,20000,300.0,XBRL_DERIVED,VALID,0.9
+PAYTM,Environmental,Water Intensity,2.5462820687772925,KL/employee,9.383,100,2.0,XBRL_DERIVED,VALID,0.9
+PAYTM,Environmental,Waste Recovered Percentage,85.84790316664629,%,10.0,0,80.0,XBRL_DERIVED,VALID,0.9
+PAYTM,Social,Female Employees Percentage,7.075600436681223,%,1.769,0,40.0,XBRL_DERIVED,VALID,0.9
+PAYTM,Social,Employee Turnover Rate,97.47,%,0.0,40,10.0,XBRL_EXACT,VALID,0.95
+PAYTM,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+PAYTM,Social,Human Rights Training Coverage,100.0,%,10.0,0,100.0,XBRL_EXACT,VALID,0.95
+PAYTM,Social,Differently Abled Employees Percentage,0.061408296943231445,%,0.307,0,2.0,XBRL_DERIVED,VALID,0.9
+PAYTM,Governance,Female Directors Percentage,12.5,%,3.788,0,33.0,XBRL_EXACT,VALID,0.95
+PAYTM,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+PAYTM,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+PAYTM,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+PAYTM,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+PAYTM,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+POLICYBZR,Environmental,Renewable Energy Percentage,0.82346990389479,%,0.137,0,60.0,XBRL_DERIVED,VALID,0.9
+POLICYBZR,Environmental,Energy Intensity,614.8581067968412,kWh/employee,8.291,20000,300.0,XBRL_DERIVED,VALID,0.9
+POLICYBZR,Environmental,Water Intensity,0.4632092794124233,KL/employee,10.0,100,2.0,XBRL_DERIVED,VALID,0.9
+POLICYBZR,Environmental,Waste Recovered Percentage,100.0,%,10.0,0,80.0,XBRL_DERIVED,VALID,0.9
+POLICYBZR,Social,Female Employees Percentage,24.488333557257377,%,6.122,0,40.0,XBRL_DERIVED,VALID,0.9
+POLICYBZR,Social,Employee Turnover Rate,89.57000000000001,%,0.0,40,10.0,XBRL_EXACT,VALID,0.95
+POLICYBZR,Social,Lost Time Injury Frequency Rate,1.04,per million hours,0.0,1,0.0,XBRL_EXACT,VALID,0.95
+POLICYBZR,Social,Human Rights Training Coverage,100.0,%,10.0,0,100.0,XBRL_EXACT,VALID,0.95
+POLICYBZR,Social,Differently Abled Employees Percentage,0.08509113708630033,%,0.425,0,2.0,XBRL_DERIVED,VALID,0.9
+POLICYBZR,Governance,Female Directors Percentage,33.339999999999996,%,10.0,0,33.0,XBRL_EXACT,VALID,0.95
+POLICYBZR,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+POLICYBZR,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+POLICYBZR,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+POLICYBZR,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+POLICYBZR,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+DELHIVERY,Environmental,Renewable Energy Percentage,0.6388135266822805,%,0.106,0,60.0,XBRL_DERIVED,VALID,0.9
+DELHIVERY,Environmental,Energy Intensity,10386.68573747887,kWh/employee,1.56,20000,300.0,XBRL_RESCALED,REPAIRED,0.85
+DELHIVERY,Environmental,Water Intensity,3.441067854283427,KL/employee,8.613,100,2.0,XBRL_DERIVED,VALID,0.9
+DELHIVERY,Environmental,Waste Recovered Percentage,0.0,%,0.0,0,80.0,XBRL_DERIVED,VALID,0.9
+DELHIVERY,Social,Female Employees Percentage,8.296637309847878,%,2.074,0,40.0,XBRL_DERIVED,VALID,0.9
+DELHIVERY,Social,Employee Turnover Rate,39.489999999999995,%,0.17,40,10.0,XBRL_EXACT,VALID,0.95
+DELHIVERY,Social,Lost Time Injury Frequency Rate,0.5,per million hours,5.0,1,0.0,XBRL_EXACT,VALID,0.95
+DELHIVERY,Social,Human Rights Training Coverage,97.78,%,9.778,0,100.0,XBRL_EXACT,VALID,0.95
+DELHIVERY,Social,Differently Abled Employees Percentage,0.035028022417934346,%,0.175,0,2.0,XBRL_DERIVED,VALID,0.9
+DELHIVERY,Governance,Female Directors Percentage,22.23,%,6.736,0,33.0,XBRL_EXACT,VALID,0.95
+DELHIVERY,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+DELHIVERY,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+DELHIVERY,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+DELHIVERY,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+DELHIVERY,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+NAZARA,Environmental,Renewable Energy Percentage,0.0,%,0.0,0,60.0,XBRL_DERIVED,VALID,0.9
+NAZARA,Environmental,Energy Intensity,3803.9241622574955,kWh/employee,3.952,20000,300.0,XBRL_DERIVED,VALID,0.9
+NAZARA,Social,Female Employees Percentage,15.873015873015872,%,3.968,0,40.0,XBRL_DERIVED,VALID,0.9
+NAZARA,Social,Employee Turnover Rate,30.159999999999997,%,3.28,40,10.0,XBRL_EXACT,VALID,0.95
+NAZARA,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+NAZARA,Social,Human Rights Training Coverage,100.0,%,10.0,0,100.0,XBRL_EXACT,VALID,0.95
+NAZARA,Social,Differently Abled Employees Percentage,0.0,%,0.0,0,2.0,XBRL_DERIVED,VALID,0.9
+NAZARA,Governance,Female Directors Percentage,12.5,%,3.788,0,33.0,XBRL_EXACT,VALID,0.95
+NAZARA,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+NAZARA,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+NAZARA,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+NAZARA,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+NAZARA,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+TATACOMM,Environmental,Renewable Energy Percentage,33.91159319539342,%,5.652,0,60.0,XBRL_DERIVED,VALID,0.9
+TATACOMM,Environmental,Energy Intensity,14118.59260962503,kWh/employee,0.829,20000,300.0,XBRL_DERIVED,VALID,0.9
+TATACOMM,Environmental,Water Intensity,12.35333793209167,KL/employee,5.346,100,2.0,XBRL_DERIVED,VALID,0.9
+TATACOMM,Environmental,Waste Recovered Percentage,94.16575392479008,%,10.0,0,80.0,XBRL_DERIVED,VALID,0.9
+TATACOMM,Social,Female Employees Percentage,23.790909787690655,%,5.948,0,40.0,XBRL_DERIVED,VALID,0.9
+TATACOMM,Social,Employee Turnover Rate,11.0,%,9.667,40,10.0,XBRL_EXACT,VALID,0.95
+TATACOMM,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+TATACOMM,Social,Human Rights Training Coverage,75.19,%,7.519,0,100.0,XBRL_EXACT,VALID,0.95
+TATACOMM,Social,Differently Abled Employees Percentage,0.022993791676247415,%,0.115,0,2.0,XBRL_DERIVED,VALID,0.9
+TATACOMM,Governance,Female Directors Percentage,16.669999999999998,%,5.052,0,33.0,XBRL_EXACT,VALID,0.95
+TATACOMM,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+TATACOMM,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+TATACOMM,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+TATACOMM,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+TATACOMM,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+INDUSTOWER,Environmental,Renewable Energy Percentage,1.024688439813921,%,0.171,0,60.0,XBRL_DERIVED,VALID,0.9
+INDUSTOWER,Environmental,Energy Intensity,2636740.6723526483,kWh/employee,0.0,20000,300.0,XBRL_DERIVED,VALID,0.9
+INDUSTOWER,Environmental,GHG Intensity,246.31544599698523,tCO2e/INR crore revenue,0.0,200,0.1,XBRL_DERIVED,VALID,0.9
+INDUSTOWER,Environmental,Water Intensity,88.30704299657083,KL/employee,0.318,100,2.0,XBRL_DERIVED,VALID,0.9
+INDUSTOWER,Environmental,Waste Recovered Percentage,100.0,%,10.0,0,80.0,XBRL_DERIVED,VALID,0.9
+INDUSTOWER,Social,Female Employees Percentage,16.249010815088365,%,4.062,0,40.0,XBRL_DERIVED,VALID,0.9
+INDUSTOWER,Social,Employee Turnover Rate,19.17,%,6.943,40,10.0,XBRL_EXACT,VALID,0.95
+INDUSTOWER,Social,Lost Time Injury Frequency Rate,0.46,per million hours,5.4,1,0.0,XBRL_EXACT,VALID,0.95
+INDUSTOWER,Social,Human Rights Training Coverage,99.06,%,9.906,0,100.0,XBRL_EXACT,VALID,0.95
+INDUSTOWER,Social,Differently Abled Employees Percentage,0.2637826431020839,%,1.319,0,2.0,XBRL_DERIVED,VALID,0.9
+INDUSTOWER,Governance,Female Directors Percentage,9.1,%,2.758,0,33.0,XBRL_EXACT,VALID,0.95
+INDUSTOWER,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+INDUSTOWER,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+INDUSTOWER,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+INDUSTOWER,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+INDUSTOWER,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+BHARTIARTL,Environmental,Renewable Energy Percentage,0.8044565013393389,%,0.134,0,60.0,XBRL_DERIVED,VALID,0.9
+BHARTIARTL,Environmental,Energy Intensity,55095.88268471517,kWh/employee,0.0,20000,300.0,XBRL_DERIVED,VALID,0.9
+BHARTIARTL,Environmental,GHG Intensity,4.7142173761839485,tCO2e/INR crore revenue,4.931,200,0.1,XBRL_DERIVED,VALID,0.9
+BHARTIARTL,Environmental,Water Intensity,5.349223865224748,KL/employee,7.485,100,2.0,XBRL_DERIVED,VALID,0.9
+BHARTIARTL,Environmental,Waste Recovered Percentage,98.36764526738945,%,10.0,0,80.0,XBRL_DERIVED,VALID,0.9
+BHARTIARTL,Social,Female Employees Percentage,19.576252482895608,%,4.894,0,40.0,XBRL_DERIVED,VALID,0.9
+BHARTIARTL,Social,Employee Turnover Rate,18.0,%,7.333,40,10.0,XBRL_EXACT,VALID,0.95
+BHARTIARTL,Social,Lost Time Injury Frequency Rate,0.4,per million hours,6.0,1,0.0,XBRL_EXACT,VALID,0.95
+BHARTIARTL,Social,Human Rights Training Coverage,100.0,%,10.0,0,100.0,XBRL_EXACT,VALID,0.95
+BHARTIARTL,Social,Differently Abled Employees Percentage,0.24277201500772458,%,1.214,0,2.0,XBRL_DERIVED,VALID,0.9
+BHARTIARTL,Governance,Female Directors Percentage,30.0,%,9.091,0,33.0,XBRL_EXACT,VALID,0.95
+BHARTIARTL,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+BHARTIARTL,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+BHARTIARTL,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+BHARTIARTL,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+BHARTIARTL,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+TEJASNET,Environmental,Renewable Energy Percentage,0.0,%,0.0,0,60.0,XBRL_DERIVED,VALID,0.9
+TEJASNET,Environmental,Energy Intensity,5716.043366150961,kWh/employee,2.982,20000,300.0,XBRL_DERIVED,VALID,0.9
+TEJASNET,Environmental,Water Intensity,12.316033755274262,KL/employee,5.353,100,2.0,XBRL_DERIVED,VALID,0.9
+TEJASNET,Environmental,Waste Recovered Percentage,1.8369100294135938,%,0.23,0,80.0,XBRL_DERIVED,VALID,0.9
+TEJASNET,Social,Female Employees Percentage,14.261603375527427,%,3.565,0,40.0,XBRL_DERIVED,VALID,0.9
+TEJASNET,Social,Employee Turnover Rate,10.299999999999999,%,9.9,40,10.0,XBRL_EXACT,VALID,0.95
+TEJASNET,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+TEJASNET,Social,Human Rights Training Coverage,96.24000000000001,%,9.624,0,100.0,XBRL_EXACT,VALID,0.95
+TEJASNET,Social,Differently Abled Employees Percentage,0.0,%,0.0,0,2.0,XBRL_DERIVED,VALID,0.9
+TEJASNET,Governance,Female Directors Percentage,16.669999999999998,%,5.052,0,33.0,XBRL_EXACT,VALID,0.95
+TEJASNET,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+TEJASNET,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+TEJASNET,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+TEJASNET,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+TEJASNET,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+REDINGTON,Environmental,Renewable Energy Percentage,3.466189746210186,%,0.578,0,60.0,XBRL_DERIVED,VALID,0.9
+REDINGTON,Environmental,Energy Intensity,2047.071129707113,kWh/employee,5.427,20000,300.0,XBRL_DERIVED,VALID,0.9
+REDINGTON,Environmental,GHG Intensity,0.05638572628711419,tCO2e/INR crore revenue,10.0,200,0.1,XBRL_DERIVED,VALID,0.9
+REDINGTON,Environmental,Water Intensity,6.386192468619247,KL/employee,7.032,100,2.0,XBRL_DERIVED,VALID,0.9
+REDINGTON,Environmental,Waste Recovered Percentage,99.61917447956692,%,10.0,0,80.0,XBRL_DERIVED,VALID,0.9
+REDINGTON,Social,Female Employees Percentage,23.598326359832637,%,5.9,0,40.0,XBRL_DERIVED,VALID,0.9
+REDINGTON,Social,Employee Turnover Rate,21.0,%,6.333,40,10.0,XBRL_EXACT,VALID,0.95
+REDINGTON,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+REDINGTON,Social,Human Rights Training Coverage,54.64,%,5.464,0,100.0,XBRL_EXACT,VALID,0.95
+REDINGTON,Social,Differently Abled Employees Percentage,0.16736401673640167,%,0.837,0,2.0,XBRL_DERIVED,VALID,0.9
+REDINGTON,Governance,Female Directors Percentage,25.0,%,7.576,0,33.0,XBRL_EXACT,VALID,0.95
+REDINGTON,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+REDINGTON,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+REDINGTON,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+REDINGTON,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+REDINGTON,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+MAZDOCK,Environmental,Renewable Energy Percentage,28.518532099890948,%,4.753,0,60.0,XBRL_DERIVED,VALID,0.9
+MAZDOCK,Environmental,Energy Intensity,16382.713706552708,kWh/employee,0.475,20000,300.0,XBRL_DERIVED,VALID,0.9
+MAZDOCK,Environmental,Water Intensity,79.39979487179488,KL/employee,0.59,100,2.0,XBRL_DERIVED,VALID,0.9
+MAZDOCK,Environmental,Waste Recovered Percentage,0.9205305598241129,%,0.115,0,80.0,XBRL_DERIVED,VALID,0.9
+MAZDOCK,Social,Female Employees Percentage,7.58974358974359,%,1.897,0,40.0,XBRL_DERIVED,VALID,0.9
+MAZDOCK,Social,Employee Turnover Rate,0.73,%,10.0,40,10.0,XBRL_EXACT,VALID,0.95
+MAZDOCK,Social,Lost Time Injury Frequency Rate,0.0,per million hours,10.0,1,0.0,XBRL_EXACT,VALID,0.95
+MAZDOCK,Social,Human Rights Training Coverage,100.0,%,10.0,0,100.0,XBRL_EXACT,VALID,0.95
+MAZDOCK,Social,Differently Abled Employees Percentage,3.1794871794871797,%,10.0,0,2.0,XBRL_DERIVED,VALID,0.9
+MAZDOCK,Governance,Female Directors Percentage,0.0,%,0.0,0,33.0,XBRL_EXACT,VALID,0.95
+MAZDOCK,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+MAZDOCK,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+MAZDOCK,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+MAZDOCK,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+MAZDOCK,Governance,Board Sustainability Committee,0.0,flag,0.0,0,1.0,XBRL_EXACT,VALID,0.95
+TITAN,Environmental,Renewable Energy Percentage,30.712975285370636,%,5.119,0,60.0,XBRL_DERIVED,VALID,0.9
+TITAN,Environmental,Energy Intensity,8753.32568975908,kWh/employee,1.968,20000,300.0,XBRL_DERIVED,VALID,0.9
+TITAN,Environmental,Water Intensity,39.70339992062442,KL/employee,2.361,100,2.0,XBRL_DERIVED,VALID,0.9
+TITAN,Environmental,Waste Recovered Percentage,13.103904698874919,%,1.638,0,80.0,XBRL_DERIVED,VALID,0.9
+TITAN,Social,Female Employees Percentage,25.810292366715178,%,6.453,0,40.0,XBRL_DERIVED,VALID,0.9
+TITAN,Social,Employee Turnover Rate,10.0,%,10.0,40,10.0,XBRL_EXACT,VALID,0.95
+TITAN,Social,Lost Time Injury Frequency Rate,0.024,per million hours,9.76,1,0.0,XBRL_EXACT,VALID,0.95
+TITAN,Social,Human Rights Training Coverage,100.0,%,10.0,0,100.0,XBRL_EXACT,VALID,0.95
+TITAN,Social,Differently Abled Employees Percentage,0.47625347268157164,%,2.381,0,2.0,XBRL_DERIVED,VALID,0.9
+TITAN,Governance,Female Directors Percentage,16.669999999999998,%,5.052,0,33.0,XBRL_EXACT,VALID,0.95
+TITAN,Governance,Board and KMP Disciplinary Actions,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+TITAN,Governance,Board and KMP Conflict of Interest Complaints,0.0,count,10.0,3,0.0,XBRL_DERIVED,VALID,0.9
+TITAN,Governance,Anti-Corruption Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+TITAN,Governance,Cybersecurity and Data Privacy Policy,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95
+TITAN,Governance,Board Sustainability Committee,1.0,flag,10.0,0,1.0,XBRL_EXACT,VALID,0.95

@@ -1,0 +1,8 @@
+Pillar,Group,Max,Avg,Median,Min,Source
+Overall,Sample,83,70,70,53,"NSE ESG Analysis on Top 200 Listed Companies (2026), TABLE 5"
+Overall,Information Technology,82,77,78,71,"NSE ESG Analysis on Top 200 Listed Companies (2026), TABLE 5"
+Environmental,Sample,85,59,59,31,"NSE ESG Analysis on Top 200 Listed Companies (2026), TABLE EV1"
+Environmental,Information Technology,74,64,64,53,"NSE ESG Analysis on Top 200 Listed Companies (2026), TABLE EV1"
+Social,Information Technology,83,76,77,64,"NSE ESG Analysis on Top 200 Listed Companies (2026), TABLE S1"
+Governance,Sample,94,78,80,62,"NSE ESG Analysis on Top 200 Listed Companies (2026), TABLE G1"
+Governance,Information Technology,94,85,82,80,"NSE ESG Analysis on Top 200 Listed Companies (2026), TABLE G1"

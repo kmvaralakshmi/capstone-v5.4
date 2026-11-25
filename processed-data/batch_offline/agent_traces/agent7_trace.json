@@ -1,0 +1,976 @@
+{
+  "written": "2026-11-25T15:19:02+00:00",
+  "report": {
+    "agent_id": "agent7",
+    "name": "Agent 7 - Explanation Agent",
+    "status": "completed",
+    "steps": 94,
+    "seconds": 0.66,
+    "decisions_by_source": {
+      "llm": 0,
+      "policy": 94,
+      "guardrail": 0
+    },
+    "summary": "46 explanations (0 LLM-written, verified)",
+    "findings": [],
+    "artifacts": [
+      ".batch_offline_ce4a27b3039649ae9c7448dd6cc62136.staging\\multi_agent_explanations.csv"
+    ],
+    "llm_mode": false,
+    "llm_errors": [],
+    "judgements_by_source": {},
+    "judge_calls": 0,
+    "judge_seconds": 0.0,
+    "judge_budget": 300,
+    "judge_time_budget_seconds": 1800.0,
+    "judge_budget_reached": false,
+    "judge_time_budget_reached": false,
+    "planner_mode": "recover",
+    "llm_planning_calls": 0,
+    "llm_planning_decisions": 0,
+    "llm_judgements": 0,
+    "budget_reason": "none",
+    "llm_planning_seconds": 0.0,
+    "llm_judging_seconds": 0.0,
+    "guardrail_rejections": []
+  },
+  "history": [
+    {
+      "step": 1,
+      "tool": "load_scoring_outputs",
+      "args": {},
+      "thought": "load all citable outputs",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"companies\": 46, \"_seconds\": 0.08}"
+    },
+    {
+      "step": 2,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "TCS"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TCS\", \"metrics\": 16, \"trends\": 12, \"withheld\": false, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 3,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "TCS"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TCS\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 4,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "INFY"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INFY\", \"metrics\": 15, \"trends\": 8, \"withheld\": false, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 5,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "INFY"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INFY\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 6,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "WIPRO"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"WIPRO\", \"metrics\": 16, \"trends\": 10, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 7,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "WIPRO"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"WIPRO\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 8,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "HCLTECH"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HCLTECH\", \"metrics\": 15, \"trends\": 9, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 9,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "HCLTECH"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HCLTECH\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 10,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "TECHM"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TECHM\", \"metrics\": 15, \"trends\": 9, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 11,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "TECHM"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TECHM\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 12,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "LTIM"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"LTIM\", \"metrics\": 16, \"trends\": 10, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 13,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "LTIM"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"LTIM\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 14,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "MPHASIS"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MPHASIS\", \"metrics\": 15, \"trends\": 9, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 15,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "MPHASIS"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MPHASIS\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 16,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "PERSISTENT"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"PERSISTENT\", \"metrics\": 15, \"trends\": 9, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 17,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "PERSISTENT"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"PERSISTENT\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 18,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "COFORGE"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"COFORGE\", \"metrics\": 15, \"trends\": 9, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 19,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "COFORGE"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"COFORGE\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 20,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "LTTS"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"LTTS\", \"metrics\": 15, \"trends\": 9, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 21,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "LTTS"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"LTTS\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 22,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "TATAELXSI"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATAELXSI\", \"metrics\": 15, \"trends\": 9, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 23,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "TATAELXSI"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATAELXSI\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 24,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "OFSS"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"OFSS\", \"metrics\": 16, \"trends\": 10, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 25,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "OFSS"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"OFSS\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 26,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "KPITTECH"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"KPITTECH\", \"metrics\": 13, \"trends\": 6, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 27,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "KPITTECH"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"KPITTECH\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 28,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "CYIENT"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"CYIENT\", \"metrics\": 16, \"trends\": 10, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 29,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "CYIENT"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"CYIENT\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 30,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "BSOFT"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"BSOFT\", \"metrics\": 15, \"trends\": 9, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 31,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "BSOFT"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"BSOFT\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 32,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "ZENSARTECH"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ZENSARTECH\", \"metrics\": 15, \"trends\": 8, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 33,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "ZENSARTECH"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ZENSARTECH\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 34,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "TATATECH"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATATECH\", \"metrics\": 15, \"trends\": 9, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 35,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "TATATECH"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATATECH\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 36,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "HAPPSTMNDS"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HAPPSTMNDS\", \"metrics\": 15, \"trends\": 8, \"withheld\": false, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 37,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "HAPPSTMNDS"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HAPPSTMNDS\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 38,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "SONATSOFTW"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SONATSOFTW\", \"metrics\": 16, \"trends\": 9, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 39,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "SONATSOFTW"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SONATSOFTW\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 40,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "NEWGEN"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NEWGEN\", \"metrics\": 15, \"trends\": 8, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 41,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "NEWGEN"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NEWGEN\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 42,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "TANLA"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TANLA\", \"metrics\": 16, \"trends\": 10, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 43,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "TANLA"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TANLA\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 44,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "INTELLECT"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INTELLECT\", \"metrics\": 15, \"trends\": 7, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 45,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "INTELLECT"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INTELLECT\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 46,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "ROUTE"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ROUTE\", \"metrics\": 16, \"trends\": 10, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 47,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "ROUTE"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ROUTE\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 48,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "RATEGAIN"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"RATEGAIN\", \"metrics\": 16, \"trends\": 9, \"withheld\": false, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 49,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "RATEGAIN"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"RATEGAIN\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 50,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "ECLERX"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ECLERX\", \"metrics\": 16, \"trends\": 10, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 51,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "ECLERX"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ECLERX\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 52,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "DATAMATICS"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"DATAMATICS\", \"metrics\": 16, \"trends\": 9, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 53,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "DATAMATICS"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"DATAMATICS\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 54,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "MASTEK"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MASTEK\", \"metrics\": 15, \"trends\": 7, \"withheld\": false, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 55,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "MASTEK"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MASTEK\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 56,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "SONACOMS"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SONACOMS\", \"metrics\": 15, \"trends\": 9, \"withheld\": false, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 57,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "SONACOMS"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SONACOMS\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 58,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "HGS"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HGS\", \"metrics\": 14, \"trends\": 6, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 59,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "HGS"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HGS\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 60,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "NIITLTD"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NIITLTD\", \"metrics\": 14, \"trends\": 6, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 61,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "NIITLTD"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NIITLTD\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 62,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "AFFLE"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"AFFLE\", \"metrics\": 11, \"trends\": 3, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 63,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "AFFLE"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"AFFLE\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 64,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "MPSLTD"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MPSLTD\", \"metrics\": 14, \"trends\": 6, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 65,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "MPSLTD"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MPSLTD\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 66,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "SUBEXLTD"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SUBEXLTD\", \"metrics\": 15, \"trends\": 8, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 67,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "SUBEXLTD"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SUBEXLTD\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 68,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "SIS"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SIS\", \"metrics\": 16, \"trends\": 7, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 69,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "SIS"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SIS\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 70,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "ZOMATO"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ZOMATO\", \"metrics\": 15, \"trends\": 8, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 71,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "ZOMATO"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ZOMATO\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 72,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "PAYTM"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"PAYTM\", \"metrics\": 15, \"trends\": 9, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 73,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "PAYTM"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"PAYTM\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 74,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "POLICYBZR"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"POLICYBZR\", \"metrics\": 15, \"trends\": 9, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 75,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "POLICYBZR"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"POLICYBZR\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 76,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "DELHIVERY"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"DELHIVERY\", \"metrics\": 15, \"trends\": 8, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 77,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "DELHIVERY"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"DELHIVERY\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 78,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "NAZARA"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NAZARA\", \"metrics\": 13, \"trends\": 5, \"withheld\": false, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 79,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "NAZARA"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NAZARA\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 80,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "TATACOMM"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATACOMM\", \"metrics\": 15, \"trends\": 9, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 81,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "TATACOMM"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATACOMM\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 82,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "INDUSTOWER"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INDUSTOWER\", \"metrics\": 16, \"trends\": 8, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 83,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "INDUSTOWER"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INDUSTOWER\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 84,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "BHARTIARTL"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"BHARTIARTL\", \"metrics\": 16, \"trends\": 10, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 85,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "BHARTIARTL"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"BHARTIARTL\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 86,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "TEJASNET"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TEJASNET\", \"metrics\": 15, \"trends\": 7, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 87,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "TEJASNET"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TEJASNET\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 88,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "REDINGTON"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"REDINGTON\", \"metrics\": 16, \"trends\": 10, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 89,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "REDINGTON"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"REDINGTON\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 90,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "MAZDOCK"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MAZDOCK\", \"metrics\": 15, \"trends\": 8, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 91,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "MAZDOCK"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MAZDOCK\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 92,
+      "tool": "build_evidence",
+      "args": {
+        "company_code": "TITAN"
+      },
+      "thought": "assemble evidence",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TITAN\", \"metrics\": 15, \"trends\": 9, \"withheld\": false, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 93,
+      "tool": "explain_company",
+      "args": {
+        "company_code": "TITAN"
+      },
+      "thought": "write + verify",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TITAN\", \"source\": \"deterministic\", \"grounding\": \"pass\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 94,
+      "tool": "finalize",
+      "args": {},
+      "thought": "all explained",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"explanations\": 46, \"llm_written\": 0, \"_seconds\": 0.01}"
+    }
+  ],
+  "judgements": []
+}

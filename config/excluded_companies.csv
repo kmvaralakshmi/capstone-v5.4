@@ -1,0 +1,5 @@
+company_code,company_name,ticker,reason
+HEXAWARE,Hexaware Technologies,HEXAWARE.NS,"Calendar-year reporter (Jan-Dec); filing period does not match FY2024-25 (Apr-Mar), so it must not be scored against the cohort"
+MINDTREE,Mindtree (legacy symbol),LTIM.NS,Legacy symbol: merged into LTIMindtree (LTIM); duplicates LTIM
+E2E,E2E Networks,E2E.NS,No BRSR filing: not among the BRSR-mandated top-1000 listed entities
+HCL-INFO,HCL Infosystems,HCL-INSYS.NS,No FY2024-25 BRSR filing available

@@ -1,0 +1,17 @@
+Pillar,Metric,n,Mean_Score,Share_at_ceiling,Share_at_floor,Flag
+Environmental,Energy Intensity,44,6.07,0.07,0.09,
+Environmental,GHG Intensity,16,7.08,0.19,0.06,
+Environmental,Renewable Energy Percentage,45,3.53,0.11,0.38,
+Environmental,Waste Recovered Percentage,41,6.16,0.41,0.22,
+Environmental,Water Intensity,42,6.87,0.14,0.05,
+Governance,Anti-Corruption Policy,46,9.78,0.98,0.02,saturated: cannot discriminate
+Governance,Board Sustainability Committee,46,9.13,0.91,0.09,saturated: cannot discriminate
+Governance,Board and KMP Conflict of Interest Complaints,46,10.0,1.0,0.0,saturated: cannot discriminate
+Governance,Board and KMP Disciplinary Actions,46,10.0,1.0,0.0,saturated: cannot discriminate
+Governance,Cybersecurity and Data Privacy Policy,46,10.0,1.0,0.0,saturated: cannot discriminate
+Governance,Female Directors Percentage,46,6.42,0.17,0.02,
+Social,Differently Abled Employees Percentage,46,1.43,0.04,0.39,
+Social,Employee Turnover Rate,46,6.12,0.11,0.11,
+Social,Female Employees Percentage,46,6.49,0.07,0.0,
+Social,Human Rights Training Coverage,46,8.92,0.63,0.0,mostly saturated
+Social,Lost Time Injury Frequency Rate,46,9.39,0.87,0.02,mostly saturated

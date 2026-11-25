@@ -1,0 +1,62 @@
+{
+  "written": "2026-11-25T15:18:48+00:00",
+  "report": {
+    "agent_id": "agent4",
+    "name": "Agent 4 - Market Performance Agent",
+    "status": "completed",
+    "steps": 2,
+    "seconds": 3.22,
+    "decisions_by_source": {
+      "llm": 0,
+      "policy": 2,
+      "guardrail": 0
+    },
+    "summary": "7/46 companies have market data",
+    "findings": [
+      {
+        "kind": "market_coverage_gap",
+        "severity": "high",
+        "message": "39/46 companies have no price history"
+      }
+    ],
+    "artifacts": [
+      ".batch_offline_ce4a27b3039649ae9c7448dd6cc62136.staging\\stock_esg_correlation.csv"
+    ],
+    "llm_mode": false,
+    "llm_errors": [],
+    "judgements_by_source": {},
+    "judge_calls": 0,
+    "judge_seconds": 0.0,
+    "judge_budget": 300,
+    "judge_time_budget_seconds": 1800.0,
+    "judge_budget_reached": false,
+    "judge_time_budget_reached": false,
+    "planner_mode": "recover",
+    "llm_planning_calls": 0,
+    "llm_planning_decisions": 0,
+    "llm_judgements": 0,
+    "budget_reason": "none",
+    "llm_planning_seconds": 0.0,
+    "llm_judging_seconds": 0.0,
+    "guardrail_rejections": []
+  },
+  "history": [
+    {
+      "step": 1,
+      "tool": "fetch_prices",
+      "args": {},
+      "thought": "fetch all price histories in parallel",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"with_data\": 7, \"without_data\": 39, \"by_source\": {\"static price fixture/snapshot\": 7}, \"_seconds\": 3.2}"
+    },
+    {
+      "step": 2,
+      "tool": "finalize",
+      "args": {},
+      "thought": "score and write",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"covered\": 7, \"without_prices\": 39, \"_seconds\": 0.02}"
+    }
+  ],
+  "judgements": []
+}

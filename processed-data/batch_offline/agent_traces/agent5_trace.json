@@ -1,0 +1,2488 @@
+{
+  "written": "2026-11-25T15:19:00+00:00",
+  "report": {
+    "agent_id": "agent5",
+    "name": "Agent 5 - Disclosure-Consistency Agent",
+    "status": "completed",
+    "steps": 140,
+    "seconds": 3.16,
+    "decisions_by_source": {
+      "llm": 0,
+      "policy": 140,
+      "guardrail": 0
+    },
+    "summary": "224 claims investigated for 46 companies",
+    "findings": [],
+    "artifacts": [
+      ".batch_offline_ce4a27b3039649ae9c7448dd6cc62136.staging\\greenwashing_detection.csv"
+    ],
+    "llm_mode": false,
+    "llm_errors": [],
+    "judgements_by_source": {
+      "rule": 40
+    },
+    "judge_calls": 40,
+    "judge_seconds": 0.0,
+    "judge_budget": 300,
+    "judge_time_budget_seconds": 1800.0,
+    "judge_budget_reached": false,
+    "judge_time_budget_reached": false,
+    "planner_mode": "recover",
+    "llm_planning_calls": 0,
+    "llm_planning_decisions": 0,
+    "llm_judgements": 0,
+    "budget_reason": "none",
+    "llm_planning_seconds": 0.0,
+    "llm_judging_seconds": 0.0,
+    "guardrail_rejections": []
+  },
+  "history": [
+    {
+      "step": 1,
+      "tool": "load_inputs",
+      "args": {},
+      "thought": "read upstream outputs",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"brsr_rows\": 1058, \"trend_rows\": 401, \"news_rows\": 4, \"baseline_metrics\": [\"Energy Intensity\", \"Water Intensity\", \"GHG Intensity\"], \"_seconds\": 0.06}"
+    },
+    {
+      "step": 2,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "TCS"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TCS\", \"claims\": 9, \"reported_improvements\": 2, \"pdf_statements\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 3,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "INFY"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INFY\", \"claims\": 6, \"reported_improvements\": 2, \"pdf_statements\": 3, \"_seconds\": 0.04}"
+    },
+    {
+      "step": 4,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "WIPRO"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"WIPRO\", \"claims\": 8, \"reported_improvements\": 2, \"pdf_statements\": 0, \"_seconds\": 0.03}"
+    },
+    {
+      "step": 5,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "HCLTECH"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HCLTECH\", \"claims\": 4, \"reported_improvements\": 2, \"pdf_statements\": 0, \"_seconds\": 0.03}"
+    },
+    {
+      "step": 6,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "TECHM"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TECHM\", \"claims\": 6, \"reported_improvements\": 1, \"pdf_statements\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 7,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "LTIM"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"LTIM\", \"claims\": 7, \"reported_improvements\": 3, \"pdf_statements\": 1, \"_seconds\": 0.17}"
+    },
+    {
+      "step": 8,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "MPHASIS"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MPHASIS\", \"claims\": 6, \"reported_improvements\": 2, \"pdf_statements\": 0, \"_seconds\": 0.14}"
+    },
+    {
+      "step": 9,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "PERSISTENT"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"PERSISTENT\", \"claims\": 2, \"reported_improvements\": 1, \"pdf_statements\": 0, \"_seconds\": 0.03}"
+    },
+    {
+      "step": 10,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "COFORGE"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"COFORGE\", \"claims\": 7, \"reported_improvements\": 3, \"pdf_statements\": 1, \"_seconds\": 0.03}"
+    },
+    {
+      "step": 11,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "LTTS"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"LTTS\", \"claims\": 4, \"reported_improvements\": 1, \"pdf_statements\": 0, \"_seconds\": 0.16}"
+    },
+    {
+      "step": 12,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "TATAELXSI"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATAELXSI\", \"claims\": 6, \"reported_improvements\": 2, \"pdf_statements\": 0, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 13,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "OFSS"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"OFSS\", \"claims\": 6, \"reported_improvements\": 3, \"pdf_statements\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 14,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "KPITTECH"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"KPITTECH\", \"claims\": 5, \"reported_improvements\": 1, \"pdf_statements\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 15,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "CYIENT"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"CYIENT\", \"claims\": 6, \"reported_improvements\": 1, \"pdf_statements\": 0, \"_seconds\": 0.12}"
+    },
+    {
+      "step": 16,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "BSOFT"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"BSOFT\", \"claims\": 6, \"reported_improvements\": 1, \"pdf_statements\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 17,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "ZENSARTECH"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ZENSARTECH\", \"claims\": 1, \"reported_improvements\": 1, \"pdf_statements\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 18,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "TATATECH"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATATECH\", \"claims\": 6, \"reported_improvements\": 1, \"pdf_statements\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 19,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "HAPPSTMNDS"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HAPPSTMNDS\", \"claims\": 3, \"reported_improvements\": 0, \"pdf_statements\": 0, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 20,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "SONATSOFTW"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SONATSOFTW\", \"claims\": 4, \"reported_improvements\": 3, \"pdf_statements\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 21,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "NEWGEN"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NEWGEN\", \"claims\": 5, \"reported_improvements\": 1, \"pdf_statements\": 0, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 22,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "TANLA"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TANLA\", \"claims\": 3, \"reported_improvements\": 1, \"pdf_statements\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 23,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "INTELLECT"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INTELLECT\", \"claims\": 5, \"reported_improvements\": 0, \"pdf_statements\": 1, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 24,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "ROUTE"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ROUTE\", \"claims\": 5, \"reported_improvements\": 2, \"pdf_statements\": 0, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 25,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "RATEGAIN"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"RATEGAIN\", \"claims\": 4, \"reported_improvements\": 2, \"pdf_statements\": 0, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 26,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "ECLERX"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ECLERX\", \"claims\": 8, \"reported_improvements\": 1, \"pdf_statements\": 0, \"_seconds\": 0.03}"
+    },
+    {
+      "step": 27,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "DATAMATICS"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"DATAMATICS\", \"claims\": 5, \"reported_improvements\": 2, \"pdf_statements\": 0, \"_seconds\": 0.11}"
+    },
+    {
+      "step": 28,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "MASTEK"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MASTEK\", \"claims\": 4, \"reported_improvements\": 1, \"pdf_statements\": 0, \"_seconds\": 0.0}"
+    },
+    {
+      "step": 29,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "SONACOMS"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SONACOMS\", \"claims\": 7, \"reported_improvements\": 3, \"pdf_statements\": 0, \"_seconds\": 0.04}"
+    },
+    {
+      "step": 30,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "HGS"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HGS\", \"claims\": 1, \"reported_improvements\": 1, \"pdf_statements\": 0, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 31,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "NIITLTD"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NIITLTD\", \"claims\": 3, \"reported_improvements\": 2, \"pdf_statements\": 0, \"_seconds\": 0.0}"
+    },
+    {
+      "step": 32,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "AFFLE"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"AFFLE\", \"claims\": 1, \"reported_improvements\": 1, \"pdf_statements\": 0, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 33,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "MPSLTD"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MPSLTD\", \"claims\": 3, \"reported_improvements\": 0, \"pdf_statements\": 0, \"_seconds\": 0.0}"
+    },
+    {
+      "step": 34,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "SUBEXLTD"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SUBEXLTD\", \"claims\": 3, \"reported_improvements\": 2, \"pdf_statements\": 0, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 35,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "SIS"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SIS\", \"claims\": 5, \"reported_improvements\": 0, \"pdf_statements\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 36,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "ZOMATO"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ZOMATO\", \"claims\": 5, \"reported_improvements\": 1, \"pdf_statements\": 0, \"_seconds\": 0.12}"
+    },
+    {
+      "step": 37,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "PAYTM"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"PAYTM\", \"claims\": 3, \"reported_improvements\": 0, \"pdf_statements\": 0, \"_seconds\": 0.03}"
+    },
+    {
+      "step": 38,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "POLICYBZR"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"POLICYBZR\", \"claims\": 4, \"reported_improvements\": 1, \"pdf_statements\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 39,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "DELHIVERY"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"DELHIVERY\", \"claims\": 6, \"reported_improvements\": 1, \"pdf_statements\": 0, \"_seconds\": 0.0}"
+    },
+    {
+      "step": 40,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "NAZARA"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NAZARA\", \"claims\": 2, \"reported_improvements\": 0, \"pdf_statements\": 0, \"_seconds\": 0.14}"
+    },
+    {
+      "step": 41,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "TATACOMM"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATACOMM\", \"claims\": 6, \"reported_improvements\": 4, \"pdf_statements\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 42,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "INDUSTOWER"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INDUSTOWER\", \"claims\": 2, \"reported_improvements\": 2, \"pdf_statements\": 0, \"_seconds\": 0.13}"
+    },
+    {
+      "step": 43,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "BHARTIARTL"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"BHARTIARTL\", \"claims\": 7, \"reported_improvements\": 4, \"pdf_statements\": 0, \"_seconds\": 0.02}"
+    },
+    {
+      "step": 44,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "TEJASNET"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TEJASNET\", \"claims\": 6, \"reported_improvements\": 1, \"pdf_statements\": 0, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 45,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "REDINGTON"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"REDINGTON\", \"claims\": 6, \"reported_improvements\": 3, \"pdf_statements\": 1, \"_seconds\": 0.01}"
+    },
+    {
+      "step": 46,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "MAZDOCK"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MAZDOCK\", \"claims\": 6, \"reported_improvements\": 2, \"pdf_statements\": 0, \"_seconds\": 0.0}"
+    },
+    {
+      "step": 47,
+      "tool": "extract_claims",
+      "args": {
+        "company_code": "TITAN"
+      },
+      "thought": "build claims",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TITAN\", \"claims\": 7, \"reported_improvements\": 1, \"pdf_statements\": 0, \"_seconds\": 0.12}"
+    },
+    {
+      "step": 48,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "TCS",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 49,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "INFY",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 50,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "WIPRO",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.03}"
+    },
+    {
+      "step": 51,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "HCLTECH",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 52,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "TECHM",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 53,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "LTIM",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 54,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "MPHASIS",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 55,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "PERSISTENT",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 56,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "COFORGE",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 57,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "LTTS",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 58,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "TATAELXSI",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 59,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "OFSS",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 60,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "KPITTECH",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 61,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "CYIENT",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 62,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "BSOFT",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 63,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "ZENSARTECH",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 64,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "TATATECH",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 65,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "HAPPSTMNDS",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"potential_inconsistency\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 66,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "SONATSOFTW",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 67,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "NEWGEN",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 68,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "TANLA",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 69,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "INTELLECT",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"potential_inconsistency\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 70,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "ROUTE",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 71,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "RATEGAIN",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 72,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "ECLERX",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 73,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "DATAMATICS",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 74,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "MASTEK",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 75,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "SONACOMS",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 76,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "HGS",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 77,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "NIITLTD",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 78,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "AFFLE",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 79,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "MPSLTD",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"potential_inconsistency\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 80,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "SUBEXLTD",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 81,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "SIS",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"potential_inconsistency\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 82,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "ZOMATO",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 83,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "PAYTM",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"potential_inconsistency\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 84,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "POLICYBZR",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 85,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "DELHIVERY",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 86,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "NAZARA",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"potential_inconsistency\", \"source\": \"rule\", \"_seconds\": 0.0}"
+    },
+    {
+      "step": 87,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "TATACOMM",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.03}"
+    },
+    {
+      "step": 88,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "INDUSTOWER",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.01}"
+    },
+    {
+      "step": 89,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "BHARTIARTL",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 90,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "TEJASNET",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 91,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "REDINGTON",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 92,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "MAZDOCK",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 93,
+      "tool": "investigate_claim",
+      "args": {
+        "company_code": "TITAN",
+        "claim_id": "C1"
+      },
+      "thought": "investigate the next claim",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"claim\": \"C1\", \"verdict\": \"consistent\", \"source\": \"rule\", \"_seconds\": 0.02}"
+    },
+    {
+      "step": 94,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TCS"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TCS\", \"trust\": 6.62, \"risk_level\": \"Moderate\", \"signals\": [\"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 95,
+      "tool": "score_company",
+      "args": {
+        "company_code": "INFY"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INFY\", \"trust\": 8.12, \"risk_level\": \"Low\", \"signals\": [\"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 96,
+      "tool": "score_company",
+      "args": {
+        "company_code": "WIPRO"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"WIPRO\", \"trust\": 7.0, \"risk_level\": \"Moderate\", \"signals\": [\"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 97,
+      "tool": "score_company",
+      "args": {
+        "company_code": "HCLTECH"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HCLTECH\", \"trust\": 6.62, \"risk_level\": \"Moderate\", \"signals\": [\"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 98,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TECHM"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TECHM\", \"trust\": 6.62, \"risk_level\": \"Moderate\", \"signals\": [\"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 99,
+      "tool": "score_company",
+      "args": {
+        "company_code": "LTIM"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"LTIM\", \"trust\": 7.0, \"risk_level\": \"Moderate\", \"signals\": [\"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 100,
+      "tool": "score_company",
+      "args": {
+        "company_code": "MPHASIS"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MPHASIS\", \"trust\": 6.25, \"risk_level\": \"Moderate\", \"signals\": [\"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 101,
+      "tool": "score_company",
+      "args": {
+        "company_code": "PERSISTENT"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"PERSISTENT\", \"trust\": 7.56, \"risk_level\": \"Low\", \"signals\": [\"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 102,
+      "tool": "score_company",
+      "args": {
+        "company_code": "COFORGE"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"COFORGE\", \"trust\": 5.96, \"risk_level\": \"High\", \"signals\": [\"source_disagreement\", \"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 103,
+      "tool": "score_company",
+      "args": {
+        "company_code": "LTTS"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"LTTS\", \"trust\": 6.62, \"risk_level\": \"Moderate\", \"signals\": [\"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 104,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TATAELXSI"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATAELXSI\", \"trust\": 6.62, \"risk_level\": \"Moderate\", \"signals\": [\"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 105,
+      "tool": "score_company",
+      "args": {
+        "company_code": "OFSS"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"OFSS\", \"trust\": 7.0, \"risk_level\": \"Moderate\", \"signals\": [\"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 106,
+      "tool": "score_company",
+      "args": {
+        "company_code": "KPITTECH"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"KPITTECH\", \"trust\": 5.31, \"risk_level\": \"High\", \"signals\": [\"implausible_claims\", \"claim_contradicted\", \"disclosure_gap\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 107,
+      "tool": "score_company",
+      "args": {
+        "company_code": "CYIENT"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"CYIENT\", \"trust\": 7.0, \"risk_level\": \"Moderate\", \"signals\": [\"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 108,
+      "tool": "score_company",
+      "args": {
+        "company_code": "BSOFT"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"BSOFT\", \"trust\": 6.62, \"risk_level\": \"Moderate\", \"signals\": [\"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 109,
+      "tool": "score_company",
+      "args": {
+        "company_code": "ZENSARTECH"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ZENSARTECH\", \"trust\": 8.12, \"risk_level\": \"Low\", \"signals\": [\"implausible_claims\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 110,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TATATECH"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATATECH\", \"trust\": 6.62, \"risk_level\": \"Moderate\", \"signals\": [\"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 111,
+      "tool": "score_company",
+      "args": {
+        "company_code": "HAPPSTMNDS"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HAPPSTMNDS\", \"trust\": 6.62, \"risk_level\": \"Moderate\", \"signals\": [\"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 112,
+      "tool": "score_company",
+      "args": {
+        "company_code": "SONATSOFTW"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SONATSOFTW\", \"trust\": 8.5, \"risk_level\": \"Low\", \"signals\": [\"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 113,
+      "tool": "score_company",
+      "args": {
+        "company_code": "NEWGEN"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NEWGEN\", \"trust\": 5.96, \"risk_level\": \"High\", \"signals\": [\"source_disagreement\", \"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 114,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TANLA"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TANLA\", \"trust\": 7.0, \"risk_level\": \"Moderate\", \"signals\": [\"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 115,
+      "tool": "score_company",
+      "args": {
+        "company_code": "INTELLECT"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INTELLECT\", \"trust\": 6.25, \"risk_level\": \"Moderate\", \"signals\": [\"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 116,
+      "tool": "score_company",
+      "args": {
+        "company_code": "ROUTE"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ROUTE\", \"trust\": 7.0, \"risk_level\": \"Moderate\", \"signals\": [\"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 117,
+      "tool": "score_company",
+      "args": {
+        "company_code": "RATEGAIN"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"RATEGAIN\", \"trust\": 7.0, \"risk_level\": \"Moderate\", \"signals\": [\"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 118,
+      "tool": "score_company",
+      "args": {
+        "company_code": "ECLERX"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ECLERX\", \"trust\": 7.0, \"risk_level\": \"Moderate\", \"signals\": [\"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 119,
+      "tool": "score_company",
+      "args": {
+        "company_code": "DATAMATICS"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"DATAMATICS\", \"trust\": 5.0, \"risk_level\": \"High\", \"signals\": [\"intensity_outlier\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 120,
+      "tool": "score_company",
+      "args": {
+        "company_code": "MASTEK"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MASTEK\", \"trust\": 6.62, \"risk_level\": \"Moderate\", \"signals\": [\"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 121,
+      "tool": "score_company",
+      "args": {
+        "company_code": "SONACOMS"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SONACOMS\", \"trust\": 4.62, \"risk_level\": \"High\", \"signals\": [\"implausible_claims\", \"intensity_outlier\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 122,
+      "tool": "score_company",
+      "args": {
+        "company_code": "HGS"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HGS\", \"trust\": 8.12, \"risk_level\": \"Low\", \"signals\": [\"implausible_claims\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 123,
+      "tool": "score_company",
+      "args": {
+        "company_code": "NIITLTD"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NIITLTD\", \"trust\": 7.75, \"risk_level\": \"Moderate\", \"signals\": [\"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 124,
+      "tool": "score_company",
+      "args": {
+        "company_code": "AFFLE"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"AFFLE\", \"trust\": 7.97, \"risk_level\": \"Low\", \"signals\": [\"implausible_claims\", \"disclosure_gap\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 125,
+      "tool": "score_company",
+      "args": {
+        "company_code": "MPSLTD"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MPSLTD\", \"trust\": 4.25, \"risk_level\": \"High\", \"signals\": [\"implausible_claims\", \"intensity_outlier\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 126,
+      "tool": "score_company",
+      "args": {
+        "company_code": "SUBEXLTD"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SUBEXLTD\", \"trust\": 6.5, \"risk_level\": \"Moderate\", \"signals\": [\"intensity_outlier\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 127,
+      "tool": "score_company",
+      "args": {
+        "company_code": "SIS"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SIS\", \"trust\": 5.69, \"risk_level\": \"High\", \"signals\": [\"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 128,
+      "tool": "score_company",
+      "args": {
+        "company_code": "ZOMATO"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ZOMATO\", \"trust\": 3.58, \"risk_level\": \"High\", \"signals\": [\"source_disagreement\", \"implausible_claims\", \"intensity_outlier\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 129,
+      "tool": "score_company",
+      "args": {
+        "company_code": "PAYTM"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"PAYTM\", \"trust\": 6.62, \"risk_level\": \"Moderate\", \"signals\": [\"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 130,
+      "tool": "score_company",
+      "args": {
+        "company_code": "POLICYBZR"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"POLICYBZR\", \"trust\": 6.62, \"risk_level\": \"Moderate\", \"signals\": [\"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 131,
+      "tool": "score_company",
+      "args": {
+        "company_code": "DELHIVERY"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"DELHIVERY\", \"trust\": 5.88, \"risk_level\": \"High\", \"signals\": [\"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 132,
+      "tool": "score_company",
+      "args": {
+        "company_code": "NAZARA"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NAZARA\", \"trust\": 6.35, \"risk_level\": \"High\", \"signals\": [\"implausible_claims\", \"claim_contradicted\", \"disclosure_gap\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 133,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TATACOMM"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATACOMM\", \"trust\": 6.62, \"risk_level\": \"Moderate\", \"signals\": [\"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 134,
+      "tool": "score_company",
+      "args": {
+        "company_code": "INDUSTOWER"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INDUSTOWER\", \"trust\": 7.12, \"risk_level\": \"Moderate\", \"signals\": [\"implausible_claims\", \"intensity_outlier\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 135,
+      "tool": "score_company",
+      "args": {
+        "company_code": "BHARTIARTL"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"BHARTIARTL\", \"trust\": 7.0, \"risk_level\": \"Moderate\", \"signals\": [\"claim_contradicted\"], \"_seconds\": 0.02}"
+    },
+    {
+      "step": 136,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TEJASNET"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TEJASNET\", \"trust\": 5.96, \"risk_level\": \"High\", \"signals\": [\"source_disagreement\", \"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.02}"
+    },
+    {
+      "step": 137,
+      "tool": "score_company",
+      "args": {
+        "company_code": "REDINGTON"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"REDINGTON\", \"trust\": 7.0, \"risk_level\": \"Moderate\", \"signals\": [\"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 138,
+      "tool": "score_company",
+      "args": {
+        "company_code": "MAZDOCK"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MAZDOCK\", \"trust\": 6.25, \"risk_level\": \"Moderate\", \"signals\": [\"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 139,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TITAN"
+      },
+      "thought": "grade the signals",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TITAN\", \"trust\": 6.62, \"risk_level\": \"Moderate\", \"signals\": [\"implausible_claims\", \"claim_contradicted\"], \"_seconds\": 0.01}"
+    },
+    {
+      "step": 140,
+      "tool": "finalize",
+      "args": {},
+      "thought": "all companies investigated",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"companies\": 46, \"claims\": 224, \"_seconds\": 0.02}"
+    }
+  ],
+  "judgements": [
+    {
+      "task": "compare several company claims against their separate evidence lists",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "TCS/uncertain-claims",
+      "answer": {
+        "claims": [
+          {
+            "claim_id": "C1",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C2",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          }
+        ]
+      }
+    },
+    {
+      "task": "compare several company claims against their separate evidence lists",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "INFY/uncertain-claims",
+      "answer": {
+        "claims": [
+          {
+            "claim_id": "C1",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C2",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C4",
+            "verdict": "insufficient_evidence",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the available evidence neither supports nor contradicts the claim"
+          },
+          {
+            "claim_id": "C5",
+            "verdict": "insufficient_evidence",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the available evidence neither supports nor contradicts the claim"
+          },
+          {
+            "claim_id": "C6",
+            "verdict": "insufficient_evidence",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the available evidence neither supports nor contradicts the claim"
+          }
+        ]
+      }
+    },
+    {
+      "task": "compare several company claims against their separate evidence lists",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "WIPRO/uncertain-claims",
+      "answer": {
+        "claims": [
+          {
+            "claim_id": "C1",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C2",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          }
+        ]
+      }
+    },
+    {
+      "task": "compare several company claims against their separate evidence lists",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "HCLTECH/uncertain-claims",
+      "answer": {
+        "claims": [
+          {
+            "claim_id": "C1",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C2",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          }
+        ]
+      }
+    },
+    {
+      "task": "investigate one company claim against the evidence list",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "TECHM/C1",
+      "answer": {
+        "verdict": "consistent",
+        "cited_evidence": [
+          "E2"
+        ],
+        "confidence": 0.6,
+        "rationale": "the reported improvement is supported by comparable years"
+      }
+    },
+    {
+      "task": "compare several company claims against their separate evidence lists",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "LTIM/uncertain-claims",
+      "answer": {
+        "claims": [
+          {
+            "claim_id": "C1",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C2",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2",
+              "E3"
+            ],
+            "confidence": 0.7,
+            "rationale": "the reported improvement is supported by comparable years and PDF corroboration"
+          },
+          {
+            "claim_id": "C3",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C7",
+            "verdict": "insufficient_evidence",
+            "cited_evidence": [
+              "E1"
+            ],
+            "confidence": 0.6,
+            "rationale": "the available evidence neither supports nor contradicts the claim"
+          }
+        ]
+      }
+    },
+    {
+      "task": "compare several company claims against their separate evidence lists",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "MPHASIS/uncertain-claims",
+      "answer": {
+        "claims": [
+          {
+            "claim_id": "C1",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C2",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          }
+        ]
+      }
+    },
+    {
+      "task": "investigate one company claim against the evidence list",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "PERSISTENT/C1",
+      "answer": {
+        "verdict": "consistent",
+        "cited_evidence": [
+          "E2"
+        ],
+        "confidence": 0.6,
+        "rationale": "the reported improvement is supported by comparable years"
+      }
+    },
+    {
+      "task": "compare several company claims against their separate evidence lists",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "COFORGE/uncertain-claims",
+      "answer": {
+        "claims": [
+          {
+            "claim_id": "C1",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C2",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C3",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C7",
+            "verdict": "insufficient_evidence",
+            "cited_evidence": [
+              "E1"
+            ],
+            "confidence": 0.6,
+            "rationale": "the available evidence neither supports nor contradicts the claim"
+          }
+        ]
+      }
+    },
+    {
+      "task": "investigate one company claim against the evidence list",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "LTTS/C1",
+      "answer": {
+        "verdict": "consistent",
+        "cited_evidence": [
+          "E2",
+          "E3"
+        ],
+        "confidence": 0.7,
+        "rationale": "the reported improvement is supported by comparable years and PDF corroboration"
+      }
+    },
+    {
+      "task": "compare several company claims against their separate evidence lists",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "TATAELXSI/uncertain-claims",
+      "answer": {
+        "claims": [
+          {
+            "claim_id": "C1",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C2",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          }
+        ]
+      }
+    },
+    {
+      "task": "compare several company claims against their separate evidence lists",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "OFSS/uncertain-claims",
+      "answer": {
+        "claims": [
+          {
+            "claim_id": "C1",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C2",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C3",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          }
+        ]
+      }
+    },
+    {
+      "task": "investigate one company claim against the evidence list",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "KPITTECH/C1",
+      "answer": {
+        "verdict": "consistent",
+        "cited_evidence": [
+          "E2"
+        ],
+        "confidence": 0.6,
+        "rationale": "the reported improvement is supported by comparable years"
+      }
+    },
+    {
+      "task": "investigate one company claim against the evidence list",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "CYIENT/C1",
+      "answer": {
+        "verdict": "consistent",
+        "cited_evidence": [
+          "E2"
+        ],
+        "confidence": 0.6,
+        "rationale": "the reported improvement is supported by comparable years"
+      }
+    },
+    {
+      "task": "investigate one company claim against the evidence list",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "BSOFT/C1",
+      "answer": {
+        "verdict": "consistent",
+        "cited_evidence": [
+          "E2"
+        ],
+        "confidence": 0.6,
+        "rationale": "the reported improvement is supported by comparable years"
+      }
+    },
+    {
+      "task": "investigate one company claim against the evidence list",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "ZENSARTECH/C1",
+      "answer": {
+        "verdict": "consistent",
+        "cited_evidence": [
+          "E2"
+        ],
+        "confidence": 0.6,
+        "rationale": "the reported improvement is supported by comparable years"
+      }
+    },
+    {
+      "task": "investigate one company claim against the evidence list",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "TATATECH/C1",
+      "answer": {
+        "verdict": "consistent",
+        "cited_evidence": [
+          "E2",
+          "E3"
+        ],
+        "confidence": 0.7,
+        "rationale": "the reported improvement is supported by comparable years and PDF corroboration"
+      }
+    },
+    {
+      "task": "compare several company claims against their separate evidence lists",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "SONATSOFTW/uncertain-claims",
+      "answer": {
+        "claims": [
+          {
+            "claim_id": "C1",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C2",
+            "verdict": "insufficient_evidence",
+            "cited_evidence": [
+              "E2",
+              "E3"
+            ],
+            "confidence": 0.7,
+            "rationale": "the available evidence neither supports nor contradicts the claim"
+          },
+          {
+            "claim_id": "C3",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          }
+        ]
+      }
+    },
+    {
+      "task": "investigate one company claim against the evidence list",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "NEWGEN/C1",
+      "answer": {
+        "verdict": "consistent",
+        "cited_evidence": [
+          "E2"
+        ],
+        "confidence": 0.6,
+        "rationale": "the reported improvement is supported by comparable years"
+      }
+    },
+    {
+      "task": "investigate one company claim against the evidence list",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "TANLA/C1",
+      "answer": {
+        "verdict": "consistent",
+        "cited_evidence": [
+          "E2"
+        ],
+        "confidence": 0.6,
+        "rationale": "the reported improvement is supported by comparable years"
+      }
+    },
+    {
+      "task": "compare several company claims against their separate evidence lists",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "ROUTE/uncertain-claims",
+      "answer": {
+        "claims": [
+          {
+            "claim_id": "C1",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C2",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          }
+        ]
+      }
+    },
+    {
+      "task": "compare several company claims against their separate evidence lists",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "RATEGAIN/uncertain-claims",
+      "answer": {
+        "claims": [
+          {
+            "claim_id": "C1",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C2",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          }
+        ]
+      }
+    },
+    {
+      "task": "investigate one company claim against the evidence list",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "ECLERX/C1",
+      "answer": {
+        "verdict": "consistent",
+        "cited_evidence": [
+          "E2"
+        ],
+        "confidence": 0.6,
+        "rationale": "the reported improvement is supported by comparable years"
+      }
+    },
+    {
+      "task": "compare several company claims against their separate evidence lists",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "DATAMATICS/uncertain-claims",
+      "answer": {
+        "claims": [
+          {
+            "claim_id": "C1",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C2",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          }
+        ]
+      }
+    },
+    {
+      "task": "investigate one company claim against the evidence list",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "MASTEK/C1",
+      "answer": {
+        "verdict": "consistent",
+        "cited_evidence": [
+          "E2"
+        ],
+        "confidence": 0.6,
+        "rationale": "the reported improvement is supported by comparable years"
+      }
+    },
+    {
+      "task": "compare several company claims against their separate evidence lists",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "SONACOMS/uncertain-claims",
+      "answer": {
+        "claims": [
+          {
+            "claim_id": "C1",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C2",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C3",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          }
+        ]
+      }
+    },
+    {
+      "task": "investigate one company claim against the evidence list",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "HGS/C1",
+      "answer": {
+        "verdict": "consistent",
+        "cited_evidence": [
+          "E2"
+        ],
+        "confidence": 0.6,
+        "rationale": "the reported improvement is supported by comparable years"
+      }
+    },
+    {
+      "task": "compare several company claims against their separate evidence lists",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "NIITLTD/uncertain-claims",
+      "answer": {
+        "claims": [
+          {
+            "claim_id": "C1",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C2",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          }
+        ]
+      }
+    },
+    {
+      "task": "investigate one company claim against the evidence list",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "AFFLE/C1",
+      "answer": {
+        "verdict": "consistent",
+        "cited_evidence": [
+          "E2"
+        ],
+        "confidence": 0.6,
+        "rationale": "the reported improvement is supported by comparable years"
+      }
+    },
+    {
+      "task": "compare several company claims against their separate evidence lists",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "SUBEXLTD/uncertain-claims",
+      "answer": {
+        "claims": [
+          {
+            "claim_id": "C1",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C2",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          }
+        ]
+      }
+    },
+    {
+      "task": "investigate one company claim against the evidence list",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "ZOMATO/C1",
+      "answer": {
+        "verdict": "consistent",
+        "cited_evidence": [
+          "E2"
+        ],
+        "confidence": 0.6,
+        "rationale": "the reported improvement is supported by comparable years"
+      }
+    },
+    {
+      "task": "investigate one company claim against the evidence list",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "POLICYBZR/C1",
+      "answer": {
+        "verdict": "consistent",
+        "cited_evidence": [
+          "E2"
+        ],
+        "confidence": 0.6,
+        "rationale": "the reported improvement is supported by comparable years"
+      }
+    },
+    {
+      "task": "investigate one company claim against the evidence list",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "DELHIVERY/C1",
+      "answer": {
+        "verdict": "consistent",
+        "cited_evidence": [
+          "E2"
+        ],
+        "confidence": 0.6,
+        "rationale": "the reported improvement is supported by comparable years"
+      }
+    },
+    {
+      "task": "compare several company claims against their separate evidence lists",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "TATACOMM/uncertain-claims",
+      "answer": {
+        "claims": [
+          {
+            "claim_id": "C1",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C2",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C3",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C4",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          }
+        ]
+      }
+    },
+    {
+      "task": "compare several company claims against their separate evidence lists",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "INDUSTOWER/uncertain-claims",
+      "answer": {
+        "claims": [
+          {
+            "claim_id": "C1",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C2",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          }
+        ]
+      }
+    },
+    {
+      "task": "compare several company claims against their separate evidence lists",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "BHARTIARTL/uncertain-claims",
+      "answer": {
+        "claims": [
+          {
+            "claim_id": "C1",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C2",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C3",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C4",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          }
+        ]
+      }
+    },
+    {
+      "task": "investigate one company claim against the evidence list",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "TEJASNET/C1",
+      "answer": {
+        "verdict": "consistent",
+        "cited_evidence": [
+          "E2"
+        ],
+        "confidence": 0.6,
+        "rationale": "the reported improvement is supported by comparable years"
+      }
+    },
+    {
+      "task": "compare several company claims against their separate evidence lists",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "REDINGTON/uncertain-claims",
+      "answer": {
+        "claims": [
+          {
+            "claim_id": "C1",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C2",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C3",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C6",
+            "verdict": "insufficient_evidence",
+            "cited_evidence": [
+              "E1"
+            ],
+            "confidence": 0.6,
+            "rationale": "the available evidence neither supports nor contradicts the claim"
+          }
+        ]
+      }
+    },
+    {
+      "task": "compare several company claims against their separate evidence lists",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "MAZDOCK/uncertain-claims",
+      "answer": {
+        "claims": [
+          {
+            "claim_id": "C1",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2"
+            ],
+            "confidence": 0.6,
+            "rationale": "the reported improvement is supported by comparable years"
+          },
+          {
+            "claim_id": "C2",
+            "verdict": "consistent",
+            "cited_evidence": [
+              "E2",
+              "E3"
+            ],
+            "confidence": 0.7,
+            "rationale": "the reported improvement is supported by comparable years and PDF corroboration"
+          }
+        ]
+      }
+    },
+    {
+      "task": "investigate one company claim against the evidence list",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "TITAN/C1",
+      "answer": {
+        "verdict": "consistent",
+        "cited_evidence": [
+          "E2"
+        ],
+        "confidence": 0.6,
+        "rationale": "the reported improvement is supported by comparable years"
+      }
+    }
+  ]
+}

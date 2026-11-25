@@ -1,0 +1,28 @@
+{
+  "offline_dir": "D:\\capstone-v5.4\\processed-data\\batch_offline",
+  "dynamic_dir": "D:\\capstone-v5.4\\processed-data\\batch_dynamic",
+  "companies": {
+    "overlap": 46,
+    "scored_both": 46,
+    "quality_gate_agreement": 1.0
+  },
+  "score_agreement": {
+    "mean_absolute_difference": 0.0,
+    "median_absolute_difference": 0.0,
+    "max_absolute_difference": 0.0,
+    "pearson_correlation": 1.0,
+    "spearman_rank_correlation": 1.0
+  },
+  "market_windows": {
+    "matched_companies": 7,
+    "same_window": 7,
+    "different_window": 0,
+    "consistent": true,
+    "offline_ends": [
+      "2025-11-11"
+    ],
+    "dynamic_ends": [
+      "2025-11-11"
+    ]
+  }
+}

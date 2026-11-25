@@ -1,0 +1,2587 @@
+{
+  "written": "2026-11-25T15:18:47+00:00",
+  "report": {
+    "agent_id": "agent3",
+    "name": "Agent 3 - ESG News Sentiment Agent",
+    "status": "completed",
+    "steps": 6,
+    "seconds": 2.89,
+    "decisions_by_source": {
+      "llm": 0,
+      "policy": 6,
+      "guardrail": 0
+    },
+    "summary": "news sentiment written with reliability and shrinkage",
+    "findings": [
+      {
+        "kind": "relaxed_attribution",
+        "severity": "low",
+        "message": "strict title attribution left <40% of companies with 5+ articles; relaxed to lead-text attribution"
+      }
+    ],
+    "artifacts": [
+      "processed-data\\.batch_offline_ce4a27b3039649ae9c7448dd6cc62136.staging\\esg_news_sentiment.csv"
+    ],
+    "llm_mode": false,
+    "llm_errors": [],
+    "judgements_by_source": {
+      "rule": 33
+    },
+    "judge_calls": 33,
+    "judge_seconds": 0.0,
+    "judge_budget": 300,
+    "judge_time_budget_seconds": 1800.0,
+    "judge_budget_reached": false,
+    "judge_time_budget_reached": false,
+    "planner_mode": "recover",
+    "llm_planning_calls": 0,
+    "llm_planning_decisions": 0,
+    "llm_judgements": 0,
+    "budget_reason": "none",
+    "llm_planning_seconds": 0.0,
+    "llm_judging_seconds": 0.0,
+    "guardrail_rejections": []
+  },
+  "history": [
+    {
+      "step": 1,
+      "tool": "load_corpus",
+      "args": {},
+      "thought": "inspect the corpus first",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"articles\": 3348, \"date_min\": \"2025-02-07\", \"date_max\": \"2025-08-21\", \"roundup_like_titles\": 1019, \"_seconds\": 0.28}"
+    },
+    {
+      "step": 2,
+      "tool": "attribute_articles",
+      "args": {
+        "strict": true
+      },
+      "thought": "title-level attribution avoids false credit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"attributed_rows\": 297, \"rejected_roundups\": 1131, \"rejected_ambiguous\": 0, \"companies_with_articles\": 22, \"companies_with_5plus\": 13, \"_seconds\": 0.61}"
+    },
+    {
+      "step": 3,
+      "tool": "attribute_articles",
+      "args": {
+        "strict": false
+      },
+      "thought": "title-level attribution avoids false credit",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"attributed_rows\": 335, \"rejected_roundups\": 1131, \"rejected_ambiguous\": 4, \"companies_with_articles\": 23, \"companies_with_5plus\": 14, \"_seconds\": 1.52}"
+    },
+    {
+      "step": 4,
+      "tool": "score_articles",
+      "args": {},
+      "thought": "score relevant attributed articles",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"candidates\": 335, \"esg_relevant\": 4, \"rejected_not_esg\": 331, \"judgements\": {\"rule\": 33}, \"_seconds\": 0.3}"
+    },
+    {
+      "step": 5,
+      "tool": "audit_distribution",
+      "args": {},
+      "thought": "verify the score distribution",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"share_abs_gt_0.9\": 0.0, \"class_mix\": {\"Positive\": 0.75, \"Neutral\": 0.25}, \"mean\": 0.301, \"std\": 0.177, \"companies_below_5_articles\": 46, \"_seconds\": 0.0}"
+    },
+    {
+      "step": 6,
+      "tool": "finalize",
+      "args": {},
+      "thought": "write outputs",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"articles_scored\": 4, \"companies_with_5plus_articles\": 0, \"_seconds\": 0.18}"
+    }
+  ],
+  "judgements": [
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:TECHM|2025-05-13|0|Tech Mahindra initiates key leadership changes to ",
+      "answer": {
+        "items": [
+          {
+            "key": "TECHM|2025-05-13|0|Tech Mahindra initiates key leadership changes to drive growth",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "ZOMATO|2025-03-28|1|Jefferies hikes stake in Reliance Industries, Zomato, says Chris Wood in latest ",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "negative",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-04-10|7|Chartist Talks: Hedged's Rahul Ghose explains why he is betting on these 2 large",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TITAN|2025-05-16|8|Buy Titan Company; target of Rs 4155: Sharekhan",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-07-31|11|Tata Steel Standalone June 2025 Net Sales at Rs 31,014.36 crore, down 5.9% Y-o-Y",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-06-27|12|Vedanta, Tata Steel, others rise up to 3% as White House hints Trump's July tari",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:BHARTIARTL|2025-07-14|13|Bharti Airtel Q1 PAT seen up 106.8% YoY to R",
+      "answer": {
+        "items": [
+          {
+            "key": "BHARTIARTL|2025-07-14|13|Bharti Airtel Q1 PAT seen up 106.8% YoY to Rs. 7082.5 cr: Prabhudas Lilladher",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TECHM|2025-04-25|15|Buy Tech Mahindra; target of Rs 1950: Motilal Oswal",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-05-15|17|Buy Tata Steel; target of Rs 176 Prabhudas Lilladher",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TCS|2025-07-11|18|Buy Tata Consultancy Services; target of Rs 3900: Sharekhan",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-07-11|19|Buy Tata Consultancy Services; target of Rs 3900: Sharekhan",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TITAN|2025-08-06|20|Titan Q1 Preview: Soaring gold prices likely to impact demand, dent margins",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:TATATECH|2025-06-06|22|BEL and Tata Electronics to co-develop indigen",
+      "answer": {
+        "items": [
+          {
+            "key": "TATATECH|2025-06-06|22|BEL and Tata Electronics to co-develop indigenous semiconductor solutions",
+            "relevant": false,
+            "pillar": "Social",
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "BHARTIARTL|2025-07-17|27|Bharti Airtel to Hold 30th AGM on August 8, 2025",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TITAN|2025-05-08|28|Titan says MD Venkataraman to retire by year-end, Ajoy Chawla announced as his s",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-05-16|29|Buy Tata Steel; target of Rs 190: ICICI Securities",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-04-01|30|Indian companies gear up for nuclear expansion amid policy shift: Report",
+            "relevant": false,
+            "pillar": "Environmental",
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATAELXSI|2025-07-11|31|Sell Tata Elxsi; target of Rs 4420: ICICI Securities",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:TATATECH|2025-07-11|32|Sell Tata Elxsi; target of Rs 4420: ICICI Secu",
+      "answer": {
+        "items": [
+          {
+            "key": "TATATECH|2025-07-11|32|Sell Tata Elxsi; target of Rs 4420: ICICI Securities",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TITAN|2025-05-07|33|Titan Company Q4 Preview: Rising gold prices impact demand, single-digit profit ",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TECHM|2025-04-25|35|Accumulate Tech Mahindra; target of Rs 1530: Prabhudas Lilladher",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TITAN|2025-05-08|36|Titan Company Standalone March 2025 Net Sales at Rs 13,477.00 crore, up 19.72% Y",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TECHM|2025-07-18|37|Buy Tech Mahindra; target of Rs 1950: Sharekhan",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TITAN|2025-05-19|38|Buy Titan Company; target of Rs 4155: Sharekhan",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:TATATECH|2025-06-06|39|JSW Steel, Tata Steel, other metal stocks surg",
+      "answer": {
+        "items": [
+          {
+            "key": "TATATECH|2025-06-06|39|JSW Steel, Tata Steel, other metal stocks surge up to 4% after RBI's surprise 50",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-07-23|40|Tata Steel's 'Baa3' Issuer Rating Affirmed by Moody's",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TITAN|2025-07-21|41|Titan to buy 67% stake in Dubai-based jewellery firm Damas for $283 million",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TITAN|2025-07-21|42|Buy Titan Company; target of Rs 4250: Motilal Oswal",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-07-17|43|Tata Sons plans $400-mn fund infusion into struggling e-commerce biz Tata Digita",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "negative",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-08-04|44|Accumulate Tata Steel; target of Rs 177: Prabhudas Lilladher",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:TATATECH|2025-04-11|47|Buy Tata Steel; target of Rs 180: ICICI Securi",
+      "answer": {
+        "items": [
+          {
+            "key": "TATATECH|2025-04-11|47|Buy Tata Steel; target of Rs 180: ICICI Securities",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATAELXSI|2025-07-11|48|Tata Elxsi Standalone June 2025 Net Sales at Rs 892.10 crore, down 3.71% Y-o-Y",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-07-11|49|Tata Elxsi Standalone June 2025 Net Sales at Rs 892.10 crore, down 3.71% Y-o-Y",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-07-29|52|Tata Chemicals Consolidated June 2025 Net Sales at Rs 3,719.00 crore, down 1.85%",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TECHM|2025-06-02|53|Persistent, TechM, other IT stocks drop up to 4% amid escalating US-China trade ",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "PERSISTENT|2025-06-02|54|Persistent, TechM, other IT stocks drop up to 4% amid escalating US-China trade ",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:TATATECH|2025-05-13|55|Tata Motors DVR Consolidated March 2025 Net Sa",
+      "answer": {
+        "items": [
+          {
+            "key": "TATATECH|2025-05-13|55|Tata Motors DVR Consolidated March 2025 Net Sales at Rs 119,503.00 crore, down 0",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-08-01|60|Tata Steel Netherland hopeful of completing restructuring by September",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-06-25|61|Tata Group first Indian brand over the $30 billion value mark, Eternal joins the",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "ZOMATO|2025-06-25|62|Tata Group first Indian brand over the $30 billion value mark, Eternal joins the",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TCS|2025-07-14|63|TCS\u2019s Q1 show misses the mark; what this means for the broader IT landscape",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATAELXSI|2025-04-01|64|Hold TATA Elxsi; target of Rs 4900: Choice Equity Broking",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:TATATECH|2025-04-01|65|Hold TATA Elxsi; target of Rs 4900: Choice Equ",
+      "answer": {
+        "items": [
+          {
+            "key": "TATATECH|2025-04-01|65|Hold TATA Elxsi; target of Rs 4900: Choice Equity Broking",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TECHM|2025-07-16|66|Tech Mahindra loses 622 employees in Q1, third consecutive quarter of decline",
+            "relevant": false,
+            "pillar": "Social",
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TECHM|2025-07-17|67|Buy Tech Mahindra; target of Rs 2000: Motilal Oswal",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "BHARTIARTL|2025-07-17|68|Airtel to offer free 1-year Perplexity Pro subscription to its customers",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATAELXSI|2025-04-21|69|Tata Elxsi Standalone March 2025 Net Sales at Rs 908.34 crore, up 0.26% Y-o-Y",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-04-21|70|Tata Elxsi Standalone March 2025 Net Sales at Rs 908.34 crore, up 0.26% Y-o-Y",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:TATAELXSI|2025-07-11|71|Sell Tata Elxsi ; target of Rs 4750: Prabhuda",
+      "answer": {
+        "items": [
+          {
+            "key": "TATAELXSI|2025-07-11|71|Sell Tata Elxsi ; target of Rs 4750: Prabhudas Lilladher",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-07-11|72|Sell Tata Elxsi ; target of Rs 4750: Prabhudas Lilladher",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TITAN|2025-05-09|73|Buy Titan Company; target of Rs 3752: Prabhudas Lilladher",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TECHM|2025-07-17|74|Tech Mahindra Consolidated June 2025 Net Sales at Rs 13,351.20 crore, up 2.66% Y",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-05-30|75|Vedanta, Tata Steel, other metal stocks tumble up to 3% as US-China tariff talks",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TECHM|2025-04-25|76|Tech Mahindra Consolidated March 2025 Net Sales at Rs 13,384.00 crore, up 3.98% ",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:TECHM|2025-04-25|77|Tech Mahindra Standalone March 2025 Net Sales at ",
+      "answer": {
+        "items": [
+          {
+            "key": "TECHM|2025-04-25|77|Tech Mahindra Standalone March 2025 Net Sales at Rs 11,583.60 crore, up 11.26% Y",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TECHM|2025-07-18|78|Tech Mahindra Standalone June 2025 Net Sales at Rs 11,594.60 crore, up 9.08% Y-o",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "ROUTE|2025-05-15|79|India Inc courts distant shores as foreign currency borrowing swells to over six",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TCS|2025-06-18|80|IT shares snap three-day gaining streak ahead of US Fed meet; Coforge, TCS, othe",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "COFORGE|2025-06-18|81|IT shares snap three-day gaining streak ahead of US Fed meet; Coforge, TCS, othe",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TECHM|2025-04-25|82|Reduce Tech Mahindra; target of Rs 1250: ICICI Securities",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:BHARTIARTL|2025-08-06|83|Bharti Airtel Standalone June 2025 Net Sales",
+      "answer": {
+        "items": [
+          {
+            "key": "BHARTIARTL|2025-08-06|83|Bharti Airtel Standalone June 2025 Net Sales at Rs 29,249.20 crore, up 17.39% Y-",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TECHM|2025-04-29|84|Buy Tech Mahindra; target of Rs 1650: Sharekhan",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TCS|2025-08-05|86|TCS hires US-based firm to recruit contractual workers, says report",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TITAN|2025-02-10|87|Buy Titan Company; target of Rs 4000: Motilal Oswal",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TECHM|2025-07-17|89|Reduce Tech Mahindra; target of Rs 1600: Emkay Global Financial",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-04-15|92|Tata Steel Q4 PAT seen up 34.6% YoY to Rs. 1,060 cr: PL Capital",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:TITAN|2025-07-29|93|Buy Titan Company; target of Rs 3830: Prabhudas L",
+      "answer": {
+        "items": [
+          {
+            "key": "TITAN|2025-07-29|93|Buy Titan Company; target of Rs 3830: Prabhudas Lilladher",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-07-29|95|NTPC, NHPC, SJVN ordered to mandate India-made solar cells in renewable power bi",
+            "relevant": true,
+            "pillar": "Environmental",
+            "polarity": "positive",
+            "nature": "company_announcement",
+            "evidence_quote": "",
+            "evidence_source": "rule_keywords",
+            "company_is_subject": true,
+            "rationale": "deterministic ESG keyword match"
+          },
+          {
+            "key": "TCS|2025-02-24|97|TCS, HCL Tech, M&M see heavy trading volumes amid market downturn",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "HCLTECH|2025-02-24|98|TCS, HCL Tech, M&M see heavy trading volumes amid market downturn",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TCS|2025-07-30|101|Infosys targetting everything to be AI-first, hiring to support guidance: CEO Sa",
+            "relevant": false,
+            "pillar": "Social",
+            "polarity": "negative",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "INFY|2025-07-30|102|Infosys targetting everything to be AI-first, hiring to support guidance: CEO Sa",
+            "relevant": false,
+            "pillar": "Social",
+            "polarity": "negative",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:TATATECH|2025-03-05|103|Buy Trent; target of Rs 5800: Geojit Financia",
+      "answer": {
+        "items": [
+          {
+            "key": "TATATECH|2025-03-05|103|Buy Trent; target of Rs 5800: Geojit Financial Services",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-05-27|109|Steel exports down 30% in Jan-April, sluggish demand weighs on JSW, Tata",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "negative",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-07-28|110|Tata Chemicals Standalone June 2025 Net Sales at Rs 1,169.00 crore, up 11.65% Y-",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-05-13|114|Tata Steel Consolidated March 2025 Net Sales at Rs 56,218.11 crore, down 4.21% Y",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATAELXSI|2025-04-21|118|Reduce Tata Elxsi; target of Rs 4250: ICICI Securities",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-04-21|119|Reduce Tata Elxsi; target of Rs 4250: ICICI Securities",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:TATATECH|2025-05-07|121|Tata Chemicals Standalone March 2025 Net Sale",
+      "answer": {
+        "items": [
+          {
+            "key": "TATATECH|2025-05-07|121|Tata Chemicals Standalone March 2025 Net Sales at Rs 1,219.00 crore, up 11.83% Y",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-07-02|122|Steel stocks rise up to 3.7% as Chinese mills curb production",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "negative",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TITAN|2025-07-08|127|Reduce Titan Company; target of Rs 3350: Emkay Global Financial",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-07-14|128|Tata Steel begins construction of Electric Arc Furnace at UK plant, Chandrasekar",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATAELXSI|2025-07-14|130|Sell Tata Elxsi; target of Rs 4965: Deven Choksey",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-07-14|131|Sell Tata Elxsi; target of Rs 4965: Deven Choksey",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:TCS|2025-07-28|132|'Sholay days of IT are over': CP Gurnani says TCS ",
+      "answer": {
+        "items": [
+          {
+            "key": "TCS|2025-07-28|132|'Sholay days of IT are over': CP Gurnani says TCS layoffs show focus towards out",
+            "relevant": false,
+            "pillar": "Social",
+            "polarity": "negative",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-08-05|133|Trent Q1 Preview: Weak demand, strong competition may impact profit growth",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-07-31|137|Tata Steel Consolidated June 2025 Net Sales at Rs 53,178.12 crore, down 2.91% Y-",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-05-07|140|Tata Chemicals Consolidated March 2025 Net Sales at Rs 3,509.00 crore, up 0.98% ",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-06-18|141|Retail investors bet big on turnaround stories in hopes of a jackpot",
+            "relevant": false,
+            "pillar": "Environmental",
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-04-28|142|Trent Q4 Preview: Revenue to see strong growth, margins may feel pressure from w",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:TATATECH|2025-04-29|144|Trent Q4 net profit declines 46% to Rs 350 cr",
+      "answer": {
+        "items": [
+          {
+            "key": "TATATECH|2025-04-29|144|Trent Q4 net profit declines 46% to Rs 350 cr, revenue up 29%",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "INFY|2025-05-22|146|Tech Mahindra, Infosys, other IT stocks tumble on concerns over US' fiscal defic",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "negative",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TECHM|2025-05-22|147|Tech Mahindra, Infosys, other IT stocks tumble on concerns over US' fiscal defic",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "negative",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-07-03|149|Hindalco, Tata Steel, other metal stocks gain up to 2% as China's services PMI f",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-08-01|152|Tata Steel is largely expected to be immune from US tariff threats to its Indian",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "LTTS|2025-07-21|154|L&T to build India\u2019s maiden green hydrogen plant at IOC's refinery",
+            "relevant": true,
+            "pillar": "Environmental",
+            "polarity": "positive",
+            "nature": "company_announcement",
+            "evidence_quote": "",
+            "evidence_source": "rule_keywords",
+            "company_is_subject": true,
+            "rationale": "deterministic ESG keyword match"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:INFY|2025-06-25|155|Infosys, TechM, others up 2% as US Fed chief Powe",
+      "answer": {
+        "items": [
+          {
+            "key": "INFY|2025-06-25|155|Infosys, TechM, others up 2% as US Fed chief Powell's testimony spurs rate cut b",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TECHM|2025-06-25|156|Infosys, TechM, others up 2% as US Fed chief Powell's testimony spurs rate cut b",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "INDUSTOWER|2025-07-31|158|Indus Towers\u2019 Q1 profit slumps 9.8% despite Vodafone Idea payments",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "HCLTECH|2025-06-27|159|Coforge, HCL Tech, other IT names rise up to 3% on hopes of early Fed rate cut, ",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "COFORGE|2025-06-27|160|Coforge, HCL Tech, other IT names rise up to 3% on hopes of early Fed rate cut, ",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TITAN|2025-05-08|161|Titan Company Consolidated March 2025 Net Sales at Rs 14,916.00 crore, up 19.39%",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:TATAELXSI|2025-04-18|162|Tata Elxsi Q4 net profit falls 13% to Rs 172",
+      "answer": {
+        "items": [
+          {
+            "key": "TATAELXSI|2025-04-18|162|Tata Elxsi Q4 net profit falls 13% to Rs 172 crore as auto business faces tariff",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-04-18|163|Tata Elxsi Q4 net profit falls 13% to Rs 172 crore as auto business faces tariff",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-05-27|164|Tata-Airbus to set up India's first privately-led helicopter assembly line in Ka",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-06-12|165|Trent Ltd Sets July 12 for 73rd AGM, E-voting Details Announced",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-05-13|166|Tata Steel Standalone March 2025 Net Sales at Rs 34,398.84 crore, down 6.1% Y-o-",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TITAN|2025-06-13|167|Titan Co. Details June 2025 Investor Meeting Schedule",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:TATATECH|2025-05-13|168|Tata Motors DVR Standalone March 2025 Net Sal",
+      "answer": {
+        "items": [
+          {
+            "key": "TATATECH|2025-05-13|168|Tata Motors DVR Standalone March 2025 Net Sales at Rs 19,999.00 crore, down 1.29",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "BHARTIARTL|2025-07-01|169|Indian billionaires shine in first half of 2025 despite market turbulence",
+            "relevant": false,
+            "pillar": "Environmental",
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "ZOMATO|2025-07-21|170|Eternal Q1: Blinkit revenue jumps 155% YoY to Rs 2,400 crore as user base, order",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TCS|2025-08-07|171|TCS to roll out wage hikes after announcing plans to cut 12,000 jobs. Check deta",
+            "relevant": false,
+            "pillar": "Social",
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TITAN|2025-08-08|173|Buy Titan Company; target of Rs 4150: Motilal Oswal",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "HCLTECH|2025-07-15|174|Buy HCL Technologies; target of Rs 2000: Motilal Oswal",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:HCLTECH|2025-04-23|176|Buy HCL Technologies; target of Rs 1730: Share",
+      "answer": {
+        "items": [
+          {
+            "key": "HCLTECH|2025-04-23|176|Buy HCL Technologies; target of Rs 1730: Sharekhan",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "ZOMATO|2025-06-06|178|Eternal, Swiggy together add over Rs 30,000 crore in market cap this week amid h",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "HGS|2025-05-19|179|Sebi may delay Hinduja\u2019s Invesco acquisition amid IndusInd Bank fiasco",
+            "relevant": false,
+            "pillar": "Governance",
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "ZOMATO|2025-07-22|180|Eternal Standalone June 2025 Net Sales at Rs 2,413.00 crore, up 17.82% Y-o-Y",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "INFY|2025-07-24|181|Infosys Standalone June 2025 Net Sales at Rs 35,275.00 crore, up 5.99% Y-o-Y",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "HCLTECH|2025-06-24|182|HCLTech joins hands with Nasdaq-listed chip major AMD to create centers to speed",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:HCLTECH|2025-04-23|183|Reduce HCL Technologies; target of Rs 1390: IC",
+      "answer": {
+        "items": [
+          {
+            "key": "HCLTECH|2025-04-23|183|Reduce HCL Technologies; target of Rs 1390: ICICI Securities",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "HCLTECH|2025-04-24|184|HCL Tech Consolidated March 2025 Net Sales at Rs 30,246.00 crore, up 6.13% Y-o-Y",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "BHARTIARTL|2025-08-07|186|Accumulate Bharti Airtel; target of Rs 2090: Prabhudas Lilladher",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "HCLTECH|2025-07-14|187|HCLTech says specialisation to drive fresher hiring, 'elite' cadres to get 4X hi",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "ZOMATO|2025-07-23|191|Eternal\u2019s Rs 3 trillion dream divides the Street: FIIs bail, DIIs bite",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "HCLTECH|2025-07-15|192|Hold HCL Technologies; target of Rs 1550: Prabhudas Lilladher",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:TATATECH|2025-03-06|196|Hindalco, Tata Steel, other metal stocks rise",
+      "answer": {
+        "items": [
+          {
+            "key": "TATATECH|2025-03-06|196|Hindalco, Tata Steel, other metal stocks rise up to 7% on dollar decline, China ",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "INFY|2025-07-24|197|Buy Infosys; target of Rs 1830: Deven Choksey",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "HGS|2025-05-22|198|IndusInd Bank\u2019s promoter committed to support with equity if required for busine",
+            "relevant": false,
+            "pillar": "Governance",
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "ZOMATO|2025-07-23|199|Buy Eternal; target of Rs 330: Motilal Oswal",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "BHARTIARTL|2025-08-07|202|Hold Bharti Airtel: target of Rs 1960: ICICI Securities",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "HCLTECH|2025-07-15|205|HCL Tech Consolidated June 2025 Net Sales at Rs 30,349.00 crore, up 8.17% Y-o-Y",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:ZOMATO|2025-06-09|209|Zomato introduces long-distance fee, rider assu",
+      "answer": {
+        "items": [
+          {
+            "key": "ZOMATO|2025-06-09|209|Zomato introduces long-distance fee, rider assurance plan for restaurants to boo",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "ZOMATO|2025-07-03|210|Swiggy, Eternal, other Indian top e-comm stocks outrun Chinese peers on profit h",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "HCLTECH|2025-07-15|211|Buy HCL Technologies; target of Rs 1850: Sharekhan",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "ZOMATO|2025-08-07|213|Bulk deals: Alibaba-backed Antfin offloads 1.46% stake worth Rs 4,097 crore in E",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "HCLTECH|2025-07-16|214|Hold HCL Technologies; target of Rs 1693: Deven Choksey",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-04-04|215|Vedanta, Tata Steel, other metal stocks crash up to 9% as Trump tariffs stoke de",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "negative",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:ZOMATO|2025-07-22|218|Eternal Consolidated June 2025 Net Sales at Rs ",
+      "answer": {
+        "items": [
+          {
+            "key": "ZOMATO|2025-07-22|218|Eternal Consolidated June 2025 Net Sales at Rs 7,167.00 crore, up 70.4% Y-o-Y",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TITAN|2025-08-08|221|Buy Titan Company; target of Rs 3901: Prabhudas Lilladher",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "ROUTE|2025-07-03|222|Buy Ambuja Cement; target of Rs 692: Prabhudas Lilladher",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "HCLTECH|2025-07-15|223|HCL Tech Standalone June 2025 Net Sales at Rs 13,073.00 crore, up 10.94% Y-o-Y",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "INFY|2025-07-22|225|Infosys Q1 preview: 5 key factors to watch for",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "negative",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "INFY|2025-07-24|228|Neutral Infosys; target of Rs 1750: Motilal Oswal",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:ZOMATO|2025-07-22|229|Buy ETERNAL; target of Rs 330: Emkay Global Fin",
+      "answer": {
+        "items": [
+          {
+            "key": "ZOMATO|2025-07-22|229|Buy ETERNAL; target of Rs 330: Emkay Global Financial",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "HCLTECH|2025-07-24|232|Buy HCL Technologies; target of Rs 2000: Motilal Oswal",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "LTTS|2025-07-27|233|L&T Q1 preview: Robust profit growth on strong execution; but weaker order flows",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "negative",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "INFY|2025-07-25|238|Infosys Consolidated June 2025 Net Sales at Rs 42,279.00 crore, up 7.54% Y-o-Y",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "ZOMATO|2025-07-22|240|Buy Eternal; target of Rs 315: ICICI Securities",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "HCLTECH|2025-04-24|241|HCL Tech Standalone March 2025 Net Sales at Rs 13,432.00 crore, up 11.22% Y-o-Y",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:HCLTECH|2025-04-23|243|Buy HCL Technologies; target of Rs 1800: Motil",
+      "answer": {
+        "items": [
+          {
+            "key": "HCLTECH|2025-04-23|243|Buy HCL Technologies; target of Rs 1800: Motilal Oswal",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "INFY|2025-07-24|245|Accumulate Infosys; target of Rs 1750: Prabhudas Lilladher",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "MAZDOCK|2025-07-29|248|Mazagon Dock Consolidated June 2025 Net Sales at Rs 2,625.59 crore, up 11.39% Y-",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "BHARTIARTL|2025-04-11|249|Vodafone Idea troubles to persist despite 4G gains; Airtel to see modest Q4 grow",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "negative",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "MAZDOCK|2025-06-17|251|MSCI August rejig: Swiggy, Mazagon Dock among likely additions, $850 million inf",
+            "relevant": true,
+            "pillar": "Social",
+            "polarity": "positive",
+            "nature": "company_announcement",
+            "evidence_quote": "",
+            "evidence_source": "rule_keywords",
+            "company_is_subject": true,
+            "rationale": "deterministic ESG keyword match"
+          },
+          {
+            "key": "ROUTE|2025-06-04|253|Alkem Laboratories shares sink as 1.4% stake offloaded in block deal, promotor l",
+            "relevant": false,
+            "pillar": "Social",
+            "polarity": "negative",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:INDUSTOWER|2025-05-02|255|INDUS TOWERS Consolidated March 2025 Net Sa",
+      "answer": {
+        "items": [
+          {
+            "key": "INDUSTOWER|2025-05-02|255|INDUS TOWERS Consolidated March 2025 Net Sales at Rs 7,727.10 crore, up 7.42% Y-",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "INDUSTOWER|2025-07-31|256|INDUS TOWERS Standalone June 2025 Net Sales at Rs 8,057.60 crore, up 9.14% Y-o-Y",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-06-26|257|Metal stocks extend rally to 5th straight session on weaker dollar; SAIL, Vedant",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-05-14|258|SAIL, Tata Steel, other metal stocks rally on easing retail inflation in India, ",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "MAZDOCK|2025-05-30|259|Mazagon Dock Standalone March 2025 Net Sales at Rs 3,174.41 crore, up 2.28% Y-o-",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "INDUSTOWER|2025-04-03|261|Indus Towers poised for gains as govt eases Voda Idea's financial burden",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:MAZDOCK|2025-07-29|262|Mazagon Dock Standalone June 2025 Net Sales at",
+      "answer": {
+        "items": [
+          {
+            "key": "MAZDOCK|2025-07-29|262|Mazagon Dock Standalone June 2025 Net Sales at Rs 2,625.59 crore, up 11.39% Y-o-",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "MAZDOCK|2025-06-19|263|Defence stocks rebound on escalating Israel-Iran conflict; Paras Defence, Mazago",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-02-13|264|SAIL, Tata Steel, other metal stocks rise up to 5% on likely safeguard duty on s",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "INDUSTOWER|2025-05-05|265|Reduce Indus Tower: target of Rs 350: ICICI Securities",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-03-03|271|Stocks of IREDA, Tata Tech, 4 other F&O entrants extend losses for 2nd day, fall",
+            "relevant": true,
+            "pillar": "Environmental",
+            "polarity": "neutral",
+            "nature": "company_announcement",
+            "evidence_quote": "",
+            "evidence_source": "rule_keywords",
+            "company_is_subject": true,
+            "rationale": "deterministic ESG keyword match"
+          },
+          {
+            "key": "INDUSTOWER|2025-07-31|272|INDUS TOWERS Consolidated June 2025 Net Sales at Rs 8,057.60 crore, up 9.14% Y-o",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:TATATECH|2025-03-05|273|Tata Steel, SAIL, other steel stocks surge up",
+      "answer": {
+        "items": [
+          {
+            "key": "TATATECH|2025-03-05|273|Tata Steel, SAIL, other steel stocks surge up to 4% after China announces plans ",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "ROUTE|2025-07-21|274|IREDA plans to raise Rs 2,500-3,000 crore through QIP this fiscal",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "INDUSTOWER|2025-05-02|276|INDUS TOWERS Standalone March 2025 Net Sales at Rs 7,727.10 crore, up 7.42% Y-o-",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "ROUTE|2025-07-11|278|Inox Clean Energy files confidential DRHP for Rs 6,000-crore IPO",
+            "relevant": false,
+            "pillar": "Environmental",
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-04-11|280|Tata Steel, JSW, SAIL, other metal stocks rise up to 7% as tariff war fears subs",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "negative",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TATATECH|2025-02-23|282|Two metals stocks under Rs 200 to add to your watchlist",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:ROUTE|2025-06-03|284|Telecom minister Scindia rules out any more govt",
+      "answer": {
+        "items": [
+          {
+            "key": "ROUTE|2025-06-03|284|Telecom minister Scindia rules out any more govt relief for Voda Idea: Report",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "MAZDOCK|2025-06-17|286|Mazagon Dock, BDL, other defence stocks rally up to 5% as Israel-Iran war enters",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "negative",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "INDUSTOWER|2025-05-02|287|Neutral Indus Towers; target of Rs 395: Motilal Oswal",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TITAN|2025-03-26|291|Goldman Sachs' top 10 India picks: HDFC Bank, Titan, M&M among key bets",
+            "relevant": false,
+            "pillar": "Environmental",
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "POLICYBZR|2025-08-01|292|PB Fintech Standalone June 2025 Net Sales at Rs 40.19 crore, up 33.65% Y-o-Y",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "POLICYBZR|2025-08-05|293|What led to the selloff in PB Fintech shares: IRDAI's regulatory action explaine",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:PAYTM|2025-08-04|295|Alibaba entity launches block deal to sell 5.84%",
+      "answer": {
+        "items": [
+          {
+            "key": "PAYTM|2025-08-04|295|Alibaba entity launches block deal to sell 5.84% stake in Paytm for Rs 3,800 cro",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "ROUTE|2025-06-10|296|HDFC AMC, other AMC stocks see profit booking post-May AMFI data",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "POLICYBZR|2025-08-01|297|PB Fintech Consolidated June 2025 Net Sales at Rs 1,347.99 crore, up 33.4% Y-o-Y",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "TCS|2025-07-28|298|Real estate shares continue to fall for 5th day, decline up to 6%; weak Q1 resul",
+            "relevant": false,
+            "pillar": "Social",
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "PAYTM|2025-07-23|300|One 97 Paytm Consolidated June 2025 Net Sales at Rs 1,917.50 crore, up 27.7% Y-o",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "PAYTM|2025-05-07|301|Neutral One 97 Communications; target of Rs 870: Motilal Oswal",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:POLICYBZR|2025-05-16|302|PB Fintech Consolidated March 2025 Net Sales",
+      "answer": {
+        "items": [
+          {
+            "key": "POLICYBZR|2025-05-16|302|PB Fintech Consolidated March 2025 Net Sales at Rs 1,507.87 crore, up 38.39% Y-o",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "PAYTM|2025-05-12|304|Antfin likely to sell 4% stake in Paytm for Rs 2,200 crore via block deals",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "PAYTM|2025-07-23|307|One 97 Paytm Standalone June 2025 Net Sales at Rs 1,586.20 crore, up 38.07% Y-o-",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "POLICYBZR|2025-05-15|308|PB Fintech Q4 profit jumps 184% to Rs 171 crore; FY25 net soars to Rs 353 crore",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "POLICYBZR|2025-05-16|312|PB Fintech Standalone March 2025 Net Sales at Rs 46.85 crore, up 36.55% Y-o-Y",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "POLICYBZR|2025-08-05|313|Hold PB Fintech: target of Rs 1840: ICICI Securities",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "positive",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    },
+    {
+      "task": "classify a batch of company news articles for ESG analysis",
+      "source": "rule",
+      "reason": "no LLM configured",
+      "key": "news-batch:PAYTM|2025-07-01|319|Neutral One 97 Communications; target of Rs 1000",
+      "answer": {
+        "items": [
+          {
+            "key": "PAYTM|2025-07-01|319|Neutral One 97 Communications; target of Rs 1000: Motilal Oswal",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "PAYTM|2025-08-15|322|Chartist Talk: Apollo Hospitals still a strong pick, Paytm showing signs of fati",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "PAYTM|2025-07-23|324|Buy One 97 Communications; target of Rs 1350: Emkay Global Financial",
+            "relevant": false,
+            "pillar": null,
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          },
+          {
+            "key": "PAYTM|2025-07-22|325|Madhur Deora to step down from Paytm board, to continue as President & Group CFO",
+            "relevant": false,
+            "pillar": "Governance",
+            "polarity": "neutral",
+            "nature": "other",
+            "evidence_quote": "",
+            "evidence_source": "",
+            "company_is_subject": true,
+            "rationale": "no specific ESG keyword matched the title, snippet, or URL path"
+          }
+        ]
+      }
+    }
+  ]
+}

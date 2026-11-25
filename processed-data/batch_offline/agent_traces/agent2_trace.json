@@ -1,0 +1,524 @@
+{
+  "written": "2026-11-25T15:18:57+00:00",
+  "report": {
+    "agent_id": "agent2",
+    "name": "Agent 2 - Environmental Context Agent",
+    "status": "completed",
+    "steps": 49,
+    "seconds": 12.42,
+    "decisions_by_source": {
+      "llm": 0,
+      "policy": 49,
+      "guardrail": 0
+    },
+    "summary": "46/46 companies have an environmental score",
+    "findings": [],
+    "artifacts": [
+      "processed-data\\.batch_offline_ce4a27b3039649ae9c7448dd6cc62136.staging\\company_location_environmental_risk.csv"
+    ],
+    "llm_mode": false,
+    "llm_errors": [],
+    "judgements_by_source": {},
+    "judge_calls": 0,
+    "judge_seconds": 0.0,
+    "judge_budget": 300,
+    "judge_time_budget_seconds": 1800.0,
+    "judge_budget_reached": false,
+    "judge_time_budget_reached": false,
+    "planner_mode": "off",
+    "llm_planning_calls": 0,
+    "llm_planning_decisions": 0,
+    "llm_judgements": 0,
+    "budget_reason": "none",
+    "llm_planning_seconds": 0.0,
+    "llm_judging_seconds": 0.0,
+    "guardrail_rejections": []
+  },
+  "history": [
+    {
+      "step": 1,
+      "tool": "load_aqi_sources",
+      "args": {},
+      "thought": "sources must be inspected first",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"historical\": {\"cities\": [\"Bangalore\", \"Chennai\", \"Delhi\", \"Kolkata\", \"Mumbai\"], \"window_end\": \"2024-12-31\"}, \"realtime\": {\"cities_with_computed_aqi\": 202, \"note\": \"single-hour snapshot; lower confidence\"}, \"_seconds\": 1.59}"
+    },
+    {
+      "step": 2,
+      "tool": "inspect_coverage",
+      "args": {},
+      "thought": "check which cities resolve",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"cities\": {\"Ahmedabad\": {\"method\": \"exact\", \"matched_city\": \"Ahmedabad\", \"confidence\": 0.6}, \"Bangalore\": {\"method\": \"exact\", \"matched_city\": \"Bangalore\", \"confidence\": 0.95}, \"Bengaluru\": {\"method\": \"alias\", \"matched_city\": \"Bangalore\", \"confidence\": 0.9}, \"Chandigarh\": {\"method\": \"exact\", \"matched_city\": \"Chandigarh\", \"confidence\": 0.6}, \"Chennai\": {\"method\": \"exact\", \"matched_city\": \"Chennai\", \"confidence\": 0.95}, \"Greater Noida\": {\"method\": \"exact\", \"matched_city\": \"Greater Noida\", \"confidence\": 0.6}, \"Gurgaon\": {\"method\": \"alias\", \"matched_city\": \"Gurugram\", \"confidence\": 0.5...[truncated]"
+    },
+    {
+      "step": 3,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TCS"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TCS\", \"score\": 4.327297797289491, \"locations\": 6, \"resolved\": 6, \"_seconds\": 0.43}"
+    },
+    {
+      "step": 4,
+      "tool": "score_company",
+      "args": {
+        "company_code": "INFY"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INFY\", \"score\": 4.301886256934875, \"locations\": 7, \"resolved\": 7, \"_seconds\": 0.97}"
+    },
+    {
+      "step": 5,
+      "tool": "score_company",
+      "args": {
+        "company_code": "WIPRO"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"WIPRO\", \"score\": 4.2523950558508385, \"locations\": 8, \"resolved\": 8, \"_seconds\": 0.49}"
+    },
+    {
+      "step": 6,
+      "tool": "score_company",
+      "args": {
+        "company_code": "HCLTECH"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HCLTECH\", \"score\": 3.648887951920354, \"locations\": 8, \"resolved\": 8, \"_seconds\": 0.06}"
+    },
+    {
+      "step": 7,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TECHM"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TECHM\", \"score\": 3.9625549099814252, \"locations\": 7, \"resolved\": 7, \"_seconds\": 0.06}"
+    },
+    {
+      "step": 8,
+      "tool": "score_company",
+      "args": {
+        "company_code": "LTIM"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"LTIM\", \"score\": 4.857271897810219, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.04}"
+    },
+    {
+      "step": 9,
+      "tool": "score_company",
+      "args": {
+        "company_code": "MPHASIS"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MPHASIS\", \"score\": 4.981277372262774, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.06}"
+    },
+    {
+      "step": 10,
+      "tool": "score_company",
+      "args": {
+        "company_code": "PERSISTENT"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"PERSISTENT\", \"score\": 6.506011491295772, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.05}"
+    },
+    {
+      "step": 11,
+      "tool": "score_company",
+      "args": {
+        "company_code": "COFORGE"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"COFORGE\", \"score\": 1.6014103436839988, \"locations\": 2, \"resolved\": 2, \"_seconds\": 0.04}"
+    },
+    {
+      "step": 12,
+      "tool": "score_company",
+      "args": {
+        "company_code": "LTTS"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"LTTS\", \"score\": 4.857271897810219, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.04}"
+    },
+    {
+      "step": 13,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TATAELXSI"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATAELXSI\", \"score\": 4.981277372262774, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.16}"
+    },
+    {
+      "step": 14,
+      "tool": "score_company",
+      "args": {
+        "company_code": "OFSS"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"OFSS\", \"score\": 4.857271897810219, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.04}"
+    },
+    {
+      "step": 15,
+      "tool": "score_company",
+      "args": {
+        "company_code": "KPITTECH"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"KPITTECH\", \"score\": 6.506011491295772, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.05}"
+    },
+    {
+      "step": 16,
+      "tool": "score_company",
+      "args": {
+        "company_code": "CYIENT"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"CYIENT\", \"score\": 2.4498708383101784, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.04}"
+    },
+    {
+      "step": 17,
+      "tool": "score_company",
+      "args": {
+        "company_code": "BSOFT"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"BSOFT\", \"score\": 3.262773701208602, \"locations\": 2, \"resolved\": 2, \"_seconds\": 0.04}"
+    },
+    {
+      "step": 18,
+      "tool": "score_company",
+      "args": {
+        "company_code": "ZENSARTECH"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ZENSARTECH\", \"score\": 6.506011491295772, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.04}"
+    },
+    {
+      "step": 19,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TATATECH"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATATECH\", \"score\": 6.506011491295772, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.04}"
+    },
+    {
+      "step": 20,
+      "tool": "score_company",
+      "args": {
+        "company_code": "HAPPSTMNDS"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HAPPSTMNDS\", \"score\": 4.981277372262774, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.03}"
+    },
+    {
+      "step": 21,
+      "tool": "score_company",
+      "args": {
+        "company_code": "SONATSOFTW"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SONATSOFTW\", \"score\": 4.939942214111922, \"locations\": 2, \"resolved\": 2, \"_seconds\": 0.05}"
+    },
+    {
+      "step": 22,
+      "tool": "score_company",
+      "args": {
+        "company_code": "NEWGEN"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NEWGEN\", \"score\": 4.888917883211679, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.03}"
+    },
+    {
+      "step": 23,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TANLA"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TANLA\", \"score\": 2.4498708383101784, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.04}"
+    },
+    {
+      "step": 24,
+      "tool": "score_company",
+      "args": {
+        "company_code": "INTELLECT"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INTELLECT\", \"score\": 4.998226277372262, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.03}"
+    },
+    {
+      "step": 25,
+      "tool": "score_company",
+      "args": {
+        "company_code": "ROUTE"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ROUTE\", \"score\": 4.857271897810219, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.04}"
+    },
+    {
+      "step": 26,
+      "tool": "score_company",
+      "args": {
+        "company_code": "RATEGAIN"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"RATEGAIN\", \"score\": 2.723742498513905, \"locations\": 2, \"resolved\": 2, \"_seconds\": 0.04}"
+    },
+    {
+      "step": 27,
+      "tool": "score_company",
+      "args": {
+        "company_code": "ECLERX"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ECLERX\", \"score\": 4.857271897810219, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.04}"
+    },
+    {
+      "step": 28,
+      "tool": "score_company",
+      "args": {
+        "company_code": "DATAMATICS"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"DATAMATICS\", \"score\": 4.857271897810219, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.04}"
+    },
+    {
+      "step": 29,
+      "tool": "score_company",
+      "args": {
+        "company_code": "MASTEK"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MASTEK\", \"score\": 4.642555119605608, \"locations\": 2, \"resolved\": 2, \"_seconds\": 0.05}"
+    },
+    {
+      "step": 30,
+      "tool": "score_company",
+      "args": {
+        "company_code": "SONACOMS"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SONACOMS\", \"score\": 0.876106194690266, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.05}"
+    },
+    {
+      "step": 31,
+      "tool": "score_company",
+      "args": {
+        "company_code": "HGS"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"HGS\", \"score\": 4.939942214111922, \"locations\": 2, \"resolved\": 2, \"_seconds\": 0.06}"
+    },
+    {
+      "step": 32,
+      "tool": "score_company",
+      "args": {
+        "company_code": "NIITLTD"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NIITLTD\", \"score\": 0.876106194690266, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.05}"
+    },
+    {
+      "step": 33,
+      "tool": "score_company",
+      "args": {
+        "company_code": "AFFLE"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"AFFLE\", \"score\": 2.2137100908640703, \"locations\": 2, \"resolved\": 2, \"_seconds\": 0.05}"
+    },
+    {
+      "step": 34,
+      "tool": "score_company",
+      "args": {
+        "company_code": "MPSLTD"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MPSLTD\", \"score\": 2.7601786299007656, \"locations\": 2, \"resolved\": 2, \"_seconds\": 0.05}"
+    },
+    {
+      "step": 35,
+      "tool": "score_company",
+      "args": {
+        "company_code": "SUBEXLTD"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SUBEXLTD\", \"score\": 4.981277372262774, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.04}"
+    },
+    {
+      "step": 36,
+      "tool": "score_company",
+      "args": {
+        "company_code": "SIS"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"SIS\", \"score\": 4.245382961784063, \"locations\": 2, \"resolved\": 2, \"_seconds\": 0.05}"
+    },
+    {
+      "step": 37,
+      "tool": "score_company",
+      "args": {
+        "company_code": "ZOMATO"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"ZOMATO\", \"score\": 2.2137100908640703, \"locations\": 2, \"resolved\": 2, \"_seconds\": 0.05}"
+    },
+    {
+      "step": 38,
+      "tool": "score_company",
+      "args": {
+        "company_code": "PAYTM"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"PAYTM\", \"score\": 2.723742498513905, \"locations\": 2, \"resolved\": 2, \"_seconds\": 0.05}"
+    },
+    {
+      "step": 39,
+      "tool": "score_company",
+      "args": {
+        "company_code": "POLICYBZR"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"POLICYBZR\", \"score\": 0.876106194690266, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.05}"
+    },
+    {
+      "step": 40,
+      "tool": "score_company",
+      "args": {
+        "company_code": "DELHIVERY"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"DELHIVERY\", \"score\": 2.2137100908640703, \"locations\": 2, \"resolved\": 2, \"_seconds\": 0.04}"
+    },
+    {
+      "step": 41,
+      "tool": "score_company",
+      "args": {
+        "company_code": "NAZARA"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"NAZARA\", \"score\": 4.857271897810219, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.04}"
+    },
+    {
+      "step": 42,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TATACOMM"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TATACOMM\", \"score\": 4.857271897810219, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.06}"
+    },
+    {
+      "step": 43,
+      "tool": "score_company",
+      "args": {
+        "company_code": "INDUSTOWER"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"INDUSTOWER\", \"score\": 0.876106194690266, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.05}"
+    },
+    {
+      "step": 44,
+      "tool": "score_company",
+      "args": {
+        "company_code": "BHARTIARTL"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"BHARTIARTL\", \"score\": 3.5513139870378745, \"locations\": 2, \"resolved\": 2, \"_seconds\": 0.06}"
+    },
+    {
+      "step": 45,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TEJASNET"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TEJASNET\", \"score\": 4.981277372262774, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.04}"
+    },
+    {
+      "step": 46,
+      "tool": "score_company",
+      "args": {
+        "company_code": "REDINGTON"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"REDINGTON\", \"score\": 4.998226277372262, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.04}"
+    },
+    {
+      "step": 47,
+      "tool": "score_company",
+      "args": {
+        "company_code": "MAZDOCK"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"MAZDOCK\", \"score\": 4.857271897810219, \"locations\": 1, \"resolved\": 1, \"_seconds\": 0.05}"
+    },
+    {
+      "step": 48,
+      "tool": "score_company",
+      "args": {
+        "company_code": "TITAN"
+      },
+      "thought": "score next company",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"company\": \"TITAN\", \"score\": 4.6123703191811, \"locations\": 2, \"resolved\": 2, \"_seconds\": 0.07}"
+    },
+    {
+      "step": 49,
+      "tool": "finalize",
+      "args": {},
+      "thought": "all companies scored",
+      "source": "policy",
+      "observation": "{\"ok\": true, \"rows\": 91, \"companies_without_aqi\": [], \"_seconds\": 0.01}"
+    }
+  ],
+  "judgements": []
+}
